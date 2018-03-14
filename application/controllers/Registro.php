@@ -26,17 +26,17 @@ class Registro extends CI_Controller {
          	$usuario  = $this->input->post('usuario');
          	$password = $this->input->post('password');
          	$pais  	  = $this->input->post('pais');
-         	$arrayInsert = array('Nombre' => $nombre,
-                                 'Nombre_canal'   => $canal,
+         	$arrayInsert = array('Nombre' 		=> $nombre,
+                                 'Nombre_canal' => $canal,
                                  'Email'        => $usuario,
-                                 'pass'           => base64_encode($password),
-                                 'Pais'           => $pais);
+                                 'pass'         => base64_encode($password),
+                                 'Pais'         => $pais);
             $datoInsert = $this->M_login->insertarDatos($arrayInsert, 'Users');
-            $session    = array('nombre' => $nombre,
-                                'canal'          => $canal,
-                                'usuario'        => $usuario,
-                                'pais'           => $pais,
-                                'id_capitan'     => $datoInsert['Id']);
+            $session    = array('nombre' 	 => $nombre,
+                                'canal'      => $canal,
+                                'usuario'    => $usuario,
+                                'pais'       => $pais,
+                                'id_capitan' => $datoInsert['Id']);
             $this->session->set_userdata($session);
 			$data['error'] = EXIT_SUCCESS;
         }catch(Exception $e) {
