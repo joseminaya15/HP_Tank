@@ -29,26 +29,31 @@
             <div class="header">
                 <div class="header-left">
                     <img class="logo-header" src="<?php echo RUTA_IMG?>logos/favicon.png">
+                    <h2>Programa de incentivos DeskJet HP Tank</h2>
                 </div>
             </div>
-            <div class="container">
-                <div class="mdl-card mdl-card-login">
-                    <div class="mdl-card__supporting-text">
-                        <div class="col-sm-6">
-                            <img src="<?php echo RUTA_IMG?>logo/logo_login.png">
+            <div class="mdl-card-container">
+                <div class="center-login">
+                    <div class="mdl-card mdl-card-login">
+                        <div class="mdl-card__supporting-text">
+                            <div class="col-sm-12">
+                                <h2 class="title_login">Ingresa tu cuenta</h2>
+                                <div class="mdl-input transparent">
+                                    <input type="text" class="form-control" placeholder="Usuario" id="usuario" onkeyup="verificarDatos(event);">
+                                </div>
+                                <div class="mdl-input transparent">
+                                    <input type="password" class="form-control" placeholder="Contrase&ntilde;a" id="password" onkeyup="verificarDatos(event);">
+                                </div>
+                                <div class="m-t-20 m-b-10">
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login registrar" onclick="goToRegister()">Registrarse<i class="mdi mdi-play_arrow"></i></button>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="ingresar()">Ingresar<i class="mdi mdi-play_arrow"></i></button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-sm-6 m-t-50">
-                            <h2 class="title_login">Ingreso a la cancha</h2>
-                            <div class="mdl-input transparent">
-                                <input type="text" class="form-control" placeholder="email" id="correo" onkeyup="verificarDatos(event);">
-                            </div>
-                            <div class="mdl-input transparent">
-                                <input type="password" class="form-control" placeholder="Contrase&ntilde;a" id="password" onkeyup="verificarDatos(event);">
-                            </div>
-                            <div class="m-t-20">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login registrar" onclick="goToRegister()">Registrarse<i class="mdi mdi-play_arrow"></i></button>
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="ingresar()">Ingresar<i class="mdi mdi-play_arrow"></i></button>
-                            </div>
+                    </div>
+                    <div class="mdl-card mdl-card-login">
+                        <div class="mdl-card__supporting-text">
+                            <div class="imagen-premio"></div>
                         </div>
                     </div>
                 </div>
