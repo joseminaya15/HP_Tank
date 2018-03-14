@@ -1,6 +1,7 @@
 function registrar() {
 	var nombre 	 = $('#nombre').val();
 	var password = $('#password').val();
+	var re_password = $('#re_password').val();
 	var canal 	 = $('#canal').val();
 	var correo   = $('#correo').val();
 	var pais 	 = $('#pais').val();
@@ -31,6 +32,14 @@ function registrar() {
 	}
 	if(password == ''){
 		msj('error', 'Ingrese su contraseña');
+		return;
+	}
+	if(re_password == ''){
+		msj('error', 'Repita su contraseña');
+		return;
+	}
+	if(re_password != password){
+		msj('error', 'Una de sus contraseñas es incorrecta');
 		return;
 	}
 	if(terminos == false){

@@ -42,10 +42,10 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="mdl-input">
-                                        <input type="text" class="form-control" placeholder="Nombre completo del capit&aacute;n" id="nombre" maxlength="50" onkeypress="return soloLetras(event);">
+                                        <input type="text" class="form-control" placeholder="*Nombres y Apellidos" id="nombre" maxlength="50" onkeypress="return soloLetras(event);">
                                     </div>
                                     <div class="mdl-input">
-                                        <input type="text" class="form-control" placeholder="Nombre del Canal" id="canal" maxlength="50">
+                                        <input type="text" class="form-control" placeholder="*Nombre del Canal" id="canal" maxlength="50">
                                     </div>
                                     <div class="mdl-input">
                                         <select class="selectpicker" id="pais"  name="pais">
@@ -57,10 +57,13 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="mdl-input">
-                                        <input type="text" class="form-control" placeholder="Correo electr&oacute;nico" id="correo">
+                                        <input type="text" class="form-control" placeholder="*email" id="correo">
                                     </div>
                                     <div class="mdl-input">
-                                        <input type="password" class="form-control" placeholder="Contrase&ntilde;a" id="password">
+                                        <input type="password" class="form-control" placeholder="*contrase&ntilde;a" id="password">
+                                    </div>
+                                    <div class="mdl-input">
+                                        <input type="password" class="form-control" placeholder="*Repetir contrase&ntilde;a" id="re_password">
                                     </div>
                                     <div class="col-xs-12 p-0">
                                         <div class="col-xs-6 p-0">
