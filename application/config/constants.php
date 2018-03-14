@@ -104,8 +104,3 @@ defined('MSJ_INSERT_ERROR')   OR define('MSJ_INSERT_ERROR', 'Se ha insertado inc
 defined('MSJ_INSERT_SUCCESS') OR define('MSJ_INSERT_SUCCESS', 'Se ha insertado correctamente');
 defined('MSJ_DELETE_ERROR')   OR define('MSJ_DELETE_ERROR', 'Se ha eliminado incorrectamente');
 defined('MSJ_DELETE_SUCCESS') OR define('MSJ_DELETE_SUCCESS', 'Se ha eliminado correctamente');
-
-//ESTADOS
-defined('FLAG_PENDIENTE') OR define('FLAG_PENDIENTE', 1);
-defined('FLAG_APROBADO')  OR define('FLAG_APROBADO', 2);
-defined('FLAG_RECHAZADO') OR define('FLAG_RECHAZADO', 3);
