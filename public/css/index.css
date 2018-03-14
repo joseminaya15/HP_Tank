@@ -40,7 +40,7 @@ video{
 }
 .imagen-premio{
 	background: url(../img/logos/premio.png) no-repeat center center;
-	background-size: 350px !important;
+	background-size: 400px !important;
 	position: absolute;
 }
 .header{
@@ -89,7 +89,7 @@ video{
 }
 .center-login{
 	width: 100%;
-    max-width: 350px;
+    max-width: 400px;
 	position: absolute;
     top: 50%;
     right: 0;
@@ -160,6 +160,7 @@ video{
 }
 .mdl-card-login .mdl-card__supporting-text{
 	padding: 15px;
+	height: 260px;
 }
 .mdl-card-login .mdl-card__supporting-text img{
 	width: 100%;
