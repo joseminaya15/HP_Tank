@@ -48,7 +48,11 @@
                                         <input type="text" class="form-control" placeholder="Nombre del Canal" id="canal" maxlength="50">
                                     </div>
                                     <div class="mdl-input">
-                                        <input type="text" class="form-control" placeholder="Pa&iacute;s" id="pais" maxlength="50" onkeypress="return soloLetras(event);">
+                                        <select class="selectpicker" id="pais"  name="pais">
+                                            <option value="Perú">Perú</option>
+                                            <option value="Colombia">Colombia</option>
+                                            <option value="Brasil">Brasil</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -89,7 +93,7 @@
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>login.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>jsregistro.js?v=<?php echo time();?>"></script>
         <script type="text/javascript">
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
                 $('select').selectpicker('mobile');
