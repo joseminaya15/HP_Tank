@@ -48,9 +48,12 @@
                                     </div>
                                     <div class="mdl-input">
                                         <select class="selectpicker" id="pais"  name="pais">
-                                            <option value="Perú">Perú</option>
-                                            <option value="Colombia">Colombia</option>
-                                            <option value="Brasil">Brasil</option>
+                                            <option value="Costa Rica">Costa Rica</option>
+                                            <option value="El Salvador">El Salvador</option>
+                                            <option value="Guatemala">Guatemala</option>
+                                            <option value="Honduras">Honduras</option>
+                                            <option value="Nicaragua">Nicaragua</option>
+                                            <option value="Panamá">Panam&aacute;</option>
                                         </select>
                                     </div>
                                     <div class="mdl-input">
