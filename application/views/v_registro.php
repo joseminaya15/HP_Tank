@@ -57,7 +57,40 @@
                                         </select>
                                     </div>
                                     <div class="mdl-input">
-                                        <input type="text" class="form-control" placeholder="*Nombre del Canal" id="canal" maxlength="50">
+                                        <select class="selectpicker" id="canal"  name="canal">
+                                            <option value="Alfatec De CR Sa">Alfatec De CR Sa</option>
+                                            <option value="Cdc Internacional Sa">Cdc Internacional Sa</option>
+                                            <option value="Compubetel Sa">Compubetel Sa</option>
+                                            <option value="Distribuidora Comercial Tres Ases Sa">Distribuidora Comercial Tres Ases Sa</option>
+                                            <option value="Distribuidora Ramirez Y Castillo Sa">Distribuidora Ramirez Y Castillo Sa</option>
+                                            <option value="Importadora de Tecnologia Global Ysrm Sa">Importadora de Tecnologia Global Ysrm Sa</option>
+                                            <option value="Jimenez Y Tanzi Sa">Jimenez Y Tanzi Sa</option>
+                                            <option value="Pc Lider De Costa Rica Sa">Pc Lider De Costa Rica Sa</option>
+                                            <option value="C&M Sistemas Sa De Cv">C&M Sistemas Sa De Cv</option>
+                                            <option value="Equipos Electronicos Valdes Sa De Cv">Equipos Electronicos Valdes Sa De Cv</option>
+                                            <option value="Data & Graphics Sa De Cv">Data & Graphics Sa De Cv</option>
+                                            <option value="Raf SA de CV">Raf SA de CV</option>
+                                            <option value="Dataprint De El Salvador Sa De CV">Dataprint De El Salvador Sa De CV</option>
+                                            <option value="Dpg Sa De Cv">Dpg Sa De Cv</option>
+                                            <option value="STB Computer Sa De Cv">STB Computer Sa De Cv</option>
+                                            <option value="Canella Sa">Canella Sa</option>
+                                            <option value="Compusersa Sa">Compusersa Sa</option>
+                                            <option value="Dataflex Sa">Dataflex Sa</option>
+                                            <option value="Electronica Pan Americana Sa">Electronica Pan Americana Sa</option>
+                                            <option value="Intelaf Sa">Intelaf Sa</option>
+                                            <option value="Sintegradas SA">Sintegradas SA</option>
+                                            <option value="Random Industrial S de Rl">Random Industrial S de Rl</option>
+                                            <option value="Utiles de Honduras S De Rl">Utiles de Honduras S De Rl</option>
+                                            <option value="Can Computers S de Rl de Cv">Can Computers S de Rl de Cv</option>
+                                            <option value="Accesorios para Computadoras y Oficina Acosa">Accesorios para Computadoras y Oficina Acosa</option>
+                                            <option value="Cash Business S De Rl">Cash Business S De Rl</option>
+                                            <option value="Tecnologia Computarizada SA">Tecnologia Computarizada SA</option>
+                                            <option value="Vargas Y Compania Ltda">Vargas Y Compania Ltda</option>
+                                            <option value="Libreria y Distribuidora Jardin Sa">Libreria y Distribuidora Jardin Sa</option>
+                                            <option value="Representaciones Foraneas Del Istmo Sa">Representaciones Foraneas Del Istmo Sa</option>
+                                            <option value="Suministros De Informatica Quinonez Rl">Suministros De Informatica Quinonez Rl</option>
+                                            <option value="Supricom Sa">Supricom Sa</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
