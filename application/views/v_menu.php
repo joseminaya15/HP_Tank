@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-    	<meta charset="utf-8">
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible"  content="IE=edge">
         <meta name="viewport"               content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
         <meta name="description"            content="Registro de Oportunidades DCN">
@@ -10,9 +10,9 @@
         <meta name="date"                   content="Febrero 15, 2018"/>
         <meta name="language"               content="es">
         <meta name="theme-color"            content="#000000">
-    	<title>SAP Gana por Goleada</title>
-    	<link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/favicon.png">
-    	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
+        <title>SAP Gana por Goleada</title>
+        <link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/favicon.png">
+        <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
@@ -20,44 +20,58 @@
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>roboto.css?v=<?php echo time();?>">
-    	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
-    	<link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
+        <link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
+        <link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
     </head>
     <body>
         <section id="login">
-            <video autoplay loop muted>
-                <source src="<?php echo RUTA_VIDEO?>video_hp.mp4" type="">
-            </video>
+            <div class="fondo-imagen"></div>
             <div class="header">
                 <div class="header-left">
                     <img class="logo-header" src="<?php echo RUTA_IMG?>logos/favicon.png">
                     <h2>Programa de incentivos DeskJet HP Tank</h2>
                 </div>
             </div>
-            <div class="mdl-card-container">
-                <div class="center-login">
-                    <div class="mdl-card mdl-card-login">
-                        <div class="mdl-card__supporting-text">
-                            <div class="col-sm-12">
-                                <h2 class="title_login">Ingresa tu cuenta</h2>
-                                <div class="mdl-input transparent">
-                                    <input type="text" class="form-control" placeholder="Usuario" id="usuario" onkeyup="verificarDatos(event);">
-                                </div>
-                                <div class="mdl-input transparent">
-                                    <input type="password" class="form-control" placeholder="Contrase&ntilde;a" id="password" onkeyup="verificarDatos(event);">
-                                </div>
-                                <div class="m-t-20 m-b-10">
-                                    <a href="Registro" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login registrar">Registrarse<i class="mdi mdi-play_arrow"></i></a>
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="ingresar()">Ingresar<i class="mdi mdi-play_arrow"></i></button>
-                                </div>
-                            </div>
-                        </div>
+            <div class="container mdl-card-container">
+                <div class="text-right">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout" onclick="cerrarCesion()">Cerrar Sesi&oacute;n</button>
+                </div>
+                <!-- <h2 class="person_name">Bienvenido(a) <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>
+                <p class="team_name">Equipo <?php echo $nombre_canal == null ? '' : $nombre_canal; ?></p> -->
+                <div id="Nueva_anotacion" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
+                    <div class="mdl-card__title">
+                        <img src="<?php echo RUTA_IMG?>logos/factura.png">
                     </div>
-                    <div class="mdl-card mdl-card-login">
-                        <div class="mdl-card__supporting-text">
-                            <div class="imagen-premio"></div>
-                        </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>Ingreso de facturas y Spiffs ganados</p>
                     </div>
+                </div>
+                <div id="Anotaciones" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
+                    <div class="mdl-card__title">
+                        <img src="<?php echo RUTA_IMG?>logos/ranking.png">
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>Ranking TOP 5</p>
+                    </div>
+                </div>
+                <div id="Ranking_goleadores" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
+                    <div class="mdl-card__title">
+                        <img src="<?php echo RUTA_IMG?>logos/premios.png">
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>Mis premios y Puesto del mes</p>
+                    </div>
+                </div>
+                <div id="Salon_de_fama" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
+                    <div class="mdl-card__title">
+                        <img src="<?php echo RUTA_IMG?>logos/ganadores.png">
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>Ganadores Top 5 del mes</p>
+                    </div>
+                </div>
+                <div class="footer-menu">
+                    <a href="Premios">Ver Premios <i class="mdi mdi-play_arrow"></i></a>
                 </div>
             </div>
         </section>

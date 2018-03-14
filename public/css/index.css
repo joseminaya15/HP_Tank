@@ -11,6 +11,18 @@ body{
 	position: relative;
 	height: 100vh;
 }
+video{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    min-height: 100%;
+    min-width: 100%;
+    z-index: 0;
+    overflow: hidden;
+    display: block;
+}
 .imagen-premio,
 .fondo-imagen{
     background: url(../img/logos/fondo.png) no-repeat center center;
@@ -230,7 +242,6 @@ body{
 .mdl-card-menu .mdl-card__supporting-text p{
     font-size: 25px;
     color: #FFFFFF;
-    max-width: 185px;
     line-height: 28px;
 }
 .mdl-card-anotaciones,

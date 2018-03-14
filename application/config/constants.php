@@ -88,6 +88,7 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 defined('RUTA_CSS')     OR define('RUTA_CSS'    , 'http://'.(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : null).'/HP_Tank/public/css/');
 defined('RUTA_FONTS')   OR define('RUTA_FONTS'  , 'http://'.(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : null).'/HP_Tank/public/fonts/');
 defined('RUTA_IMG')     OR define('RUTA_IMG'    , 'http://'.(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : null).'/HP_Tank/public/img/');
+defined('RUTA_VIDEO')   OR define('RUTA_VIDEO'  , 'http://'.(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : null).'/HP_Tank/public/video/');
 defined('RUTA_JS')      OR define('RUTA_JS'     , 'http://'.(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : null).'/HP_Tank/public/js/');
 defined('RUTA_PLUGINS') OR define('RUTA_PLUGINS', 'http://'.(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : null).'/HP_Tank/public/plugins/');
 
