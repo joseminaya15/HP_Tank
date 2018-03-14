@@ -45,7 +45,7 @@
                                     <input type="password" class="form-control" placeholder="Contrase&ntilde;a" id="password" onkeyup="verificarDatos(event);">
                                 </div>
                                 <div class="m-t-20 m-b-10">
-                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login registrar" onclick="goToRegister()">Registrarse<i class="mdi mdi-play_arrow"></i></button>
+                                    <a href="Registro" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login registrar">Registrarse<i class="mdi mdi-play_arrow"></i></a>
                                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="ingresar()">Ingresar<i class="mdi mdi-play_arrow"></i></button>
                                 </div>
                             </div>

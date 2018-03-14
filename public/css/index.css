@@ -79,6 +79,9 @@ body{
     right: 0;
     transform: translate(0,-50%);
 }
+.center-login.registro{
+	max-width: 680px;
+}
 .mdl-card-login{
 	background-color: rgba(0, 0, 0, 0.8);
 	display: block;
@@ -157,7 +160,7 @@ body{
 	max-width: 350px;
 }
 .mdl-registro{
-	overflow: inherit;
+	max-width:  680px;
 }
 .mdl-registro .mdl-card__title{
 	display: block;
