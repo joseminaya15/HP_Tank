@@ -1,13 +1,13 @@
 function ingresar(){
 	var usuario  = $('#usuario').val();
 	var password = $('#password').val();
-  if($('#remember').is(':checked') == true){
+  /*if($('#remember').is(':checked') == true){
     sessionStorage.setItem('CHECK', '1');
     sessionStorage.setItem('USERNAME', usuario);
     sessionStorage.setItem('PASS', password);
   }else{
     sessionStorage.setItem('CHECK', '0');
-  }
+  }*/
 	if(usuario == null || usuario == ''){
     msj('error', 'Ingrese su usuario');
     return;
