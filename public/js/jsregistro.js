@@ -1,10 +1,10 @@
 function registrar() {
-	var nombre 	 = $('#nombre').val();
-	var password = $('#password').val();
+	var nombre 	 	= $('#nombre').val();
+	var password 	= $('#password').val();
 	var re_password = $('#re_password').val();
-	var canal 	 = $('#canal').val();
-	var correo   = $('#correo').val();
-	var pais 	 = $('#pais').val();
+	var canal 	 	= $('#canal').val();
+	var correo   	= $('#correo').val();
+	var pais 	 	= $('#pais').val();
 	var terminos = $('#checkbox-1').is(':checked');
 	if(nombre == '' && canal == '' && canal == '' && correo == '' && pais == ''){
 		msj('error', 'Ingrese sus datos');
