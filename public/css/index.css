@@ -353,9 +353,24 @@ video{
     color: #FFFFFF;
     background-color: transparent;
 }
+.mdl-input .bootstrap-select{
+	width: 100% !important
+}
+.mdl-input .bootstrap-select button{
+	height: 45px;
+    border-radius: 10px;
+    outline: 0 !important;
+    box-shadow: none;
+    background-color: #FFFFFF !important;
+} 
+.mdl-checkbox__label{
+	line-height: 16px;
+}
 .mdl-checkbox__label a{
 	text-decoration: none;
 	color: #FFFFFF;
+	font-size: 14px;
+	font-style: italic;
 }
 .mdl-checkbox.is-checked .mdl-checkbox__box-outline,
 .mdl-checkbox__box-outline{
@@ -370,6 +385,12 @@ video{
 }
 .mdl-card-anotar .mdl-checkbox.is-checked .mdl-checkbox__tick-outline{
 	background: #000000;
+}
+.required p{
+	margin: 0;
+	color: #F05332;
+	font-size: 20px;
+	margin-top: 15px;
 }
 /*PLACEHOLDER*/
 input::placeholder {

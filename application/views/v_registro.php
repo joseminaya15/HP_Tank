@@ -47,14 +47,14 @@
                                         <input type="text" class="form-control" placeholder="*Nombres y Apellidos" id="nombre" maxlength="50" onkeypress="return soloLetras(event);">
                                     </div>
                                     <div class="mdl-input">
-                                        <input type="text" class="form-control" placeholder="*Nombre del Canal" id="canal" maxlength="50">
-                                    </div>
-                                    <div class="mdl-input">
                                         <select class="selectpicker" id="pais"  name="pais">
                                             <option value="Perú">Perú</option>
                                             <option value="Colombia">Colombia</option>
                                             <option value="Brasil">Brasil</option>
                                         </select>
+                                    </div>
+                                    <div class="mdl-input">
+                                        <input type="text" class="form-control" placeholder="*Nombre del Canal" id="canal" maxlength="50">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -68,16 +68,19 @@
                                         <input type="password" class="form-control" placeholder="*Repetir contrase&ntilde;a" id="re_password">
                                     </div>
                                     <div class="col-xs-12 p-0">
-                                        <div class="col-xs-6 p-0">
+                                        <div class="col-xs-8 p-0">
                                             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
                                                 <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
                                                 <span class="mdl-checkbox__label"><a>Acepto t&eacute;rminos y condiciones</a></span>
                                             </label>
                                         </div>
-                                        <div class="col-xs-6 p-0 text-right">
+                                        <div class="col-xs-4 p-0 text-right">
                                             <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="registrar();">Grabar</button>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-xs-12 required">
+                                    <p>*Complete todos los campos</p>
                                 </div>
                             </div>
                         </div>
