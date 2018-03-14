@@ -25,7 +25,7 @@ class Login extends CI_Controller {
          try {
             $usuario  = $this->input->post('usuario');
             $password = $this->input->post('password');
-            $username = $this->M_solicitud->verificarUsuario($usuario);
+            $username = $this->M_login->verificarUsuario($usuario);
             if(count($username) != 0){
                 if(strtolower($username[0]->Email) == strtolower($usuario)){
                     if($password == base64_decode($username[0]->pass)){
