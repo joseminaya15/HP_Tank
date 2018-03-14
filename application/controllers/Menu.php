@@ -13,8 +13,8 @@ class Menu extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-        $this->session->unset_userdata('user');
-        $this->session->unset_userdata('Id_user');
-		$this->load->view('v_menu');
+        $data['nombre'] = $this->session->userdata('nombre');
+        $data['canal']   = $this->session->userdata('canal');
+		$this->load->view('v_menu', $data);
 	}
 }

@@ -10,9 +10,13 @@ body{
 	width: 100%;
 	position: relative;
 	height: 100vh;
+	margin: auto;
+}
+.mdl-card-container.menu{
+	padding-top: 100px;
 }
 video{
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 0;
     -webkit-transform: translate(0, -50%);
@@ -228,6 +232,7 @@ video{
 }
 .mdl-card-menu .mdl-card__supporting-text{
 	padding: 16px 30px;
+	height: 100px;
 }
 .mdl-card-menu .mdl-card__supporting-text p{
     font-size: 25px;

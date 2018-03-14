@@ -34,12 +34,11 @@
                     <h2>Programa de incentivos DeskJet HP Tank</h2>
                 </div>
             </div>
-            <div class="container mdl-card-container">
+            <div class="container mdl-card-container menu">
                 <div class="text-right">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login logout" onclick="cerrarCesion()">Cerrar Sesi&oacute;n</button>
+                    <h2 class="person_name">Bienvenido(a) <?php echo $nombre == null ? '' : $nombre; ?></h2>
+                    <p class="team_name">Canal <?php echo $canal == null ? '' : $canal; ?></p>
                 </div>
-                <!-- <h2 class="person_name">Bienvenido(a) <?php echo $nombre_capitan == null ? '' : $nombre_capitan; ?></h2>
-                <p class="team_name">Equipo <?php echo $nombre_canal == null ? '' : $nombre_canal; ?></p> -->
                 <div id="Nueva_anotacion" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
                     <div class="mdl-card__title">
                         <img src="<?php echo RUTA_IMG?>logos/factura.png">
@@ -71,9 +70,6 @@
                     <div class="mdl-card__supporting-text">
                         <p>Ganadores Top 5 del mes</p>
                     </div>
-                </div>
-                <div class="footer">
-                    <p>&copy; Copyright 2018 Hewlett-Packard Development Company, L.P.</p>
                 </div>
             </div>
             <div class="footer">
