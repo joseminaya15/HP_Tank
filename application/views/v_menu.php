@@ -25,7 +25,9 @@
     </head>
     <body>
         <section id="login">
-            <div class="fondo-imagen"></div>
+            <video autoplay loop muted>
+                <source src="<?php echo RUTA_VIDEO?>video_hp.mp4">
+            </video>
             <div class="header">
                 <div class="header-left">
                     <img class="logo-header" src="<?php echo RUTA_IMG?>logos/favicon.png">
@@ -70,9 +72,12 @@
                         <p>Ganadores Top 5 del mes</p>
                     </div>
                 </div>
-                <div class="footer-menu">
-                    <a href="Premios">Ver Premios <i class="mdi mdi-play_arrow"></i></a>
+                <div class="footer">
+                    <p>&copy; Copyright 2018 Hewlett-Packard Development Company, L.P.</p>
                 </div>
+            </div>
+            <div class="footer">
+                <p>&copy; Copyright 2018 Hewlett-Packard Development Company, L.P.</p>
             </div>
         </section>
 

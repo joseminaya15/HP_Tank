@@ -136,26 +136,16 @@ video{
 	background-color: #F05332; 
 	float: right;
 }
-.footer-menu{
-	position: relative;
-	margin-top: 20px;
+.footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	padding: 15px;
 }
-.footer-menu a{
+.footer p{
 	color: #FFFFFF;
-    text-decoration: none;
-    font-size: 37px;
-    position: absolute;
-    top: 50px;
-}
-.footer-menu a i{
-	color: #FFFFFF;
-	vertical-align: middle;
-}
-.footer-menu img{
-	max-width: 125px;
-    position: absolute;
-    right: 0;
-    margin-bottom: 40px;
 }
 /*MDL-CARD*/
 .mdl-card{

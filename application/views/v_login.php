@@ -60,6 +60,9 @@
                     </div>
                 </div>
             </div>
+            <div class="footer">
+                <p>&copy; Copyright 2018 Hewlett-Packard Development Company, L.P.</p>
+            </div>
         </section>
 
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
