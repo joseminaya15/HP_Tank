@@ -160,6 +160,8 @@ video{
 }
 .mdl-card-login .mdl-card__supporting-text{
 	padding: 15px;
+}
+.mdl-card-login.login .mdl-card__supporting-text{
 	height: 260px;
 }
 .mdl-card-login .mdl-card__supporting-text img{

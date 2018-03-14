@@ -36,7 +36,7 @@
             </div>
             <div class="mdl-card-container">
                 <div class="center-login">
-                    <div class="mdl-card mdl-card-login">
+                    <div class="mdl-card mdl-card-login login">
                         <div class="mdl-card__supporting-text">
                             <div class="col-sm-12">
                                 <h2 class="title_login">Ingresa tu cuenta</h2>
