@@ -58,7 +58,14 @@
                                 <img src="<?php echo RUTA_IMG?>logos/money.png"">
                                 <h2>997</h2>
                             </div>
-                            <a>Descargar factura cargada<i class="mdi mdi-play_arrow"></i></a>
+                            <div id="content" style="display: none;">
+                                 <h3>Hello, this is a H3 tag</h3>
+
+                                <p>a pararaph</p>
+                            </div>
+                            <div id="editor"></div>
+                            <a id="cmd">Descargar factura cargada<i class="mdi mdi-play_arrow"></i></a>
+                            <!--<button id="cmd">Descargar factura cargada</button>-->
                         </div>
                     </div>
                     <div class="mdl-card mdl-factura">
@@ -110,6 +117,7 @@
         <script src="<?php echo RUTA_PLUGINS?>datetimepicker/js/bootstrap-material-datetimepicker.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>jquery-mask/jquery.mask.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jslogin.js?v=<?php echo time();?>"></script>
@@ -119,6 +127,20 @@
             } else {
                 $('select').selectpicker();
             }
+            var doc = new jsPDF();
+            var specialElementHandlers = {
+                '#editor': function (element, renderer) {
+                    return true;
+                }
+            };
+
+            $('#cmd').click(function () {
+                doc.fromHTML($('#content').html(), 15, 15, {
+                    'width': 170,
+                        'elementHandlers': specialElementHandlers
+                });
+                doc.save('sample-file.pdf');
+            });
         </script>
     </body>
 </html>
