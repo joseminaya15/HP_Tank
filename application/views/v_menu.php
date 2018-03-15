@@ -59,7 +59,7 @@
                             <p>Ingreso de facturas y Spiffs ganados</p>
                         </div>
                     </div>
-                    <div id="Anotaciones" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
+                    <div id="Ranking" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
                         <div class="mdl-card__title">
                             <img src="<?php echo RUTA_IMG?>logos/ranking.png">
                         </div>
@@ -67,7 +67,7 @@
                             <p>Ranking TOP 5</p>
                         </div>
                     </div>
-                    <div id="Ranking_goleadores" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
+                    <div id="Ranking" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
                         <div class="mdl-card__title">
                             <img src="<?php echo RUTA_IMG?>logos/premios.png">
                         </div>
@@ -75,7 +75,7 @@
                             <p>Mis premios y Puesto del mes</p>
                         </div>
                     </div>
-                    <div id="Salon_de_fama" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
+                    <div id="Ranking" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
                         <div class="mdl-card__title">
                             <img src="<?php echo RUTA_IMG?>logos/ganadores.png">
                         </div>
