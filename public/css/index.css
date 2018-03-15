@@ -56,10 +56,10 @@ video{
     z-index: 10;
 }
 .header-left {
-    padding: 18px 0 17px 25px;
+    padding: 15px 0 15px 25px;
     float: left;
     width: 100%;
-    max-width: calc(100% - 360px);
+    max-width: calc(100% - 255px);
 }
 .header-left img{
     max-width: 38px;
@@ -78,18 +78,27 @@ video{
 .header-right {
     float: right;
     height: 68px;
-    max-width: 355px;
+    max-width: 250px;
     width: 100%;
     display: flex;
     display: -webkit-flex;
     align-items: center;
 }
-.header-right h2{
-	color: #FFFFFF;
-	font-family: 'RobotoRegular';
-	font-size: 20px;
-	line-height: 26px;
-	margin-right: 35px;
+.header-right p{
+    display: inline-block;
+    margin: 0;
+    color: #FFFFFF;
+    margin-right: 5px;
+    margin-left: 15px;
+}
+.header-menu,
+.header-sesion{
+	cursor: pointer;
+}
+.header-sesion i{
+    color: #FFFFFF;
+    font-size: 24px;
+    vertical-align: middle;
 }
 .center-login{
 	width: 100%;

@@ -35,11 +35,11 @@
                     <h2>Programa de incentivos DeskJet HP Tank</h2>
                 </div>
                 <div class="header-right">
-                    <div class="header-menu">
+                    <div class="header-menu" onclick="goToMenu()">
                         <p>Menu</p>
                         <img src="<?php echo RUTA_IMG?>logos/home.png"">
                     </div>
-                    <div class="header-sesion">
+                    <div class="header-sesion" onclick="cerrarCesion()">
                         <p>Cerrar Sesi&oacute;n</p>
                         <i class="fas fa-sign-out-alt"></i>
                     </div>
