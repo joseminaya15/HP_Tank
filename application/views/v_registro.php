@@ -63,6 +63,9 @@
                                           </select>
                                         </div>
                                     </div>
+                                    <div class="col-xs-6">
+                                        <a href="Login">Retroceder</a>
+                                    </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="mdl-input">
