@@ -14,6 +14,7 @@ body{
 }
 .mdl-card-container.menu{
 	padding-top: 100px;
+	text-align: center;
 }
 video{
     position: fixed;
@@ -94,6 +95,13 @@ video{
     top: 50%;
     right: 0;
     transform: translate(0,-50%);
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
 }
 .center-login.registro{
 	max-width: 680px;
@@ -190,14 +198,15 @@ video{
 	color: #FFFFFF;
 }
 .person_name{
-    margin: 10px 0;
-    line-height: 42px;
+    margin: 5px 0;
+    line-height: 38px;
+    font-size: 36px;
 }
 
 .team_name{
     margin: 5px 0 15px 0;
-    font-size: 26px;
-    line-height: 30px;
+    font-size: 24px;
+    line-height: 26px;
 }
 #menu .container{
 	padding-top: 100px;
@@ -206,10 +215,10 @@ video{
 	background-color: rgba(0, 0, 0, 0.8);
 	display: inline-block;
     width: 100%;
-    max-width: 280px;
+    max-width: 250px;
     border-radius: 25px;
     cursor: pointer;
-    margin: 3px;
+    margin: 15px;
     -webkit-transition: transform .2s linear;
     -moz-transition: transform .2s linear;
     -ms-transition: transform .2s linear;
@@ -238,9 +247,9 @@ video{
 	height: 100px;
 }
 .mdl-card-menu .mdl-card__supporting-text p{
-    font-size: 25px;
+    font-size: 21px;
     color: #FFFFFF;
-    line-height: 28px;
+    line-height: 24px;
 }
 .mdl-card-anotaciones,
 .mdl-card-ranking,

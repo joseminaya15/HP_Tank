@@ -35,40 +35,42 @@
                 </div>
             </div>
             <div class="container mdl-card-container menu">
-                <div class="text-right">
-                    <h2 class="person_name">Bienvenido(a) <?php echo $nombre == null ? '' : $nombre; ?></h2>
-                    <p class="team_name">Canal <?php echo $canal == null ? '' : $canal; ?></p>
-                </div>
-                <div id="Nueva_anotacion" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
-                    <div class="mdl-card__title">
-                        <img src="<?php echo RUTA_IMG?>logos/factura.png">
+                <div class="center">
+                    <div class="text-right">
+                        <h2 class="person_name">Bienvenido(a) <?php echo $nombre == null ? '' : $nombre; ?></h2>
+                        <p class="team_name">Canal <?php echo $canal == null ? '' : $canal; ?></p>
                     </div>
-                    <div class="mdl-card__supporting-text">
-                        <p>Ingreso de facturas y Spiffs ganados</p>
+                    <div id="Nueva_anotacion" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
+                        <div class="mdl-card__title">
+                            <img src="<?php echo RUTA_IMG?>logos/factura.png">
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <p>Ingreso de facturas y Spiffs ganados</p>
+                        </div>
                     </div>
-                </div>
-                <div id="Anotaciones" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
-                    <div class="mdl-card__title">
-                        <img src="<?php echo RUTA_IMG?>logos/ranking.png">
+                    <div id="Anotaciones" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
+                        <div class="mdl-card__title">
+                            <img src="<?php echo RUTA_IMG?>logos/ranking.png">
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <p>Ranking TOP 5</p>
+                        </div>
                     </div>
-                    <div class="mdl-card__supporting-text">
-                        <p>Ranking TOP 5</p>
+                    <div id="Ranking_goleadores" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
+                        <div class="mdl-card__title">
+                            <img src="<?php echo RUTA_IMG?>logos/premios.png">
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <p>Mis premios y Puesto del mes</p>
+                        </div>
                     </div>
-                </div>
-                <div id="Ranking_goleadores" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
-                    <div class="mdl-card__title">
-                        <img src="<?php echo RUTA_IMG?>logos/premios.png">
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        <p>Mis premios y Puesto del mes</p>
-                    </div>
-                </div>
-                <div id="Salon_de_fama" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
-                    <div class="mdl-card__title">
-                        <img src="<?php echo RUTA_IMG?>logos/ganadores.png">
-                    </div>
-                    <div class="mdl-card__supporting-text">
-                        <p>Ganadores Top 5 del mes</p>
+                    <div id="Salon_de_fama" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
+                        <div class="mdl-card__title">
+                            <img src="<?php echo RUTA_IMG?>logos/ganadores.png">
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <p>Ganadores Top 5 del mes</p>
+                        </div>
                     </div>
                 </div>
             </div>
