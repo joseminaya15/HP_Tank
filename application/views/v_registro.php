@@ -47,7 +47,7 @@
                                         <input type="text" class="form-control" placeholder="*Nombres y Apellidos" id="nombre" maxlength="50" onkeypress="return soloLetras(event);">
                                     </div>
                                     <div class="mdl-input">
-                                        <select class="selectpicker" id="pais"  name="pais" title="Pais" onchange="seleccionarPais()">
+                                        <select class="selectpicker" id="pais"  name="pais" title="País" onchange="seleccionarPais()">
                                             <option value="Costa Rica">Costa Rica</option>
                                             <option value="El Salvador">El Salvador</option>
                                             <option value="Guatemala">Guatemala</option>
