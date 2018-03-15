@@ -238,7 +238,7 @@ video{
     -o-transition: transform .2s linear;
     transition: transform .2s linear;
 }
-.mdl-card-menu:HOVER{
+.mdl-card-menu.scale:HOVER{
 	-webkit-transform: scale(1.04);
 	   -moz-transform: scale(1.04);
 	    -ms-transform: scale(1.04);
@@ -263,6 +263,62 @@ video{
     font-size: 21px;
     color: #FFFFFF;
     line-height: 24px;
+}
+.mdl-card-menu.ganancia{
+	min-height: 100%;
+	max-width: 280px;
+}
+.mdl-factura{
+	background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    max-width: 1000px;
+    float: right;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 15px;
+    -webkit-transition: transform .2s linear;
+    -moz-transition: transform .2s linear;
+    -ms-transition: transform .2s linear;
+    -o-transition: transform .2s linear;
+    transition: transform .2s linear;
+}
+.mdl-ganancia{
+	padding: 20px;
+}
+.mdl-ganancia p{
+	color: #FFFFFF;
+	text-align: left;
+	margin: 0;
+    font-size: 18px;
+    font-family: 'RobotoLight';
+}
+.mdl-ganancia a{
+	font-size: 12px;
+	font-family: 'RobotoMedium';
+	color: #FFFFFF;
+	padding: 5px 0;
+	text-decoration: none;
+	border-bottom: 1px solid #F05332;
+}
+.mdl-ganancia a i{
+	color: #F05332;
+	vertical-align: middle;
+	font-size: 12px;
+}
+.mdl-money{
+	display: flex;
+	align-items: center;
+	margin: 15px 0;
+}
+.mdl-money img{
+	max-width: 60px;
+}
+.mdl-money h2{
+	color: #FFFFFF;
+    font-family: 'RobotoBold';
+    font-size: 65px;
+    margin: 0;
+    margin-left: 35px;
 }
 .mdl-card-anotaciones,
 .mdl-card-ranking,
