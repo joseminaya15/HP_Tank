@@ -81,7 +81,7 @@
                                         <div class="col-xs-8 p-0">
                                             <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
                                                 <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
-                                                <span class="mdl-checkbox__label"><a>Acepto t&eacute;rminos y condiciones</a></span>
+                                                <span class="mdl-checkbox__label"><a href="" data-toggle="modal" data-target="#ModalTerminos">Acepto t&eacute;rminos y condiciones</a></span>
                                             </label>
                                         </div>
                                         <div class="col-xs-4 p-0 text-right">
@@ -101,7 +101,30 @@
                 <p>&copy; Copyright 2018 Hewlett-Packard Development Company, L.P.</p>
             </div>
         </section>
-
+        <!--MODAL-->
+        <div class="modal fade" id="ModalTerminos" tabindex="-1" role="dialog" aria-labelledby="simpleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-sm text-center">
+                <div class="modal-content">
+                    <div class="mdl-card" >
+                        <div class="mdl-card__title">
+                            <h2>T&eacute;rminos y condiciones</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text text-left">
+                            <ul>
+                                <li>El premio se entregar&aacute; directamente al vendedor de la compa&ntilde;&iacute;a.</li>
+                                <li>La compa&ntilde;&iacute;a que no acepte esta directriz, no recibir&aacute; la tarjeta. </li>
+                                <li>El vendedor debe de acumular como mínimo $50 para realizarle la entrega de la tarjeta. </li>
+                                <li>HP se reserva el derecho de modificar los t&eacute;rminos y condiciones del incentivo sin previo aviso. </li>
+                                <li>Los premios se entregarán un mes despu&eacute;s del cierre del mes a trav&eacute;s de una tarjeta de regalo que se entregar&aacute; directamente en las oficinas del canal.</li>
+                            </ul>
+                        </div> 
+                        <div class="mdl-card__actions text-right">                          
+                            <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.js?v=<?php echo time();?>"></script>

@@ -374,105 +374,6 @@ video{
 .mdl-ranking .mdl-ganador .mdl-card__title{
 	background-color: #A63A93;
 }
-.mdl-card-anotaciones,
-.mdl-card-ranking,
-.mdl-card-fama{
-	width: 100%;
-    max-width: calc(100% - 290px);
-    display: inline-block;
-    vertical-align: top;
-}
-.fama-imagen{
-	width: 100%;
-	max-width: 415px;
-	display: inline-block;
-	margin: 11px;
-	position: relative;
-}
-.fama-imagen img{
-	width: 100%;
-}
-.fama-imagen:BEFORE{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #000000;
-	height: 100%;
-	width: 100%;
-	opacity: 0.3;
-	z-index: 0;
-	display: block;
-}
-.fama-imagen p{
-	position: absolute;
-	bottom: 15px;
-	left: 15px;
-	color: #FFFFFF;
-	font-size: 30px;
-	line-height: 32px;
-	font-family: 'RobotoMedium';
-	margin: 0;
-}
-.mdl-card-ranking{
-	border-radius: 15px;
-	padding: 0 20px;
-	margin-left: 20px;
-	max-width: calc(100% - 310px);
-}
-.mdl-card-ranking h2{
-    margin: 0;
-    font-size: 28px;
-    font-family: 'RobotoMedium';
-    border-bottom: 2px solid #000;
-    width: 100%;
-}
-.mdl-card-anotar{
-    display: inline-block;
-    max-width: 300px;
-    margin: 3px 10px;
-    padding: 15px 25px;
-    border-radius: 20px;
-}
-.mdl-card-anotar p{
-	margin: 0;
-	line-height: 18px;
-    margin-top: 5px;
-}
-.mdl-card-anotar .mdl-puntos{
-	padding: 5px 0;
-	border-bottom: 1px solid #000;
-}
-.mdl-card-cuentas{
-    display: inline-block;
-    max-width: calc(100% - 345px);
-    vertical-align: top;
-    margin: 3px 10px;
-    padding: 25px;
-    border-radius: 20px;
-}
-.mdl-card-cuentas .mdl-card__title{
-	border-bottom: 1px solid #000000;
-	padding: 5px 0;
-}
-.mdl-card-cuentas .mdl-card__title h2{
-	margin: 0;
-	font-size: 20px;
-	line-height: 22px;
-	font-family: 'RobotoMedium';
-	width: calc(100% - 150px);
-    display: inline-block;
-}
-.mdl-card-cuentas .mdl-card__title .puntaje{
-	max-width: 145px;
-	width: 100%;
-	text-align: right;
-}
-.mdl-card-cuentas .mdl-card__supporting-text{
-	padding: 20px 0;
-}
 /*MDL-INPUT*/
 .mdl-input{
 	margin: 12px 0;
@@ -526,6 +427,20 @@ video{
 	color: #F05332;
 	font-size: 20px;
 	margin-top: 15px;
+}
+#ModalTerminos .mdl-card .mdl-card__title h2{
+	margin: 0;
+	font-size: 22px;
+	line-height: 24px;
+	font-family: 'RobotoBold';
+}
+#ModalTerminos .mdl-card .mdl-card__supporting-text ul{
+	padding-left: 25px;
+}
+#ModalTerminos .mdl-card .mdl-card__supporting-text ul li{
+    line-height: 20px;
+    color: #000000;
+    font-family: 'RobotoLight';
 }
 /*PLACEHOLDER*/
 input::placeholder {

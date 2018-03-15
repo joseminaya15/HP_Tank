@@ -64,7 +64,6 @@
                 <p>&copy; Copyright 2018 Hewlett-Packard Development Company, L.P.</p>
             </div>
         </section>
-
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.js?v=<?php echo time();?>"></script>
