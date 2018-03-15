@@ -58,7 +58,7 @@
                             </div>
                             <div class="mdl-card__supporting-text">
                                 <div class="table-responsive">
-                                    <table>
+                                    <table class="table">
                                         <thead>
                                             <tr>
                                                 <th>VENDEDOR</th>
@@ -80,7 +80,7 @@
                             </div>
                             <div class="mdl-card__supporting-text">
                                 <div class="table-responsive">
-                                    <table>
+                                    <table class="table">
                                         <thead>
                                             <tr>
                                                 <th>MES</th>
@@ -102,7 +102,7 @@
                             </div>
                             <div class="mdl-card__supporting-text">
                                 <div class="table-responsive">
-                                    <table>
+                                    <table class="table">
                                         <thead>
                                             <tr>
                                                 <th>MES MARZO</th>
