@@ -26,6 +26,7 @@
     </head>
     <body>
         <section id="login">
+            <div class="video-opacity"></div>
             <video autoplay loop muted>
                 <source src="<?php echo RUTA_VIDEO?>video_hp.mp4">
             </video>

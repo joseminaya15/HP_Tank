@@ -11,6 +11,7 @@ body{
 	position: relative;
 	height: 100vh;
 	margin: auto;
+	z-index: 5;
 }
 .mdl-card-container.menu{
 	text-align: center;
@@ -29,6 +30,19 @@ video{
     z-index: 0;
     overflow: hidden;
     display: block;
+}
+.video-opacity{
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000000;
+	opacity: .4;
+	display: block;
+	width: 100%;
+	z-index: 1;
 }
 .imagen-premio,
 .fondo-imagen{
