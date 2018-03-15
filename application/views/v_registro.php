@@ -64,7 +64,7 @@
                                         </div>
                                     </div>
                                     <div class="col-xs-6">
-                                        <a href="Login">Retroceder</a>
+                                        <a href="Login" style="color: #fff">Retroceder</a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
