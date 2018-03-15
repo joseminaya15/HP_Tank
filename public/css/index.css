@@ -167,10 +167,10 @@ video{
 	width: 100%;
 }
 .mdl-card-login .mdl-card__supporting-text{
-	padding: 15px;
+	padding: 10px;
 }
 .mdl-card-login.login .mdl-card__supporting-text{
-	height: 260px;
+	height: 235px;
 }
 .mdl-card-login .mdl-card__supporting-text img{
 	width: 100%;
@@ -352,14 +352,14 @@ video{
 }
 /*MDL-INPUT*/
 .mdl-input{
-	margin: 15px 0;
+	margin: 12px 0;
 }
 .mdl-input .form-control{
 	height: 45px;
     border-radius: 8px;
 }
 .mdl-input.transparent .form-control{
-	height: 50px;
+	height: 46px;
     border-radius: 20px;
     border-color: #FFFFFF;
     color: #FFFFFF;
