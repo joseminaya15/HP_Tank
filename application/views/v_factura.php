@@ -33,6 +33,16 @@
                     <img class="logo-header" src="<?php echo RUTA_IMG?>logos/favicon.png">
                     <h2>Programa de incentivos DeskJet HP Tank</h2>
                 </div>
+                <div class="header-right">
+                    <div class="header-menu">
+                        <p>Menu</p>
+                        <img src="<?php echo RUTA_IMG?>logos/home.png"">
+                    </div>
+                    <div class="header-sesion">
+                        <p>Cerrar Sesi&oacute;n</p>
+                        <i class="fas fa-sign-out-alt"></i>
+                    </div>
+                </div>
             </div>
             <div class="container mdl-card-container factura">
                 <div class="center">
@@ -44,7 +54,7 @@
                         <div>
                             <p>Total ganado hasta hoy</p>
                             <div>
-                                <img src="">
+                                <img src="<?php echo RUTA_IMG?>logos/money.png"">
                                 <h2>997</h2>
                             </div>
                             <a>Descargar factura cargada<i class="mdi mdi-play_arrow"></i></a>

@@ -18,6 +18,7 @@
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>datetimepicker/css/bootstrap-material-datetimepicker.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
+        <link rel="stylesheet"    href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>roboto.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
@@ -32,6 +33,16 @@
                 <div class="header-left">
                     <img class="logo-header" src="<?php echo RUTA_IMG?>logos/favicon.png">
                     <h2>Programa de incentivos DeskJet HP Tank</h2>
+                </div>
+                <div class="header-right">
+                    <div class="header-menu">
+                        <p>Menu</p>
+                        <img src="<?php echo RUTA_IMG?>logos/home.png"">
+                    </div>
+                    <div class="header-sesion">
+                        <p>Cerrar Sesi&oacute;n</p>
+                        <i class="fas fa-sign-out-alt"></i>
+                    </div>
                 </div>
             </div>
             <div class="container mdl-card-container menu">
