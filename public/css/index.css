@@ -13,8 +13,10 @@ body{
 	margin: auto;
 }
 .mdl-card-container.menu{
-	padding-top: 100px;
 	text-align: center;
+}
+.mdl-card-container.factura{
+	text-align: right;
 }
 video{
     position: fixed;
@@ -95,6 +97,7 @@ video{
     top: 50%;
     right: 0;
     transform: translate(0,-50%);
+    margin-top: 30px;
 }
 .center{
     position: absolute;
