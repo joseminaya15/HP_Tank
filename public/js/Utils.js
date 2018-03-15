@@ -56,6 +56,6 @@ function msj(tipo, msj, cabecera){
 		toastr.success(msj, cabecera, {timeOut: 4000});
 	}
 }
-function goToMenu(){
-	location.href = "Menu";
+function goToMenu(id){
+	location.href = id;
 }

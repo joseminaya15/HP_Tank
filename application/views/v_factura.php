@@ -35,7 +35,7 @@
                     <h2>Programa de incentivos DeskJet HP Tank</h2>
                 </div>
                 <div class="header-right">
-                    <div class="header-menu" onclick="goToMenu()">
+                    <div id="Menu" class="header-menu" onclick="goToMenu(this.id)">
                         <p>Menu</p>
                         <img src="<?php echo RUTA_IMG?>logos/home.png"">
                     </div>
