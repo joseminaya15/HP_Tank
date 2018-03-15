@@ -31,6 +31,7 @@ class Login extends CI_Controller {
                     if($password == base64_decode($username[0]->pass)){
                         $session = array('usuario'   => $usuario,
                                          'nombre'    => $username[0]->Nombre,   
+                                         'canal'     => $username[0]->Nombre_canal,
                                          'Id_user'   => $username[0]->Id);
                         $this->session->set_userdata($session);
                         $data['error'] = EXIT_SUCCESS;
