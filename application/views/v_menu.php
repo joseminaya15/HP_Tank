@@ -18,6 +18,7 @@
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>datetimepicker/css/bootstrap-material-datetimepicker.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
+        <link rel="stylesheet"    href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>roboto.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
@@ -33,6 +34,16 @@
                     <img class="logo-header" src="<?php echo RUTA_IMG?>logos/favicon.png">
                     <h2>Programa de incentivos DeskJet HP Tank</h2>
                 </div>
+                <div class="header-right">
+                    <div id="Menu" class="header-menu" onclick="goToMenu(this.id)">
+                        <p>Menu</p>
+                        <img src="<?php echo RUTA_IMG?>logos/home.png"">
+                    </div>
+                    <div class="header-sesion" onclick="cerrarCesion()">
+                        <p>Cerrar Sesi&oacute;n</p>
+                        <i class="fas fa-sign-out-alt"></i>
+                    </div>
+                </div>
             </div>
             <div class="container mdl-card-container menu">
                 <div class="center">
@@ -40,7 +51,7 @@
                         <h2 class="person_name">Bienvenido(a) <?php echo $nombre == null ? '' : $nombre; ?></h2>
                         <p class="team_name">Canal <?php echo $canal == null ? '' : $canal; ?></p>
                     </div>
-                    <div id="Nueva_anotacion" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
+                    <div id="Factura" class="mdl-card mdl-card-menu scale" onclick="goToMenu(this.id)">
                         <div class="mdl-card__title">
                             <img src="<?php echo RUTA_IMG?>logos/factura.png">
                         </div>
@@ -48,7 +59,7 @@
                             <p>Ingreso de facturas y Spiffs ganados</p>
                         </div>
                     </div>
-                    <div id="Anotaciones" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
+                    <div id="Ranking" class="mdl-card mdl-card-menu scale" onclick="goToMenu(this.id)">
                         <div class="mdl-card__title">
                             <img src="<?php echo RUTA_IMG?>logos/ranking.png">
                         </div>
@@ -56,7 +67,7 @@
                             <p>Ranking TOP 5</p>
                         </div>
                     </div>
-                    <div id="Ranking_goleadores" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
+                    <div id="Ranking" class="mdl-card mdl-card-menu scale" onclick="goToMenu(this.id)">
                         <div class="mdl-card__title">
                             <img src="<?php echo RUTA_IMG?>logos/premios.png">
                         </div>
@@ -64,7 +75,7 @@
                             <p>Mis premios y Puesto del mes</p>
                         </div>
                     </div>
-                    <div id="Salon_de_fama" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
+                    <div id="Ranking" class="mdl-card mdl-card-menu scale" onclick="goToMenu(this.id)">
                         <div class="mdl-card__title">
                             <img src="<?php echo RUTA_IMG?>logos/ganadores.png">
                         </div>

@@ -51,46 +51,14 @@
                         <h2 class="person_name">Bienvenido(a) <?php echo $nombre == null ? '' : $nombre; ?></h2>
                         <p class="team_name">Canal <?php echo $canal == null ? '' : $canal; ?></p>
                     </div>
-                    <div class="mdl-card mdl-card-menu ganancia">
-                        <div class="mdl-ganancia">
+                    <div id="Nueva_anotacion" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
+                        <div>
                             <p>Total ganado hasta hoy</p>
-                            <div class="mdl-money">
+                            <div>
                                 <img src="<?php echo RUTA_IMG?>logos/money.png"">
                                 <h2>997</h2>
                             </div>
                             <a>Descargar factura cargada<i class="mdi mdi-play_arrow"></i></a>
-                        </div>
-                    </div>
-                    <div class="mdl-card mdl-factura">
-                        <div class="mdl-card__supporting-text">
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Fecha de venta</th>
-                                            <th>N&uacute;mero de factura</th>
-                                            <th>Modelo DeskJet</th>
-                                            <th>Cantidad</th>
-                                            <th>Spiff ganado</th>
-                                            <th>Monto de la factura</th>
-                                            <th>Subir factura (PDF)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                
-                                            </td>
-                                            <td>
-                                                
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="mdl-card__actions">
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar">Cargar factura<i class="mdi mdi-play_arrow"></i></button>
                         </div>
                     </div>
                 </div>

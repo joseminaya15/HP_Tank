@@ -20,4 +20,16 @@ class Menu extends CI_Controller {
         $data['canal']  = $this->session->userdata('canal');
 		$this->load->view('v_menu', $data);
 	}
+    function cerrarCesion(){
+        $data['error'] = EXIT_ERROR;
+        $data['msj']   = null;
+        try {
+            $this->session->unset_userdata('usuario');
+            $this->session->unset_userdata('Id_user');
+            $data['error'] = EXIT_SUCCESS;
+        } catch (Exception $e){
+            $data['msj'] = $e->getMessage();
+        }
+        echo json_encode($data);
+    }
 }

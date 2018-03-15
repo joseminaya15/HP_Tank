@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Factura extends CI_Controller {
+class Ranking extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
@@ -18,7 +18,7 @@ class Factura extends CI_Controller {
         }
         $data['nombre'] = $this->session->userdata('nombre');
         $data['canal']  = $this->session->userdata('canal');
-		$this->load->view('v_factura', $data);
+		$this->load->view('v_ranking', $data);
 	}
     function cerrarCesion(){
         $data['error'] = EXIT_ERROR;
