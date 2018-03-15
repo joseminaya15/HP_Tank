@@ -25,9 +25,8 @@
     </head>
     <body>
         <section id="login">
-            <video autoplay loop muted>
-                <source src="<?php echo RUTA_VIDEO?>video_hp.mp4">
-            </video>
+            <div class="video-opacity"></div>
+            <div class="fondo-imagen"></div>
             <div class="header">
                 <div class="header-left">
                     <img class="logo-header" src="<?php echo RUTA_IMG?>logos/favicon.png">
