@@ -51,14 +51,72 @@
                         <h2 class="person_name">Bienvenido(a) <?php echo $nombre == null ? '' : $nombre; ?></h2>
                         <p class="team_name">Canal <?php echo $canal == null ? '' : $canal; ?></p>
                     </div>
-                    <div id="Nueva_anotacion" class="mdl-card mdl-card-menu" onclick="goToMenu(this.id)">
-                        <div>
-                            <p>Total ganado hasta hoy</p>
-                            <div>
-                                <img src="<?php echo RUTA_IMG?>logos/money.png"">
-                                <h2>997</h2>
+                    <div class="mdl-ranking">
+                        <div class="mdl-card mdl-top">
+                            <div class="mdl-card__title">
+                                <h2>Ranking TOP 5</h2>
                             </div>
-                            <a>Descargar factura cargada<i class="mdi mdi-play_arrow"></i></a>
+                            <div class="mdl-card__supporting-text">
+                                <div class="table-responsive">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>VENDEDOR</th>
+                                                <th>CANAL</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-card mdl-premio">
+                            <div class="mdl-card__title">
+                                <h2>Mis premios ganados</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                <div class="table-responsive">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>MES</th>
+                                                <th>SPIFFS GANADOS</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-card mdl-ganador">
+                            <div class="mdl-card__title">
+                                <h2>Ganadores TOP 5 del mes</h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                <div class="table-responsive">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>MES MARZO</th>
+                                                <th>MES ABRIL</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
