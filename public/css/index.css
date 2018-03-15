@@ -326,9 +326,7 @@ video{
 }
 .mdl-ranking .mdl-card{
 	background-color: rgba(255, 255, 255, 0.8);
-    max-width: 1000px;
-    float: right;
-    border-radius: 25px;
+    border-radius: 15px;
     cursor: pointer;
     margin: 15px;
     display: inline-block;
@@ -345,6 +343,22 @@ video{
 }
 .mdl-ranking .mdl-premio{
 	max-width: 25%
+}
+.mdl-ranking .mdl-card h2{
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 22px;
+    font-family: 'RobotoBold';
+}
+.mdl-ranking .mdl-top .mdl-card__title{
+	background-color: #F5842F;
+}
+.mdl-ranking .mdl-premio .mdl-card__title{
+	background-color: #0C5AA9;
+}
+.mdl-ranking .mdl-ganador .mdl-card__title{
+	background-color: #A63A93;
 }
 .mdl-card-anotaciones,
 .mdl-card-ranking,
