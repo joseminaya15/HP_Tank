@@ -44,7 +44,7 @@ class Factura extends CI_Controller {
             $cantidad = $this->input->post('cantidad');
             $spiff    = $this->input->post('spiff');
             $monto    = $this->input->post('monto');
-            $date = str_replace('/', '-', $fecha);
+            $date     = str_replace('/', '-', $fecha);
 
             $arrInsert = array('fecha'       => date('Y-m-d', strtotime($date)),
                                'nro_factura' => $nro_fact,
@@ -60,7 +60,7 @@ class Factura extends CI_Controller {
                                'spiff'        => $spiff,
                                'monto'        => $monto,
                                'id_anotacion' => $datoInsert['Id']);
-             $this->session->set_userdata($session);
+            $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;
         } catch (Exception $e){
             $data['msj'] = $e->getMessage();
