@@ -375,6 +375,10 @@ video{
 	background-color: #A63A93;
 }
 /*MDL-INPUT*/
+.mdl-fecha{
+    display: flex;
+    align-items: center;
+}
 .mdl-input{
 	margin: 12px 0;
 }

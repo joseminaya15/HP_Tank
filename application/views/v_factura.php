@@ -84,12 +84,17 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>
-                                                
+                                            <td class="text-center">
+                                                <div class="mdl-input mdl-fecha">
+                                                    <div class="mdl-icon">
+                                                        <button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-date_range"></i></button>
+                                                    </div>
+                                                    <input class="form-control" type="text" id="fecha" name="fecha" maxlength="10" placeholder="dd/mm/aaaa">
+                                                </div>
                                             </td>
                                             <td class="text-center">
                                                 <div class="mdl-input">
-                                                    <input type="text" class="form-control" id="nro_factura">
+                                                    <input type="text" class="form-control text-center" id="nro_factura">
                                                 </div>
                                             </td>
                                             <td class="text-center">
@@ -102,7 +107,7 @@
                                             </td>
                                             <td class="text-center">
                                                 <div class="mdl-input">
-                                                    <input id="cantidad" type="text" class="form-control">
+                                                    <input id="cantidad" type="text" class="form-control text-center">
                                                 </div>
                                             </td>
                                             <td class="text-center">
@@ -175,6 +180,8 @@
                 });
                 doc.save('sample-file.pdf');
             });
+            initButtonCalendarDaysMinToday('fecha');
+            initMaskInputs('fecha');
         </script>
     </body>
 </html>
