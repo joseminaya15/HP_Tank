@@ -26,21 +26,6 @@ function crearAnotacion(){
   if(fecha == null || fecha == ''){
     msj('error', 'Ingrese la fecha');
   }
-  if(nro_fact == null || nro_fact == ''){
-    msj('error', 'Ingrese el número de factura');
-  }
-  if(modelo == null || modelo == ''){
-    msj('error', 'Ingrese el modelo');
-  }
-  if(spiff == null || spiff == ''){
-    msj('error', 'Ingrese el spiff');
-  }
-  if(monto == null || monto == ''){
-    msj('error', 'Ingrese el monto');
-  }
-  if(cantidad == null || cantidad == ''){
-    msj('error', 'Ingrese la cantidad');
-  }
   $.ajax({
     url  : 'Factura/crearAnotacion',
     type : 'POST'
@@ -63,25 +48,9 @@ function crearAnotacion(){
       }
   });
 }
+
 function subirFactura(){
-  $( "#archivo" ).trigger( "click" );
-  /*if($('#archivo')[0].files[0].name) {
-    $('#btnSubirFact').text('CARGADO');
-  }*/
-}
-function agregarDatos(){
-  var datos = new FormData();
-    datos.append('archivo',$('#archivo')[0].files[0]);
-     $.ajax({
-        type:"post",
-        dataType:"json",
-        url:"Factura/cargarFact",
-        contentType:false,
-        data:datos,
-        processData:false,
-      }).done(function(respuesta){
-        msj('error', respuesta.mensaje);
-    });
+  $( "#pdf_factura" ).trigger( "click" );
 }
 
 /* MASK DE FECHA */
@@ -146,10 +115,12 @@ function selectPrint(){
     spiff.val('$5');
   else if (print == 'HP Tank 5820')
     spiff.val('$7');
-  var hola = "Hello world!";
-  var res = hola.substr(1,2);
+  var res = spiff.val().substr(1,2);
+  numberSpiff = res;
   console.log(res);
 }
 function readCount(){
-
+  var read       = $('#cantidad').val();
+  var Monto      = $('#monto').val(read*numberSpiff);
+  numberCantidad = read;
 }
