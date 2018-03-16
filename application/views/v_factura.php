@@ -73,13 +73,13 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>Fecha de venta</th>
-                                            <th>N&uacute;mero de factura</th>
-                                            <th>Modelo DeskJet</th>
-                                            <th>Cantidad</th>
-                                            <th>Spiff ganado</th>
-                                            <th>Monto de la factura</th>
-                                            <th>Subir factura (PDF)</th>
+                                            <th class="text-center">Fecha de venta</th>
+                                            <th class="text-center">N&uacute;mero de factura</th>
+                                            <th class="text-center">Modelo DeskJet</th>
+                                            <th class="text-center">Cantidad</th>
+                                            <th class="text-center">Spiff ganado</th>
+                                            <th class="text-center">Monto de la factura</th>
+                                            <th class="text-center">Subir factura (PDF)</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -87,8 +87,38 @@
                                             <td>
                                                 
                                             </td>
+                                            <td class="text-center">
+                                                <div class="mdl-input">
+                                                    <input type="text" class="form-control" id="factura">
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="mdl-input">
+                                                    <select class="selectpicker" id="pais" name="pais">
+                                                        <option value="HP Tank 5810">HP Tank 5810</option>
+                                                        <option value="HP Tank 5820">HP Tank 5820</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="mdl-input">
+                                                    <input type="text" class="form-control" id="factura">
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="mdl-input">
+                                                    <input type="text" class="form-control" id="factura">
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="mdl-input">
+                                                    <input type="text" class="form-control" id="factura">
+                                                </div>
+                                            </td>
                                             <td>
-                                                
+                                                <div class="mdl-input">
+                                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccionar Archivo</button>
+                                                </div>
                                             </td>
                                         </tr>
                                     </tbody>
