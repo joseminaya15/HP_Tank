@@ -47,7 +47,7 @@ function crearAnotacion(){
              spiff : spiff,
              monto : monto,
              cantidad : cantidad,
-             datos : datos}
+             datos : datos},
     url   : 'Factura/crearAnotacion',
     type  : 'POST'
   }).done(function(data){
