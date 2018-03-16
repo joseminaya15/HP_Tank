@@ -22,6 +22,10 @@ function crearAnotacion(){
   var spiff    = $('#spiff').val();
   var monto    = $('#monto').val();
   var cantidad = $('#cantidad').val();
+
+  if(fecha == null || fecha == ''){
+    msj('error', 'Ingrese la fecha');
+  }
   $.ajax({
     url  : 'Factura/crearAnotacion',
     type : 'POST'
