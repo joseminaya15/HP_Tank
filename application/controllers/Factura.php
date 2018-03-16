@@ -18,6 +18,8 @@ class Factura extends CI_Controller {
         }
         $data['nombre'] = $this->session->userdata('nombre');
         $data['canal']  = $this->session->userdata('canal');
+        $datos = $this->M_solicitud->getTotal($this->session->userdata('Id_user'));
+        $data['total'] = $datos[0]->total == '' ? '0' : $datos[0]->total;
 		$this->load->view('v_factura', $data);
 	}
 
@@ -51,7 +53,8 @@ class Factura extends CI_Controller {
                                'modelo'      => $modelo,
                                'cantidad'    => $cantidad,
                                'spiff'       => $spiff,
-                               'monto'       => $monto);
+                               'monto'       => $monto,
+                               'Id_user'     => $this->session->userdata('Id_user'));
             $datoInsert = $this->M_solicitud->insertarDatos($arrInsert, 'anotacion');
             $session    = array('fecha'      => $fecha,
                                'nro_factura'  => $nro_fact,
@@ -61,6 +64,8 @@ class Factura extends CI_Controller {
                                'monto'        => $monto,
                                'id_anotacion' => $datoInsert['Id']);
             $this->session->set_userdata($session);
+            $datos = $this->M_solicitud->getTotal($this->session->userdata('Id_user'));
+            $data['total'] = $datos[0]->total == '' ? '0' : $datos[0]->total;
             $data['error'] = EXIT_SUCCESS;
         } catch (Exception $e){
             $data['msj'] = $e->getMessage();

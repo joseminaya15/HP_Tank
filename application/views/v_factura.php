@@ -55,7 +55,7 @@
                             <p>Total ganado hasta hoy</p>
                             <div class="mdl-money">
                                 <img src="<?php echo RUTA_IMG?>logos/money.png"">
-                                <h2>997</h2>
+                                <h2 id="gtotal"><?php echo $total ?></h2>
                             </div>
                             <div id="content" style="display: none;">
                                  <h3>Hello, this is a H3 tag</h3>

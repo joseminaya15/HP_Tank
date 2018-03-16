@@ -56,6 +56,7 @@ function crearAnotacion(){
           $('#nro_factura').val("");
           $('#monto').val("");
           $('#cantidad').val("");
+          $('#gtotal').text(data.total);
         }else{
           return;
         }

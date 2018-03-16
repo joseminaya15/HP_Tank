@@ -23,4 +23,15 @@ class M_solicitud extends  CI_Model{
         }
         return array('error' => EXIT_SUCCESS,'msj' => MSJ_UPT);
     }
+
+    function getTotal($id_user) {
+        $sql = "SELECT SUM(a.monto) AS total
+                  FROM anotacion a,
+                       users u
+                 WHERE a.Id_user = u.Id
+                   AND a.documento IS NOT NULL
+                   AND a.Id_user = ?";
+        $result = $this->db->query($sql, $id_user);
+        return $result->result();
+    }
 }
