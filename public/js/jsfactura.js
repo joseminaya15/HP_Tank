@@ -44,3 +44,7 @@ function crearAnotacion(){
       }
   });
 }
+
+function subirFactura(){
+  $( "#pdf_factura" ).trigger( "click" );
+}
