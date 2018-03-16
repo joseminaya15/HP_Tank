@@ -106,38 +106,11 @@ function initButtonCalendarDaysMinToday(idButton, currentDate, fecha) {
   var valueNewInput = $("#"+newInput).val();   
   id.text(valueNewInput);
 }
-function initCalendarDaysRange(id, min, max){
-  $("#"+id).bootstrapMaterialDatePicker({ 
-    weekStart : 0, 
-    date  : true, 
-    time  : false, 
-    format  : 'DD/MM/YYYY',
-    minDate : min,
-    maxDate : max
-  });
-}
-function initButtonCalendarDaysRange(idButton, minDate, maxDate) {
-  var text    = idButton;
-  var id      = $("#"+text);
-  var min         = minDate;
-  var max         = maxDate;
-  var newInput  = null;
-  var iconButton  = id.closest('.mdl-input').find('.mdl-icon');
-  iconButton.find('.mdl-button').click(function(){
-    newInput = text+'ForCalendar';
-    if ( $('#'+newInput).length < 1 ) {
-      $('<input>').attr({
-          type    : 'text',
-          id      : newInput,
-          name    : newInput,
-          'data-time' : text,
-          onchange  : 'clonarFecha($(this))',
-          style   : 'position: absolute; top: 40px; background-color: transparent; border: transparent; color: transparent; z-index: -4'
-      }).appendTo(iconButton);
-      initCalendarDaysRange(newInput, min, max);
-    }
-    $("#"+newInput).focus();
-  });   
-  var valueNewInput = $("#"+newInput).val();
-  id.text(valueNewInput);
+function selectPrint(){
+  var spiff = $('#spiff');
+  var print = $('#modelo').val();
+  if(print == 'HP Tank 5810')
+    spiff.val('$5');
+  else if (print == 'HP Tank 5820')
+    spiff.val('$7');
 }

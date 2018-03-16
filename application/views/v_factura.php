@@ -99,7 +99,7 @@
                                             </td>
                                             <td class="text-center">
                                                 <div class="mdl-input">
-                                                    <select class="selectpicker" id="modelo" name="modelo">
+                                                    <select class="selectpicker" id="modelo" name="modelo" onchange="selectPrint()">
                                                         <option value="HP Tank 5810">HP Tank 5810</option>
                                                         <option value="HP Tank 5820">HP Tank 5820</option>
                                                     </select>
