@@ -71,7 +71,7 @@ function crearAnotacion(){
 }
 
 function subirFactura(){
-  $( "#pdf_factura" ).trigger( "click" );
+  $( "#archivo" ).trigger( "click" );
 }
 
 function agregarDatos(){
@@ -156,6 +156,7 @@ function selectPrint(){
   console.log(res);
 }
 function readCount(){
+  selectPrint();
   var read       = $('#cantidad').val();
   var Monto      = $('#monto').val(read*numberSpiff);
   numberCantidad = read; 
