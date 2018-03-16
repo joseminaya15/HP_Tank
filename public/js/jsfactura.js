@@ -97,7 +97,7 @@ function initButtonCalendarDaysMinToday(idButton, currentDate, fecha) {
           name    : newInput,
           'data-time' : text,
           onchange  : 'clonarFecha($(this))',
-          style   : 'position: absolute; top: 40px; background-colo: transparent; border: transparent; color: transparent; z-index: -4'
+          style   : 'position: absolute; top: 40px; background-color: transparent; border: transparent; color: transparent; z-index: -4'
       }).appendTo(iconButton);
       initCalendarDaysMinToday(newInput, currentDate, fecha);
     }
@@ -132,7 +132,7 @@ function initButtonCalendarDaysRange(idButton, minDate, maxDate) {
           name    : newInput,
           'data-time' : text,
           onchange  : 'clonarFecha($(this))',
-          style   : 'position: absolute; top: 40px; background-colo: transparent; border: transparent; color: transparent; z-index: -4'
+          style   : 'position: absolute; top: 40px; background-color: transparent; border: transparent; color: transparent; z-index: -4'
       }).appendTo(iconButton);
       initCalendarDaysRange(newInput, min, max);
     }
