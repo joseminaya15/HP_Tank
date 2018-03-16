@@ -44,13 +44,13 @@ class Factura extends CI_Controller {
             $cantidad = $this->input->post('cantidad');
             $spiff    = $this->input->post('spiff');
             $monto    = $this->input->post('monto');
-            $arrInsert = $arrayName = array('fecha'       => $fecha,
-                                            'nro_factura' => $nro_factura,
-                                            'modelo'      => $modelo,
-                                            'cantidad'    => $cantidad,
-                                            'spiff'       => $spiff,
-                                            'monto'       => $monto);
-            $dataInsert = $this->M_solicitud->insrtDatos($arrInsert, 'anotacion');
+            $arrInsert = array('fecha'       => $fecha,
+                               'nro_factura' => $nro_factura,
+                               'modelo'      => $modelo,
+                               'cantidad'    => $cantidad,
+                               'spiff'       => $spiff,
+                               'monto'       => $monto);
+            $dataInsert = $this->M_solicitud->insertarDatos($arrInsert, 'anotacion');
             $data['error'] = EXIT_SUCCESS;
         } catch (Exception $e){
             $data['msj'] = $e->getMessage();
