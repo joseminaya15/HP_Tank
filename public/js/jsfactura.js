@@ -21,6 +21,7 @@ function crearAnotacion(){
   var modelo   = $('#modelo').val();
   var spiff    = $('#spiff').val();
   var monto    = $('#monto').val();
+  var cantidad = $('#cantidad').val();
   $.ajax({
     url  : 'Factura/crearAnotacion',
     type : 'POST'
@@ -34,6 +35,7 @@ function crearAnotacion(){
           $('.selectpicker').selectpicker('refresh');
           $('#nro_factura').val("");
           $('#monto').val("");
+          $('#cantidad').val("");
         }else {
           return;
         }
