@@ -107,7 +107,7 @@
                                             </td>
                                             <td class="text-center">
                                                 <div class="mdl-input">
-                                                    <input id="cantidad" type="text" class="form-control text-center">
+                                                    <input id="cantidad" type="text" class="form-control text-center" onkeyup="readCount()">
                                                 </div>
                                             </td>
                                             <td class="text-center">
