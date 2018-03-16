@@ -84,17 +84,22 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>
-                                                
-                                            </td>
                                             <td class="text-center">
-                                                <div class="mdl-input">
-                                                    <input type="text" class="form-control" id="nro_factura">
+                                                <div class="mdl-input mdl-fecha">
+                                                    <div class="mdl-icon">
+                                                        <button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-date_range"></i></button>
+                                                    </div>
+                                                    <input class="form-control" type="text" id="fecha" name="fecha" maxlength="10" placeholder="dd/mm/aaaa">
                                                 </div>
                                             </td>
                                             <td class="text-center">
                                                 <div class="mdl-input">
-                                                    <select class="selectpicker" id="modelo" name="modelo">
+                                                    <input type="text" class="form-control text-center" id="nro_factura">
+                                                </div>
+                                            </td>
+                                            <td class="text-center">
+                                                <div class="mdl-input">
+                                                    <select class="selectpicker" id="modelo" name="modelo" onchange="selectPrint()">
                                                         <option value="HP Tank 5810">HP Tank 5810</option>
                                                         <option value="HP Tank 5820">HP Tank 5820</option>
                                                     </select>
@@ -102,7 +107,7 @@
                                             </td>
                                             <td class="text-center">
                                                 <div class="mdl-input">
-                                                    <input id="cantidad" type="text" class="form-control">
+                                                    <input id="cantidad" type="text" class="form-control text-center" onkeyup="readCount()">
                                                 </div>
                                             </td>
                                             <td class="text-center">
@@ -126,7 +131,7 @@
                             </div>
                         </div>
                         <div class="mdl-card__actions">
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="crearAnotacion()" id="cargarAnotacion">Cargar factura<i class="mdi mdi-play_arrow"></i></button>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="crearAnotacion();agregarDatos();" id="cargarAnotacion">Cargar factura<i class="mdi mdi-play_arrow"></i></button>
                         </div>
                     </div>
                 </div>
@@ -175,6 +180,8 @@
                 });
                 doc.save('sample-file.pdf');
             });
+            initButtonCalendarDaysMinToday('fecha');
+            initMaskInputs('fecha');
         </script>
     </body>
 </html>

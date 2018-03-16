@@ -41,7 +41,6 @@ function crearAnotacion(){
   if(cantidad == null || cantidad == ''){
     msj('error', 'Ingrese la cantidad');
   }
-  agregarDatos();
   $.ajax({
     url  : 'Factura/crearAnotacion',
     type : 'POST'
@@ -85,3 +84,72 @@ function agregarDatos(){
     });
 }
 
+/* MASK DE FECHA */
+function initMaskInputs() {
+  for(var i = 0; i < arguments.length; i++) {
+    var text  = arguments[i];
+    var input = $('#'+text);
+    input.mask('00/00/0000');
+  }
+}
+function clonarFecha(inputNew,idButton) {
+  $('#'+inputNew.data('time')).val(inputNew.val());
+  $('#'+inputNew.data('time')).focus();
+  $('#'+inputNew.data('time')).blur();
+  if(idButton){
+    $("#"+idButton).trigger("change");
+  }
+}
+function initCalendarDaysMinToday(id, currentDate, fecha){
+  var startDate = new Date();
+   if (currentDate != undefined) {
+            var startDate = new Date(currentDate);
+        }
+  $("#"+id).bootstrapMaterialDatePicker({ 
+    weekStart : 0, 
+    date  : true, 
+    time  : false, 
+    format  : 'DD/MM/YYYY',
+    currentDate : startDate,
+    minDate : (fecha == undefined) ? new Date() : fecha
+  });
+}
+function initButtonCalendarDaysMinToday(idButton, currentDate, fecha) {
+  var text    = idButton;
+  var id      = $("#"+text);
+  var newInput  = null;
+  var iconButton  = id.closest('.mdl-input').find('.mdl-icon');
+  iconButton.find('.mdl-button').click(function(){
+    newInput = text+'ForCalendar';
+    if ( $('#'+newInput).length < 1 ) {
+      $('<input>').attr({
+          type    : 'text',
+          id      : newInput,
+          name    : newInput,
+          'data-time' : text,
+          onchange  : 'clonarFecha($(this))',
+          style   : 'position: absolute; top: 40px; background-color: transparent; border: transparent; color: transparent; z-index: -4'
+      }).appendTo(iconButton);
+      initCalendarDaysMinToday(newInput, currentDate, fecha);
+    }
+    $("#"+newInput).focus();      
+  });   
+  var valueNewInput = $("#"+newInput).val();   
+  id.text(valueNewInput);
+}
+var numberCantidad = null;
+var numberSpiff = null;
+function selectPrint(){
+  var spiff = $('#spiff');
+  var print = $('#modelo').val();
+  if(print == 'HP Tank 5810')
+    spiff.val('$5');
+  else if (print == 'HP Tank 5820')
+    spiff.val('$7');
+  var hola = "Hello world!";
+  var res = hola.substr(1,2);
+  console.log(res);
+}
+function readCount(){
+
+}
