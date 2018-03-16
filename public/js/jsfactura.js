@@ -142,5 +142,5 @@ function selectPrint(){
 function readCount(){
   var read       = $('#cantidad').val();
   var Monto      = $('#monto').val(read*numberSpiff);
-  numberCantidad = read;
+  numberCantidad = read; 
 }
