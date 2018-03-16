@@ -22,6 +22,8 @@ function crearAnotacion(){
   var spiff    = $('#spiff').val();
   var monto    = $('#monto').val();
   var cantidad = $('#cantidad').val();
+  var datos = new FormData();
+  datos.append('archivo',$('#archivo')[0].files[0]);
 
   if(fecha == null || fecha == ''){
     msj('error', 'Ingrese la fecha');
@@ -42,8 +44,15 @@ function crearAnotacion(){
     msj('error', 'Ingrese la cantidad');
   }
   $.ajax({
-    url  : 'Factura/crearAnotacion',
-    type : 'POST'
+    $data : {fecha : fecha,
+             nro_fact : nro_fact,
+             modelo : modelo,
+             spiff : spiff,
+             monto : monto,
+             cantidad : cantidad,
+             datos : datos}
+    url   : 'Factura/crearAnotacion',
+    type  : 'POST'
   }).done(function(data){
     try{
         data = JSON.parse(data);
