@@ -37,60 +37,58 @@
                 <div class="center-login registro">
                     <div class="mdl-card mdl-card-login mdl-registro">
                         <div class="mdl-card__supporting-text">
-                            <div class="mdl-card__supporting-text">
-                                <div class="col-xs-12">
-                                    <h2>Nuevo registro</h2>
+                            <div class="col-xs-12">
+                                <h2>Nuevo registro</h2>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="mdl-input">
+                                    <input type="text" class="form-control" placeholder="*Nombres y Apellidos" id="nombre" maxlength="50" onkeypress="return soloLetras(event);">
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="mdl-input">
-                                        <input type="text" class="form-control" placeholder="*Nombres y Apellidos" id="nombre" maxlength="50" onkeypress="return soloLetras(event);">
-                                    </div>
-                                    <div class="mdl-input">
-                                        <select class="selectpicker" id="pais"  name="pais" title="País" onchange="seleccionarPais()">
-                                            <option value="Costa Rica">Costa Rica</option>
-                                            <option value="El Salvador">El Salvador</option>
-                                            <option value="Guatemala">Guatemala</option>
-                                            <option value="Honduras">Honduras</option>
-                                            <option value="Nicaragua">Nicaragua</option>
-                                            <option value="Panamá">Panam&aacute;</option>
-                                        </select>
-                                    </div>
-                                    <div class="mdl-input canal">
-                                        <div class="form-group">
-                                          <select class="form-control" id="canal" name="canal">
-                                                    <option value="">Canal</option>
-                                          </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <a href="Login" style="color: #fff">Retroceder</a>
+                                <div class="mdl-input">
+                                    <select class="selectpicker" id="pais"  name="pais" title="País" onchange="seleccionarPais()">
+                                        <option value="Costa Rica">Costa Rica</option>
+                                        <option value="El Salvador">El Salvador</option>
+                                        <option value="Guatemala">Guatemala</option>
+                                        <option value="Honduras">Honduras</option>
+                                        <option value="Nicaragua">Nicaragua</option>
+                                        <option value="Panamá">Panam&aacute;</option>
+                                    </select>
+                                </div>
+                                <div class="mdl-input canal">
+                                    <div class="form-group">
+                                      <select class="form-control" id="canal" name="canal">
+                                                <option value="">Canal</option>
+                                      </select>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="mdl-input">
-                                        <input type="text" class="form-control" placeholder="*email" id="correo">
+                                <div class="col-xs-6">
+                                    <a href="Login" style="color: #fff">Retroceder</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="mdl-input">
+                                    <input type="text" class="form-control" placeholder="*email" id="correo">
+                                </div>
+                                <div class="mdl-input">
+                                    <input type="password" class="form-control" placeholder="*contrase&ntilde;a" id="password">
+                                </div>
+                                <div class="mdl-input">
+                                    <input type="password" class="form-control" placeholder="*Repetir contrase&ntilde;a" id="re_password">
+                                </div>
+                                <div class="col-xs-12 p-0">
+                                    <div class="col-xs-8 p-0">
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                                            <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
+                                            <span class="mdl-checkbox__label"><a href="" data-toggle="modal" data-target="#ModalTerminos">Acepto t&eacute;rminos y condiciones</a></span>
+                                        </label>
                                     </div>
-                                    <div class="mdl-input">
-                                        <input type="password" class="form-control" placeholder="*contrase&ntilde;a" id="password">
-                                    </div>
-                                    <div class="mdl-input">
-                                        <input type="password" class="form-control" placeholder="*Repetir contrase&ntilde;a" id="re_password">
-                                    </div>
-                                    <div class="col-xs-12 p-0">
-                                        <div class="col-xs-8 p-0">
-                                            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-                                                <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input">
-                                                <span class="mdl-checkbox__label"><a href="" data-toggle="modal" data-target="#ModalTerminos">Acepto t&eacute;rminos y condiciones</a></span>
-                                            </label>
-                                        </div>
-                                        <div class="col-xs-4 p-0 text-right">
-                                            <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="registrar();">Grabar</button>
-                                        </div>
+                                    <div class="col-xs-4 p-0 text-right">
+                                        <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="registrar();">Grabar</button>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 required">
-                                    <p>*Complete todos los campos</p>
-                                </div>
+                            </div>
+                            <div class="col-xs-12 required">
+                                <p>*Complete todos los campos</p>
                             </div>
                         </div>
                     </div>

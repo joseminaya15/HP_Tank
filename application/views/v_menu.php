@@ -45,11 +45,11 @@
                 </div>
             </div>
             <div class="container mdl-card-container menu">
+                <div class="text-right">
+                    <h2 class="person_name">Bienvenido(a) <?php echo $nombre == null ? '' : $nombre; ?></h2>
+                    <p class="team_name">Canal <?php echo $canal == null ? '' : $canal; ?></p>
+                </div>
                 <div class="center">
-                    <div class="text-right">
-                        <h2 class="person_name">Bienvenido(a) <?php echo $nombre == null ? '' : $nombre; ?></h2>
-                        <p class="team_name">Canal <?php echo $canal == null ? '' : $canal; ?></p>
-                    </div>
                     <div id="Factura" class="mdl-card mdl-card-menu scale" onclick="goToMenu(this.id)">
                         <div class="mdl-card__title">
                             <img src="<?php echo RUTA_IMG?>logos/factura.png">
