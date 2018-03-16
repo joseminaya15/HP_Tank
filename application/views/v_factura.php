@@ -94,7 +94,7 @@
                     <div class="mdl-card mdl-factura">
                         <div class="mdl-card__supporting-text">
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table m-0">
                                     <thead>
                                         <tr>
                                             <th class="text-center">Fecha de venta</th>
@@ -109,7 +109,7 @@
                                     <tbody>
                                         <tr>
                                             <td class="text-center">
-                                                <div class="mdl-input mdl-fecha">
+                                                <div class="mdl-input mdl-fecha factura">
                                                     <div class="mdl-icon">
                                                         <button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-date_range"></i></button>
                                                     </div>
@@ -117,12 +117,12 @@
                                                 </div>
                                             </td>
                                             <td class="text-center">
-                                                <div class="mdl-input">
+                                                <div class="mdl-input factura">
                                                     <input type="text" class="form-control text-center" id="nro_factura">
                                                 </div>
                                             </td>
                                             <td class="text-center">
-                                                <div class="mdl-input">
+                                                <div class="mdl-input factura">
                                                     <select class="selectpicker" id="modelo" name="modelo" onchange="selectPrint()">
                                                         <option value="HP Tank 5810">HP Tank 5810</option>
                                                         <option value="HP Tank 5820">HP Tank 5820</option>
@@ -130,23 +130,23 @@
                                                 </div>
                                             </td>
                                             <td class="text-center">
-                                                <div class="mdl-input">
+                                                <div class="mdl-input factura">
                                                     <input id="cantidad" type="text" class="form-control text-center numeros" onkeyup="readCount()">
                                                 </div>
                                             </td>
                                             <td class="text-center">
-                                                <div class="mdl-input">
+                                                <div class="mdl-input factura">
                                                     <input id="spiff" type="text" class="form-control text-center" value="$5" disabled>
                                                 </div>
                                             </td>
                                             <td class="text-center">
-                                                <div class="mdl-input">
+                                                <div class="mdl-input factura">
                                                     <input id="monto" type="text" class="form-control text-center" disabled>
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="mdl-input">
-                                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="subirFactura()" id="btnSubirFact">Seleccionar Archivo</button>
+                                                <div class="mdl-input factura">
+                                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-select" onclick="subirFactura()" id="btnSubirFact">Seleccionar Archivo</button>
                                                 </div>
                                             </td>
                                         </tr>

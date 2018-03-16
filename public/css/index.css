@@ -179,6 +179,15 @@ video{
 	background-color: #F05332; 
 	float: right;
 }
+.button-select{
+    box-shadow: none;
+    height: 42px;
+    border-radius: 10px;
+    text-transform: inherit;
+    line-height: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+}
 .footer{
 	position: absolute;
 	bottom: 0;
@@ -284,6 +293,9 @@ video{
 .mdl-card-menu.ganancia{
 	min-height: 100%;
 	max-width: 280px;
+}
+.mdl-factura .mdl-card__actions{
+    padding: 0 25px;
 }
 .mdl-factura{
 	background-color: rgba(255, 255, 255, 0.8);
@@ -398,6 +410,10 @@ video{
     color: #FFFFFF;
     background-color: transparent;
 }
+.mdl-input.factura .bootstrap-select button,
+.mdl-input.factura .form-control{
+    border: 1px solid #000000;
+}
 .mdl-input .bootstrap-select{
 	width: 100% !important
 }
@@ -493,6 +509,13 @@ video{
 input::placeholder {
 	font-style: italic;
 	color: #FFFFFF;
+}
+/*TABLE*/
+.table>thead>tr>th{
+    border: none;
+}
+.table>tbody>tr>td{
+    border-top: 1px solid #00A1DD;
 }
 /* DateTimePicker */
 .dtp-date-view{
