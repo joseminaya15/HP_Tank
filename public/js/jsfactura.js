@@ -22,9 +22,6 @@ function crearAnotacion(){
   var spiff    = $('#spiff').val();
   var monto    = $('#monto').val();
   var cantidad = $('#cantidad').val();
-  var datos = new FormData();
-  datos.append('archivo',$('#archivo')[0].files[0]);
-
   if(fecha == null || fecha == ''){
     msj('error', 'Ingrese la fecha');
   }
@@ -40,40 +37,36 @@ function crearAnotacion(){
   if(cantidad == null || cantidad == ''){
     msj('error', 'Ingrese la cantidad');
   }
-  $.ajax({
-    $data : {fecha : fecha,
-             nro_fact : nro_fact,
-             modelo : modelo,
-             spiff : spiff,
-             monto : monto,
-             cantidad : cantidad,
-             datos : datos},
-    url   : 'Factura/crearAnotacion',
-    type  : 'POST'
+ $.ajax({
+    data : {fecha     : fecha,
+            nro_fact  : nro_fact,
+            modelo    : modelo,
+            spiff     : spiff,
+            monto     : monto,
+            cantidad  : cantidad},
+    url  : 'Factura/crearAnotacion',
+    type : 'POST'
   }).done(function(data){
     try{
         data = JSON.parse(data);
         if(data.error == 0){
-          $('#fecha').val("0");
-          $('.selectpicker').selectpicker('refresh');
+          $('#fecha').val("");
           $('#modelo').val("0");
           $('.selectpicker').selectpicker('refresh');
           $('#nro_factura').val("");
           $('#monto').val("");
           $('#cantidad').val("");
-        }else {
+        }else{
           return;
         }
-      }catch(err){
+      } catch (err){
         msj('error',err.message);
       }
   });
 }
-
 function subirFactura(){
   $( "#archivo" ).trigger( "click" );
 }
-
 function agregarDatos(){
   var datos = new FormData();
     datos.append('archivo',$('#archivo')[0].files[0]);

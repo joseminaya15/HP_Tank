@@ -39,43 +39,28 @@ class Factura extends CI_Controller {
         $data['msj']   = null;
         try {
             $fecha    = $this->input->post('fecha');
-            $nro_fact = $this->input->post('nro_factura');
+            $nro_fact = $this->input->post('nro_fact');
             $modelo   = $this->input->post('modelo');
             $cantidad = $this->input->post('cantidad');
             $spiff    = $this->input->post('spiff');
             $monto    = $this->input->post('monto');
-            if(count($_FILES) == 0){
-                $data['msj'] = 'Seleccione su factura';
-                return $data;
-            }else {
-                $tipo = $_FILES['archivo']['type']; 
-                $tamanio = $_FILES['archivo']['size']; 
-                $archivotmp = $_FILES['archivo']['tmp_name'];
-                $namearch = $_FILES['archivo']['name'];
-                $nuevo = explode(".",$namearch);
-                if($nuevo[1] == 'pdf' || $nuevo[1] == 'jpeg' || $nuevo[1] == 'jpg' || $nuevo[1] == 'png'){
-                    $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'archivos'.DIRECTORY_SEPARATOR.'1'.basename($_FILES['archivo']['name']);
-                    if(move_uploaded_file($archivotmp, $target) ){
-                       $data['msj'] = 'Su factura se subió correctamente';
-                       $data['error'] = EXIT_SUCCESS;
-                    } else {
-                       $data['msj'] = 'Hubo un problema en la subida de su factura';
-                       $data['error'] = EXIT_ERROR;
-                       return $data;
-                    }
-                }else {
-                    $data['msj'] = 'El formato de la factura es incorrecto';
-                    $data['error'] = EXIT_ERROR;
-                    return $data;
-                }
-            }
-            $arrInsert = array('fecha'       => $fecha,
+            $date = str_replace('/', '-', $fecha);
+
+            $arrInsert = array('fecha'       => date('Y-m-d', strtotime($date)),
                                'nro_factura' => $nro_fact,
                                'modelo'      => $modelo,
                                'cantidad'    => $cantidad,
                                'spiff'       => $spiff,
                                'monto'       => $monto);
-            $dataInsert = $this->M_solicitud->insertarDatos($arrInsert, 'anotacion');
+            $datoInsert = $this->M_solicitud->insertarDatos($arrInsert, 'anotacion');
+            $session    = array('fecha'      => $fecha,
+                               'nro_factura'  => $nro_fact,
+                               'modelo'       => $modelo,
+                               'cantidad'     => $cantidad,
+                               'spiff'        => $spiff,
+                               'monto'        => $monto,
+                               'id_anotacion' => $datoInsert['Id']);
+             $this->session->set_userdata($session);
             $data['error'] = EXIT_SUCCESS;
         } catch (Exception $e){
             $data['msj'] = $e->getMessage();
@@ -97,6 +82,8 @@ class Factura extends CI_Controller {
             if($nuevo[1] == 'pdf' || $nuevo[1] == 'jpeg' || $nuevo[1] == 'jpg' || $nuevo[1] == 'png'){
                 $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'archivos'.DIRECTORY_SEPARATOR.'1'.basename($_FILES['archivo']['name']);
                 if(move_uploaded_file($archivotmp, $target) ){
+                   $arrUpdt = array('documento' => $namearch);
+                   $this->M_solicitud->updateDatos($arrUpdt, $this->session->userdata('id_anotacion'), 'anotacion');
                    $respuesta->mensaje = 'Su factura se subió correctamente';
                 } else {
                    $respuesta->mensaje = 'Hubo un problema en la subida de su factura';
@@ -106,22 +93,5 @@ class Factura extends CI_Controller {
             }
             echo json_encode($respuesta);
         }
-       /*$tipo = $_FILES['archivo']['type']; 
-        $tamanio = $_FILES['archivo']['size']; 
-        $archivotmp = $_FILES['archivo']['tmp_name'];*/
-
-        /*$respuesta = new stdClass();
-        $respuesta->mensaje = "";
-        if( $tipo == 'application/vnd.ms-excel'){
-            throw new Exception("Error Processing Request", 1);
-        }
-        $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'archivos'.DIRECTORY_SEPARATOR.'1'.basename($_FILES['archivo']['name']);
- 
-        if(move_uploaded_file($archivotmp, $target) ){
-           $respuesta->estado = true;
-        } else {
-           $respuesta->estado = false;
-           $respuesta->mensaje = "El archivo no se pudo subir al servidor, inténtalo mas tarde";
-        }*/
     }
 }
