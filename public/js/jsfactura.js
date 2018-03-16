@@ -137,6 +137,7 @@ function initButtonCalendarDaysMinToday(idButton, currentDate, fecha) {
 }
 var numberCantidad = null;
 var numberSpiff = null;
+var cantidad = null;
 function selectPrint(){
   var spiff = $('#spiff');
   var print = $('#modelo').val();
@@ -146,7 +147,7 @@ function selectPrint(){
     spiff.val('$7');
   var res = spiff.val().substr(1,2);
   numberSpiff = res;
-  console.log(res);
+  $('#monto').val(numberCantidad*numberSpiff);
 }
 function readCount(){
   selectPrint();

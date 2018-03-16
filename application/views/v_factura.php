@@ -107,7 +107,7 @@
                                             </td>
                                             <td class="text-center">
                                                 <div class="mdl-input">
-                                                    <input id="cantidad" type="text" class="form-control text-center" onkeyup="readCount()">
+                                                    <input id="cantidad" type="text" class="form-control text-center numeros" onkeyup="readCount()">
                                                 </div>
                                             </td>
                                             <td class="text-center">
@@ -141,7 +141,7 @@
             </div>
         </section>
 
-        <form id="frmArchivo" method="post">
+        <form id="frmArchivo" method="post" style="display: none;">
             <input id="archivo" type="file" name="archivo" />
             <input type="hidden" name="MAX_FILE_SIZE" value="20000"/>
             <input class="boton" type="submit" name="enviar" value="Importar" style="display: none" />
