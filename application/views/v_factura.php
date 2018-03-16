@@ -117,7 +117,7 @@
                                             </td>
                                             <td>
                                                 <div class="mdl-input">
-                                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="subirFactura()">Seleccionar Archivo</button>
+                                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="subirFactura()" id="btnSubirFact">Seleccionar Archivo</button>
                                                 </div>
                                             </td>
                                         </tr>
@@ -126,19 +126,19 @@
                             </div>
                         </div>
                         <div class="mdl-card__actions">
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar">Cargar factura<i class="mdi mdi-play_arrow"></i></button>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="crearAnotacion()" id="cargarAnotacion">Cargar factura<i class="mdi mdi-play_arrow"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="footer">
                 <p>&copy; Copyright 2018 Hewlett-Packard Development Company, L.P.</p>
-            </div>
         </section>
 
         <form id="frmArchivo" method="post">
-            <input id="pdf_factura" type="file" name="pdf_factura" />
+            <input id="archivo" type="file" name="archivo" />
             <input type="hidden" name="MAX_FILE_SIZE" value="20000"/>
+            <input class="boton" type="submit" name="enviar" value="Importar" style="display: none" />
         </form>
 
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>

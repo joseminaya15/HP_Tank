@@ -26,6 +26,22 @@ function crearAnotacion(){
   if(fecha == null || fecha == ''){
     msj('error', 'Ingrese la fecha');
   }
+  if(nro_fact == null || nro_fact == ''){
+    msj('error', 'Ingrese el número de factura');
+  }
+  if(modelo == null || modelo == ''){
+    msj('error', 'Ingrese el modelo');
+  }
+  if(spiff == null || spiff == ''){
+    msj('error', 'Ingrese el spiff');
+  }
+  if(monto == null || monto == ''){
+    msj('error', 'Ingrese el monto');
+  }
+  if(cantidad == null || cantidad == ''){
+    msj('error', 'Ingrese la cantidad');
+  }
+  agregarDatos();
   $.ajax({
     url  : 'Factura/crearAnotacion',
     type : 'POST'
@@ -48,7 +64,24 @@ function crearAnotacion(){
       }
   });
 }
-
 function subirFactura(){
-  $( "#pdf_factura" ).trigger( "click" );
+  $( "#archivo" ).trigger( "click" );
+  /*if($('#archivo')[0].files[0].name) {
+    $('#btnSubirFact').text('CARGADO');
+  }*/
 }
+function agregarDatos(){
+  var datos = new FormData();
+    datos.append('archivo',$('#archivo')[0].files[0]);
+     $.ajax({
+        type:"post",
+        dataType:"json",
+        url:"Factura/cargarFact",
+        contentType:false,
+        data:datos,
+        processData:false,
+      }).done(function(respuesta){
+        msj('error', respuesta.mensaje);
+    });
+}
+
