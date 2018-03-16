@@ -44,6 +44,31 @@ class Factura extends CI_Controller {
             $cantidad = $this->input->post('cantidad');
             $spiff    = $this->input->post('spiff');
             $monto    = $this->input->post('monto');
+            if(count($_FILES) == 0){
+                $data['msj'] = 'Seleccione su factura';
+                return $data;
+            }else {
+                $tipo = $_FILES['archivo']['type']; 
+                $tamanio = $_FILES['archivo']['size']; 
+                $archivotmp = $_FILES['archivo']['tmp_name'];
+                $namearch = $_FILES['archivo']['name'];
+                $nuevo = explode(".",$namearch);
+                if($nuevo[1] == 'pdf' || $nuevo[1] == 'jpeg' || $nuevo[1] == 'jpg' || $nuevo[1] == 'png'){
+                    $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'archivos'.DIRECTORY_SEPARATOR.'1'.basename($_FILES['archivo']['name']);
+                    if(move_uploaded_file($archivotmp, $target) ){
+                       $data['msj'] = 'Su factura se subió correctamente';
+                       $data['error'] = EXIT_SUCCESS;
+                    } else {
+                       $data['msj'] = 'Hubo un problema en la subida de su factura';
+                       $data['error'] = EXIT_ERROR;
+                       return $data;
+                    }
+                }else {
+                    $data['msj'] = 'El formato de la factura es incorrecto';
+                    $data['error'] = EXIT_ERROR;
+                    return $data;
+                }
+            }
             $arrInsert = array('fecha'       => $fecha,
                                'nro_factura' => $nro_fact,
                                'modelo'      => $modelo,

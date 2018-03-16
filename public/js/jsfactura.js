@@ -28,6 +28,18 @@ function crearAnotacion(){
   if(fecha == null || fecha == ''){
     msj('error', 'Ingrese la fecha');
   }
+  if(modelo == null || modelo == ''){
+    msj('error', 'Ingrese el modelo');
+  }
+  if(spiff == null || spiff == ''){
+    msj('error', 'Ingrese el spiff');
+  }
+  if(monto == null || monto == ''){
+    msj('error', 'Ingrese el monto');
+  }
+  if(cantidad == null || cantidad == ''){
+    msj('error', 'Ingrese la cantidad');
+  }
   $.ajax({
     $data : {fecha : fecha,
              nro_fact : nro_fact,
@@ -57,7 +69,6 @@ function crearAnotacion(){
       }
   });
 }
-
 function subirFactura(){
   $( "#pdf_factura" ).trigger( "click" );
 }
