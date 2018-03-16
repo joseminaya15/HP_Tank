@@ -89,12 +89,12 @@
                                             </td>
                                             <td class="text-center">
                                                 <div class="mdl-input">
-                                                    <input type="text" class="form-control" id="factura">
+                                                    <input type="text" class="form-control" id="nro_factura">
                                                 </div>
                                             </td>
                                             <td class="text-center">
                                                 <div class="mdl-input">
-                                                    <select class="selectpicker" id="pais" name="pais">
+                                                    <select class="selectpicker" id="modelo" name="modelo">
                                                         <option value="HP Tank 5810">HP Tank 5810</option>
                                                         <option value="HP Tank 5820">HP Tank 5820</option>
                                                     </select>
@@ -102,22 +102,22 @@
                                             </td>
                                             <td class="text-center">
                                                 <div class="mdl-input">
-                                                    <input type="text" class="form-control" id="factura">
+                                                    <input id="cantidad" type="text" class="form-control">
                                                 </div>
                                             </td>
                                             <td class="text-center">
                                                 <div class="mdl-input">
-                                                    <input type="text" class="form-control" id="factura">
+                                                    <input id="spiff" type="text" class="form-control text-center" value="$5" disabled>
                                                 </div>
                                             </td>
                                             <td class="text-center">
                                                 <div class="mdl-input">
-                                                    <input type="text" class="form-control" id="factura">
+                                                    <input id="monto" type="text" class="form-control text-center" disabled>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="mdl-input">
-                                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Seleccionar Archivo</button>
+                                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="subirFactura()">Seleccionar Archivo</button>
                                                 </div>
                                             </td>
                                         </tr>
@@ -136,6 +136,11 @@
             </div>
         </section>
 
+        <form id="frmArchivo" method="post">
+            <input id="pdf_factura" type="file" name="pdf_factura" />
+            <input type="hidden" name="MAX_FILE_SIZE" value="20000"/>
+        </form>
+
         <script src="<?php echo RUTA_JS?>jquery-3.2.1.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.js?v=<?php echo time();?>"></script>
@@ -149,7 +154,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
-        <script src="<?php echo RUTA_JS?>jslogin.js?v=<?php echo time();?>"></script>
+        <script src="<?php echo RUTA_JS?>jsfactura.js?v=<?php echo time();?>"></script>
         <script type="text/javascript">
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
                 $('select').selectpicker('mobile');
