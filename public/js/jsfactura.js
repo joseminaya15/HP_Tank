@@ -1,19 +1,19 @@
 function cerrarCesion(){
-	$.ajax({
-		url  : 'Factura/cerrarCesion',
-		type : 'POST'
-	}).done(function(data){
-		try{
+  $.ajax({
+    url  : 'Factura/cerrarCesion',
+    type : 'POST'
+  }).done(function(data){
+    try{
         data = JSON.parse(data);
         if(data.error == 0){
-        	location.href = 'Login';
+          location.href = 'Login';
         }else {
-        	return;
+          return;
         }
       }catch(err){
         msj('error',err.message);
       }
-	});
+  });
 }
 function crearAnotacion(){
   var fecha    = $('#fecha').val();
@@ -69,11 +69,27 @@ function crearAnotacion(){
       }
   });
 }
+
 function subirFactura(){
   $( "#pdf_factura" ).trigger( "click" );
 }
 
-/* MASK DE FECHA */
+function agregarDatos(){
+  var datos = new FormData();
+    datos.append('archivo',$('#archivo')[0].files[0]);
+     $.ajax({
+        type:"post",
+        dataType:"json",
+        url:"Factura/cargarFact",
+        contentType:false,
+        data:datos,
+        processData:false,
+      }).done(function(respuesta){
+        msj('error', respuesta.mensaje);
+    });
+}
+
+/ MASK DE FECHA /
 function initMaskInputs() {
   for(var i = 0; i < arguments.length; i++) {
     var text  = arguments[i];
