@@ -59,3 +59,8 @@ function msj(tipo, msj, cabecera){
 function goToMenu(id){
 	location.href = id;
 }
+$(".numeros").keypress(function (key) {
+	if ((key.charCode < 48 || key.charCode > 57) && (key.keyCode != 46) && (key.keyCode != 8) && (key.keyCode != 37) && (key.keyCode != 39)){
+  		return false;
+	}
+});
