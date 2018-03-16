@@ -106,6 +106,8 @@ function initButtonCalendarDaysMinToday(idButton, currentDate, fecha) {
   var valueNewInput = $("#"+newInput).val();   
   id.text(valueNewInput);
 }
+var numberCantidad = null;
+var numberSpiff = null;
 function selectPrint(){
   var spiff = $('#spiff');
   var print = $('#modelo').val();
@@ -113,4 +115,10 @@ function selectPrint(){
     spiff.val('$5');
   else if (print == 'HP Tank 5820')
     spiff.val('$7');
+  var hola = "Hello world!";
+  var res = hola.substr(1,2);
+  console.log(res);
+}
+function readCount(){
+
 }
