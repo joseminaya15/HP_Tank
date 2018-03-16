@@ -34,4 +34,15 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, $id_user);
         return $result->result();
     }
+
+    function getDatosTabla($id_user) {
+        $sql = "SELECT a.*,
+                       u.Nombre
+                  FROM anotacion a,
+                       users u
+                 WHERE a.Id_user = u.Id
+                   AND a.Id_user = ?";
+        $result = $this->db->query($sql, $id_user);
+        return $result->result();
+    }
 }

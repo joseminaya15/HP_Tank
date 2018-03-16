@@ -23,6 +23,22 @@
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>roboto.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+            </style>
     </head>
     <body>
         <section id="login">
@@ -58,9 +74,17 @@
                                 <h2 id="gtotal"><?php echo $total ?></h2>
                             </div>
                             <div id="content" style="display: none;">
-                                 <h3>Hello, this is a H3 tag</h3>
-
-                                <p>a pararaph</p>
+                                     <table>
+                                          <tr>
+                                            <th>Nombre</th>
+                                            <th>Fecha</th>
+                                            <th>Nro Factura</th>
+                                            <th>Modelo</th>
+                                            <th>Cantidad</th>
+                                            <th>Total</th>
+                                          </tr>
+                                          <?php echo $tabla ?>
+                                        </table>
                             </div>
                             <div id="editor"></div>
                             <a id="cmd">Descargar factura cargada<i class="mdi mdi-play_arrow"></i></a>

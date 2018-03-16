@@ -19,6 +19,23 @@ class Factura extends CI_Controller {
         $data['nombre'] = $this->session->userdata('nombre');
         $data['canal']  = $this->session->userdata('canal');
         $datos = $this->M_solicitud->getTotal($this->session->userdata('Id_user'));
+        $html  = '';
+        $tabla = $this->M_solicitud->getDatosTabla($this->session->userdata('Id_user'));
+        if(count($tabla) == 0){
+            return;
+        }else {
+            foreach ($tabla as $key){
+                $html .= '<tr>
+                            <td class="text-center">'.$key->Nombre.'</td>
+                            <td class="text-center">'.$key->fecha.'</td>
+                            <td class="text-center">'.$key->nro_factura.'</td>
+                            <td class="text-center">'.$key->modelo.'</td>
+                            <td class="text-center">'.$key->cantidad.'</td>
+                            <td class="text-center">'.$key->monto.'</td>
+                        </tr>';
+            }
+            $data['tabla'] = $html;
+        }
         $data['total'] = $datos[0]->total == '' ? '0' : $datos[0]->total;
 		$this->load->view('v_factura', $data);
 	}
