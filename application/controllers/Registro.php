@@ -93,16 +93,16 @@ class Registro extends CI_Controller {
                                             <td style="padding: 20px 0;">
                                                 <table width="360" cellspacing="0" cellpadding="0" border="0" align="center" style="border: solid 1px #ccc;padding: 20px;">
                                                     <tr>
-                                                        <td style="text-align: right;padding: 2px 10px;"><fonts style="font-family: arial;color: #757575;font-size: 14px;">Usuario</font></td>
-                                                        <td style="text-align: left;padding: 2px 10px;""><font style="font-family: arial;color: #00A0DC;font-size: 14px;">'.$this->session->userdata('nombre').'</font></td>
+                                                        <td style="text-align: right;padding: 2px 10px;"><fonts style="font-family: arial;color: #757575;font-size: 14px;color: #757575;">Usuario</font></td>
+                                                        <td style="text-align: left;padding: 2px 10px;"><font style="font-family: arial;color: #00A0DC;font-size: 14px;">'.$this->session->userdata('nombre').'</font></td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: right;padding: 2px 10px;"><font style="font-family: arial;color: #757575;font-size: 14px;">Email</font></td>
-                                                        <td style="text-align: left;padding: 2px 10px;""><font style="font-family: arial;color: #00A0DC;font-size: 14px;">'.$this->session->userdata('usuario').'</font></td>
+                                                        <td style="text-align: right;padding: 2px 10px;"><font style="font-family: arial;color: #757575;font-size: 14px;color: #757575;">Email</font></td>
+                                                        <td style="text-align: left;padding: 2px 10px;"><font style="font-family: arial;color: #00A0DC;font-size: 14px;">'.$this->session->userdata('usuario').'</font></td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="text-align: right;padding: 2px 10px;"><font style="font-family: arial;color: #757575;font-size: 14px;">'.$this->session->userdata('pass').'</font></td>
-                                                        <td style="text-align: left;padding: 2px 10px;""><font style="font-family: arial;color: #00A0DC;font-size: 14px;">123456</font></td>
+                                                        <td style="text-align: right;padding: 2px 10px;"><font style="font-family: arial;color: #757575;font-size: 14px;color: #757575;">Contrase&ntilde;a</font></td>
+                                                        <td style="text-align: left;padding: 2px 10px;"><font style="font-family: arial;color: #00A0DC;font-size: 14px;">'.$this->session->userdata('pass').'</font></td>
                                                     </tr>
                                                 </table>
                                             </td>
