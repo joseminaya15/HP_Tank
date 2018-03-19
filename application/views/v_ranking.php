@@ -96,16 +96,8 @@
                                 </div>
                             </div>
                             <div class="mdl-card__actions">
-                                <button id="boton-descarga" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Compartir<i class="fa fa-facebook"></i></button>
                                 <div id="fb-root"></div>
-                                <script>(function(d, s, id) {
-                                  var js, fjs = d.getElementsByTagName(s)[0];
-                                  if (d.getElementById(id)) return;
-                                  js = d.createElement(s); js.id = id;
-                                  js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.12';
-                                  fjs.parentNode.insertBefore(js, fjs);
-                                }(document, 'script', 'facebook-jssdk'));</script>
-                                <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+                                <div class="fb-share-button" data-href="http://localhost/HP_Tank/RankingTop5" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="http://localhost/HP_Tank/RankingTop5" class="fb-xfbml-parse-ignore">Compartir</a></div>
                             </div>
                         </div>
                         <div class="mdl-card mdl-premio">
@@ -265,7 +257,7 @@
                 });
                 doc.save('pdf1.pdf');
             });
-            function downloadCanvas(canvasId, filename) {
+            /*function downloadCanvas(canvasId, filename) {
                 var domElement = document.getElementById(canvasId);
                 html2canvas(domElement, {
                     onrendered: function(domElementCanvas) {
@@ -288,7 +280,14 @@
             }
             $('#boton-descarga').click(function() {
                 downloadCanvas('ranking','ranking.png');
-            });
+            });*/
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.12';
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
         </script>
     </body>
 </html>
