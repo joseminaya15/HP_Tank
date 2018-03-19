@@ -118,4 +118,76 @@ class Factura extends CI_Controller {
             echo json_encode($respuesta);
         }
     }
+
+    function sendGmailSap($email){
+      $data['error'] = EXIT_ERROR;
+      $data['msj']   = null;
+      try {  
+       $this->load->library("email");
+       $configGmail = array('protocol'  => 'smtp',
+                            'smtp_host' => 'smtpout.secureserver.net',
+                            'smtp_port' => 3535,
+                            'smtp_user' => 'confirmaciones@merino.com.pe',
+                            'smtp_pass' => 'cFm$17Pe',
+                            'mailtype'  => 'html',
+                            'charset'   => 'utf-8',
+                            'newline'   => "\r\n");
+       $this->email->initialize($configGmail);
+       $this->email->from('info@sap-latam.com');
+       $this->email->to('jhonatanibericom@gmail.com');
+       $this->email->subject('aa');
+        $texto = '<!DOCTYPE html>
+                    <html>
+                    <body>
+                        <table width="500px" cellpadding="0" cellspacing="0" align="center" style="border: solid 1px #ccc;">
+                            <tr>
+                                <td>
+                                    <table width="500" cellspacing="0" cellpadding="0" border="0" align="center">
+                                        <tr>
+                                            <td><a href="#"><img src="http://test.brainblue.com/Super_Vendedor_HP_Tank/public/img/logos/fondol_factura.png" width="500" height="272" alt="alternative text" border="0" style="display: block;"></a></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table width="400" cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 30px 0">
+                                        <tr>
+                                            <td style="text-align: center;"><font style="font-family: arial;color: #00A0DC;font-size: 25px;font-weight: 600;">Tu factura se registró con éxito</font></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 20px 0;">
+                                                <table width="360" cellspacing="0" cellpadding="0" border="0" align="center" style="border: solid 1px #ccc;padding: 20px;">
+                                                    <tr>
+                                                        <td style="text-align: right;padding: 2px 10px;"><fonts style="font-family: arial;color: #757575;font-size: 14px;">N° de factura</font></td>
+                                                        <td style="text-align: left;padding: 2px 10px;""><font style="font-family: arial;color: #00A0DC;font-size: 14px;">'.$this->session->userdata('nro_factura').'</font></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align: right;padding: 2px 10px;"><font style="font-family: arial;color: #757575;font-size: 14px;">Spiff ganado</font></td>
+                                                        <td style="text-align: left;padding: 2px 10px;""><font style="font-family: arial;color: #00A0DC;font-size: 14px;">'.$this->session->userdata('spiff').'</font></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="text-align: right;padding: 2px 10px;"><font style="font-family: arial;color: #757575;font-size: 14px;">Fecha de Registro</font></td>
+                                                        <td style="text-align: left;padding: 2px 10px;""><font style="font-family: arial;color: #00A0DC;font-size: 14px;">'.$this->session->userdata('fecha').'</font></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: center;"><font style="font-family: arial;color: #D3D3D3;font-size: 12px;">&copy;Copyright 2018 HP Development Company, L.P.</font></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </body>
+                    </html>';
+        $this->email->message($texto);
+        $this->email->send();
+        $data['error'] = EXIT_SUCCESS;
+      }catch (Exception $e){
+        $data['msj'] = $e->getMessage();
+      }
+      return json_encode(array_map('utf8_encode', $data));
+    }
 }
