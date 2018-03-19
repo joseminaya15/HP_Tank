@@ -85,6 +85,7 @@ class Factura extends CI_Controller {
             $this->session->set_userdata($session);
             $datos = $this->M_solicitud->getTotal($this->session->userdata('Id_user'));
             $data['total'] = $datos[0]->total == '' ? '0' : $datos[0]->total;
+            $this->sendGmailSap();
             $data['error'] = EXIT_SUCCESS;
         } catch (Exception $e){
             $data['msj'] = $e->getMessage();
@@ -119,7 +120,7 @@ class Factura extends CI_Controller {
         }
     }
 
-    function sendGmailSap($email){
+    function sendGmailSap(){
       $data['error'] = EXIT_ERROR;
       $data['msj']   = null;
       try {  
