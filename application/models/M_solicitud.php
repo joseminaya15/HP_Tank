@@ -48,7 +48,8 @@ class M_solicitud extends  CI_Model{
 
     function get5Primeros() {
         $sql = "SELECT a.*,
-                       u.Nombre
+                       u.Nombre,
+                       u.Nombre_canal AS Canal
                   FROM anotacion a,
                        users u
                  WHERE a.Id_user = u.Id
@@ -65,10 +66,22 @@ class M_solicitud extends  CI_Model{
                   FROM anotacion a,
                        users u
                  WHERE a.Id_user = u.Id
-                   AND SUBSTRING(a.fecha, 6, 2) = '03'
+                   AND SUBSTRING(a.fecha, 6, 2) = ?
                  GROUP BY a.Id_user
                 ORDER BY SUM(a.monto) DESC
                 LIMIT 5";
+        $result = $this->db->query($sql, $mes);
+        return $result->result();
+    }
+
+    function getTotalMes($id_user, $mes) {
+        $sql = "SELECT SUM(a.monto) AS total
+                  FROM anotacion a,
+                       users u
+                 WHERE a.Id_user = u.Id
+                   AND a.documento IS NOT NULL
+                   AND a.fecha = '".$mes."'
+                   AND a.Id_user = ".$id_user."";
         $result = $this->db->query($sql);
         return $result->result();
     }

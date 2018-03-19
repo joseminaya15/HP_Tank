@@ -68,28 +68,28 @@
                                         <tbody>
                                             <tr>
                                                 <td><img src="<?php echo RUTA_IMG?>ranking/ranking1.png""></td>
-                                                <td class="text-left">Carlos Quispe</td>
-                                                <td class="text-left">Accesorios para Computadoras y Oficina Acosa</td>
+                                                <td class="text-left"><?php echo $uno_nombre ?></td>
+                                                <td class="text-left"><?php echo $uno_canal ?></td>
                                             </tr>
                                             <tr>
                                                 <td><img src="<?php echo RUTA_IMG?>ranking/ranking2.png""></td>
-                                                <td class="text-left">Carlos Quispe</td>
-                                                <td class="text-left">Accesorios para Computadoras y Oficina Acosa</td>
+                                                <td class="text-left"><?php echo $dos_nombre ?></td>
+                                                <td class="text-left"><?php echo $dos_canal ?></td>
                                             </tr>
                                             <tr>
                                                 <td><img src="<?php echo RUTA_IMG?>ranking/ranking3.png""></td>
-                                                <td class="text-left">Carlos Quispe</td>
-                                                <td class="text-left">Accesorios para Computadoras y Oficina Acosa</td>
+                                                <td class="text-left"><?php echo $tres_nombre ?></td>
+                                                <td class="text-left"><?php echo $tres_canal ?></td>
                                             </tr>
                                             <tr>
                                                 <td><img src="<?php echo RUTA_IMG?>ranking/ranking4.png""></td>
-                                                <td class="text-left">Carlos Quispe</td>
-                                                <td class="text-left">Accesorios para Computadoras y Oficina Acosa</td>
+                                                <td class="text-left"><?php echo $cuatro_nombre ?></td>
+                                                <td class="text-left"><?php echo $cuatro_canal ?></td>
                                             </tr>
                                             <tr>
                                                 <td><img src="<?php echo RUTA_IMG?>ranking/ranking5.png""></td>
-                                                <td class="text-left">Carlos Quispe</td>
-                                                <td class="text-left">Accesorios para Computadoras y Oficina Acosa</td>
+                                                <td class="text-left"><?php echo $cinco_nombre ?></td>
+                                                <td class="text-left"><?php echo $cinco_canal ?></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -112,11 +112,11 @@
                                         <tbody>
                                             <tr>
                                                 <td class="text-left">Marzo</td>
-                                                <td class="text-left">$50</td>
+                                                <td class="text-left">$<?php echo $total_marzo ?></td>
                                             </tr>
                                             <tr>
                                                 <td class="text-left">Abril</td>
-                                                <td class="text-left">$48</td>
+                                                <td class="text-left">$<?php echo $total_abril ?></td>
                                             </tr>
                                             <tr>
                                                 <td class="text-left">En Marzo quedaste en el puesto</td>
@@ -144,23 +144,23 @@
                                             <tbody>
                                                 <tr>
                                                     <td><img src="<?php echo RUTA_IMG?>ranking/ganador1.png""></td>
-                                                    <td class="text-left">Carlos Quispe</td>
+                                                    <td class="text-left"><?php echo $uno_nombre_m ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td><img src="<?php echo RUTA_IMG?>ranking/ganador2.png""></td>
-                                                    <td class="text-left">Carlos Quispe</td>
+                                                    <td class="text-left"><?php echo $dos_nombre_m ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td><img src="<?php echo RUTA_IMG?>ranking/ganador3.png""></td>
-                                                    <td class="text-left">Carlos Quispe</td>
+                                                    <td class="text-left"><?php echo $tres_nombre_m ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td><img src="<?php echo RUTA_IMG?>ranking/ganador4.png""></td>
-                                                    <td class="text-left">Carlos Quispe</td>
+                                                    <td class="text-left"><?php echo $cuatro_nombre_m ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td><img src="<?php echo RUTA_IMG?>ranking/ganador5.png""></td>
-                                                    <td class="text-left">Carlos Quispe</td>
+                                                    <td class="text-left"><?php echo $cinco_nombre_m ?></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -178,23 +178,23 @@
                                             <tbody>
                                                 <tr>
                                                     <td><img src="<?php echo RUTA_IMG?>ranking/ganador1.png""></td>
-                                                    <td class="text-left">Carlos Quispe</td>
+                                                    <td class="text-left"><?php echo $uno_nombre_a ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td><img src="<?php echo RUTA_IMG?>ranking/ganador2.png""></td>
-                                                    <td class="text-left">Carlos Quispe</td>
+                                                    <td class="text-left"><?php echo $dos_nombre_a ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td><img src="<?php echo RUTA_IMG?>ranking/ganador3.png""></td>
-                                                    <td class="text-left">Carlos Quispe</td>
+                                                    <td class="text-left"><?php echo $tres_nombre_a ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td><img src="<?php echo RUTA_IMG?>ranking/ganador4.png""></td>
-                                                    <td class="text-left">Carlos Quispe</td>
+                                                    <td class="text-left"><?php echo $cuatro_nombre_a ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td><img src="<?php echo RUTA_IMG?>ranking/ganador5.png""></td>
-                                                    <td class="text-left">Carlos Quispe</td>
+                                                    <td class="text-left"><?php echo $cinco_nombre_a ?></td>
                                                 </tr>
                                             </tbody>
                                         </table>
