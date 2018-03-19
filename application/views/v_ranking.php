@@ -122,6 +122,10 @@
                                                 <td class="text-left">En Marzo quedaste en el puesto</td>
                                                 <td class="text-left">25</td>
                                             </tr>
+                                            <tr>
+                                                <td colspan="2" class="text-center">¡Rétate y haz que el próximo
+mes tenga tu huella!</td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -137,8 +141,7 @@
                                         <table class="table">
                                             <thead>
                                                 <tr>
-                                                    <th>MES MARZO</th>
-                                                    <th></th>
+                                                    <th colspan="2">MES MARZO</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -171,8 +174,7 @@
                                         <table class="table">
                                             <thead>
                                                 <tr>
-                                                    <th>MES ABRIL</th>
-                                                    <th></th>
+                                                    <th colspan="2">MES ABRIL</th>
                                                 </tr>
                                             </thead>
                                             <tbody>

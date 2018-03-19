@@ -357,8 +357,7 @@ video{
 }
 .mdl-ranking .mdl-card{
 	background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
-    cursor: pointer;
+    border-radius: 10px;
     margin: 15px;
     display: inline-block;
     -webkit-transition: transform .2s linear;
@@ -515,6 +514,7 @@ input::placeholder {
 .table>thead>tr>th{
     border: none;
     color: #000000;
+    border-top: 1px solid transparent !important;
 }
 .table>tbody>tr>td{
     border-top: 1px solid #00A1DD;
