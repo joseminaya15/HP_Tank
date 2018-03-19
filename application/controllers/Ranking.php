@@ -20,9 +20,14 @@ class Ranking extends CI_Controller {
         $data['canal']  = $this->session->userdata('canal');
         $datos = $this->M_solicitud->getTotalMes($this->session->userdata('Id_user'), '03');
         $data['total_marzo'] = $datos[0]->total == '' ? '0' : $datos[0]->total;
+        $ranking = $this->M_solicitud->rankingTotal($this->session->userdata('Id_user'));
+        foreach ($ranking as $key) {
+            if($key->Id == $this->session->userdata('Id_user')){
+                $data['ranking'] = $key->rank == '' ? '-' : $key->rank;
+            }
+        }
         $datos_abril = $this->M_solicitud->getTotalMes($this->session->userdata('Id_user'), '04');
         $data['total_abril'] = $datos_abril[0]->total == '' ? '0' : $datos_abril[0]->total;
-        print_r($datos[0]->total);
         $primeros = $this->M_solicitud->get5Primeros();
         if(count($primeros) == 0){
             $data['uno_nombre'] = '-';

@@ -120,7 +120,7 @@
                                             </tr>
                                             <tr>
                                                 <td class="text-left">En Marzo quedaste en el puesto</td>
-                                                <td class="text-left">25</td>
+                                                <td class="text-left"><?php echo $ranking ?></td>
                                             </tr>
                                             <tr>
                                                 <td colspan="2" class="text-center">¡Rétate y haz que el próximo

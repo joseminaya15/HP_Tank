@@ -37,6 +37,8 @@ class Factura extends CI_Controller {
             $data['tabla'] = $html;
         }
         $data['total'] = $datos[0]->total == '' ? '0' : $datos[0]->total;
+        $arrUpdt = array('total' => $datos[0]->total);
+        $this->M_solicitud->updateDatos($arrUpdt, $this->session->userdata('Id_user'), 'users');
 		$this->load->view('v_factura', $data);
 	}
 
