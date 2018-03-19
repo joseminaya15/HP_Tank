@@ -22,7 +22,7 @@ class Factura extends CI_Controller {
         $html  = '';
         $tabla = $this->M_solicitud->getDatosTabla($this->session->userdata('Id_user'));
         if(count($tabla) == 0){
-            return;
+            //return;
         }else {
             foreach ($tabla as $key){
                 $html .= '<tr>
