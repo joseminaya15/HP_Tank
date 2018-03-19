@@ -165,6 +165,9 @@ mes tenga tu huella!</td>
                                                     <td><img src="<?php echo RUTA_IMG?>ranking/ganador5.png""></td>
                                                     <td class="text-left"><?php echo $cinco_nombre_m ?></td>
                                                 </tr>
+                                                <tr>
+                                                    <td colspan="2"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf">Descargar PDF<i class="mdi mdi-play_arrow"></i></button></td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -197,6 +200,9 @@ mes tenga tu huella!</td>
                                                 <tr>
                                                     <td><img src="<?php echo RUTA_IMG?>ranking/ganador5.png""></td>
                                                     <td class="text-left"><?php echo $cinco_nombre_a ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf">Descargar PDF<i class="mdi mdi-play_arrow"></i></button></td>
                                                 </tr>
                                             </tbody>
                                         </table>
