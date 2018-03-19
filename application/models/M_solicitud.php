@@ -45,4 +45,31 @@ class M_solicitud extends  CI_Model{
         $result = $this->db->query($sql, $id_user);
         return $result->result();
     }
+
+    function get5Primeros() {
+        $sql = "SELECT a.*,
+                       u.Nombre
+                  FROM anotacion a,
+                       users u
+                 WHERE a.Id_user = u.Id
+                 GROUP BY a.Id_user
+                ORDER BY SUM(a.monto) DESC
+                LIMIT 5";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
+
+    function get5PrimerosMes($mes) {
+        $sql = "SELECT a.*,
+                       u.Nombre
+                  FROM anotacion a,
+                       users u
+                 WHERE a.Id_user = u.Id
+                   AND SUBSTRING(a.fecha, 6, 2) = '03'
+                 GROUP BY a.Id_user
+                ORDER BY SUM(a.monto) DESC
+                LIMIT 5";
+        $result = $this->db->query($sql);
+        return $result->result();
+    }
 }
