@@ -137,7 +137,7 @@ mes tenga tu huella!</td>
                             </div>
                             <div class="mdl-card__supporting-text">
                                 <div class="col-xs-6">
-                                    <div class="table-responsive">
+                                    <div class="table-responsive" id="content">
                                         <table class="table">
                                             <thead>
                                                 <tr>
@@ -166,14 +166,15 @@ mes tenga tu huella!</td>
                                                     <td class="text-left"><?php echo $cinco_nombre_m ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td colspan="2"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf">Descargar PDF<i class="mdi mdi-play_arrow"></i></button></td>
+                                                <div id="editor"></div>
+                                                    <td colspan="2"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf" id="pdf1">Descargar PDF<i class="mdi mdi-play_arrow"></i></button></td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
                                 </div>
                                 <div class="col-xs-6">
-                                    <div class="table-responsive">
+                                    <div class="table-responsive" id="contenido2">
                                         <table class="table">
                                             <thead>
                                                 <tr>
@@ -202,7 +203,8 @@ mes tenga tu huella!</td>
                                                     <td class="text-left"><?php echo $cinco_nombre_a ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td colspan="2"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf">Descargar PDF<i class="mdi mdi-play_arrow"></i></button></td>
+                                                    <div id="editor2"></div>
+                                                    <td colspan="2"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf" id="pdf2">Descargar PDF<i class="mdi mdi-play_arrow"></i></button></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -227,6 +229,7 @@ mes tenga tu huella!</td>
         <script src="<?php echo RUTA_PLUGINS?>moment/moment.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>datetimepicker/js/bootstrap-material-datetimepicker.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>jquery-mask/jquery.mask.min.js?v=<?php echo time();?>"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script>
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
@@ -237,6 +240,19 @@ mes tenga tu huella!</td>
             } else {
                 $('select').selectpicker();
             }
+            var doc = new jsPDF();
+            var specialElementHandlers = {
+                '#editor': function (element, renderer) {
+                    return true;
+                }
+            };
+            $('#pdf1').click(function () {
+                doc.fromHTML($('#content').html(), 15, 15, {
+                    'width': 170,
+                        'elementHandlers': specialElementHandlers
+                });
+                doc.save('pdf1.pdf');
+            });
         </script>
     </body>
 </html>
