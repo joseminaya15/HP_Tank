@@ -188,6 +188,22 @@ video{
     overflow: hidden;
     white-space: nowrap;
 }
+.button-pdf{
+    background-color: #F05332;
+    text-transform: initial;
+    color: #FFFFFF;
+    width: 100%;
+    padding: 0 5px;
+    font-family: 'RobotoMedium';
+    border-radius: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+.button-pdf i{
+    color: #FFFFFF;
+    vertical-align: middle;
+    font-size: 15px;
+}
 .footer{
 	position: absolute;
 	bottom: 0;
