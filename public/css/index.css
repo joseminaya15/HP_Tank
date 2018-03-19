@@ -357,8 +357,7 @@ video{
 }
 .mdl-ranking .mdl-card{
 	background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
-    cursor: pointer;
+    border-radius: 10px;
     margin: 15px;
     display: inline-block;
     -webkit-transition: transform .2s linear;
@@ -367,6 +366,7 @@ video{
     -o-transition: transform .2s linear;
     transition: transform .2s linear;
     width: 100%;
+    vertical-align: top;
 }
 .mdl-ranking .mdl-ganador,
 .mdl-ranking .mdl-top{
@@ -513,9 +513,25 @@ input::placeholder {
 /*TABLE*/
 .table>thead>tr>th{
     border: none;
+    color: #000000;
+    border-top: 1px solid transparent !important;
 }
 .table>tbody>tr>td{
     border-top: 1px solid #00A1DD;
+    color: #000000;
+}
+.mdl-ranking .table>tbody>tr>td{
+    font-size: 13px;
+    line-height: 16px;
+}
+.mdl-top .table>tbody>tr>td{
+    border-top: 1px solid #F5842F;
+}
+.mdl-premio .table>tbody>tr>td{
+    border-top: 1px solid #0C5AA9;
+}
+.mdl-ganador .table>tbody>tr>td{
+    border-top: 1px solid #A63A93;
 }
 /* DateTimePicker */
 .dtp-date-view{
