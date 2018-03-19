@@ -367,6 +367,7 @@ video{
     -o-transition: transform .2s linear;
     transition: transform .2s linear;
     width: 100%;
+    vertical-align: top;
 }
 .mdl-ranking .mdl-ganador,
 .mdl-ranking .mdl-top{
@@ -513,9 +514,18 @@ input::placeholder {
 /*TABLE*/
 .table>thead>tr>th{
     border: none;
+    color: #000000;
 }
 .table>tbody>tr>td{
     border-top: 1px solid #00A1DD;
+    color: #000000;
+}
+.mdl-ranking .table>tbody>tr>td{
+    font-size: 13px;
+    line-height: 16px;
+}
+.mdl-ranking .table>tbody>tr>td img{
+    max-width: 40px;
 }
 /* DateTimePicker */
 .dtp-date-view{
