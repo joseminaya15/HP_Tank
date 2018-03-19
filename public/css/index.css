@@ -540,6 +540,9 @@ input::placeholder {
     font-size: 13px;
     line-height: 16px;
 }
+.mdl-ranking .table>tbody>tr>td img{
+    max-width: 40px;
+}
 .mdl-top .table>tbody>tr>td{
     border-top: 1px solid #F5842F;
 }

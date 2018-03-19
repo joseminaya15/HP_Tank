@@ -51,7 +51,7 @@
                 </div>
                 <div class="center">
                     <div class="mdl-ranking">
-                        <div class="mdl-card mdl-top">
+                        <div id="ranking" class="mdl-card mdl-top">
                             <div class="mdl-card__title">
                                 <h2>Ranking TOP 5</h2>
                             </div>
@@ -96,7 +96,16 @@
                                 </div>
                             </div>
                             <div class="mdl-card__actions">
-                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Compartir<i class="fa fa-facebook"></i></button>
+                                <button id="boton-descarga" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Compartir<i class="fa fa-facebook"></i></button>
+                                <div id="fb-root"></div>
+                                <script>(function(d, s, id) {
+                                  var js, fjs = d.getElementsByTagName(s)[0];
+                                  if (d.getElementById(id)) return;
+                                  js = d.createElement(s); js.id = id;
+                                  js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.12';
+                                  fjs.parentNode.insertBefore(js, fjs);
+                                }(document, 'script', 'facebook-jssdk'));</script>
+                                <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
                             </div>
                         </div>
                         <div class="mdl-card mdl-premio">
@@ -148,23 +157,23 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador1.png""></td>
+                                                    <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador1.png""></td>
                                                     <td class="text-left"><?php echo $uno_nombre_m ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador2.png""></td>
+                                                    <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador2.png""></td>
                                                     <td class="text-left"><?php echo $dos_nombre_m ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador3.png""></td>
+                                                    <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador3.png""></td>
                                                     <td class="text-left"><?php echo $tres_nombre_m ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador4.png""></td>
+                                                    <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador4.png""></td>
                                                     <td class="text-left"><?php echo $cuatro_nombre_m ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador5.png""></td>
+                                                    <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador5.png""></td>
                                                     <td class="text-left"><?php echo $cinco_nombre_m ?></td>
                                                 </tr>
                                                 <tr>
@@ -185,23 +194,23 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador1.png""></td>
+                                                    <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador1.png""></td>
                                                     <td class="text-left"><?php echo $uno_nombre_a ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador2.png""></td>
+                                                    <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador2.png""></td>
                                                     <td class="text-left"><?php echo $dos_nombre_a ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador3.png""></td>
+                                                    <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador3.png""></td>
                                                     <td class="text-left"><?php echo $tres_nombre_a ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador4.png""></td>
+                                                    <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador4.png""></td>
                                                     <td class="text-left"><?php echo $cuatro_nombre_a ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador5.png""></td>
+                                                    <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador5.png""></td>
                                                     <td class="text-left"><?php echo $cinco_nombre_a ?></td>
                                                 </tr>
                                                 <tr>
@@ -233,6 +242,7 @@
         <script src="<?php echo RUTA_PLUGINS?>jquery-mask/jquery.mask.min.js?v=<?php echo time();?>"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script>
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jslogin.js?v=<?php echo time();?>"></script>
@@ -254,6 +264,30 @@
                         'elementHandlers': specialElementHandlers
                 });
                 doc.save('pdf1.pdf');
+            });
+            function downloadCanvas(canvasId, filename) {
+                var domElement = document.getElementById(canvasId);
+                html2canvas(domElement, {
+                    onrendered: function(domElementCanvas) {
+                        var context = domElementCanvas.getContext('2d');
+                        var link = document.createElement('a');
+                        link.href = domElementCanvas.toDataURL("image/png");
+                        link.download = filename;
+                        if (document.createEvent) {
+                            var event = document.createEvent('MouseEvents');
+                            event.initMouseEvent("click", true, true, window, 0,
+                                0, 0, 0, 0,
+                                false, false, false, false,
+                                0, null);
+                            link.dispatchEvent(event);
+                        } else {
+                            link.click();
+                        }
+                    }
+                });
+            }
+            $('#boton-descarga').click(function() {
+                downloadCanvas('ranking','ranking.png');
             });
         </script>
     </body>
