@@ -60,13 +60,36 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
+                                                <th></th>
                                                 <th>VENDEDOR</th>
                                                 <th>CANAL</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td></td>
+                                                <td><img src="<?php echo RUTA_IMG?>ranking/ranking1.png""></td>
+                                                <td>Carlos Quispe</td>
+                                                <td>Accesorios para Computadoras y Oficina Acosa</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="<?php echo RUTA_IMG?>ranking/ranking2.png""></td>
+                                                <td>Carlos Quispe</td>
+                                                <td>Accesorios para Computadoras y Oficina Acosa</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="<?php echo RUTA_IMG?>ranking/ranking3.png""></td>
+                                                <td>Carlos Quispe</td>
+                                                <td>Accesorios para Computadoras y Oficina Acosa</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="<?php echo RUTA_IMG?>ranking/ranking4.png""></td>
+                                                <td>Carlos Quispe</td>
+                                                <td>Accesorios para Computadoras y Oficina Acosa</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="<?php echo RUTA_IMG?>ranking/ranking5.png""></td>
+                                                <td>Carlos Quispe</td>
+                                                <td>Accesorios para Computadoras y Oficina Acosa</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -88,7 +111,16 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td></td>
+                                                <td>Marzo</td>
+                                                <td>$50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Abril</td>
+                                                <td>$48</td>
+                                            </tr>
+                                            <tr>
+                                                <td>En Marzo quedaste en el puesto</td>
+                                                <td>25</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -100,20 +132,73 @@
                                 <h2>Ganadores TOP 5 del mes</h2>
                             </div>
                             <div class="mdl-card__supporting-text">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>MES MARZO</th>
-                                                <th>MES ABRIL</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="col-xs-6">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>MES MARZO</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador1.png""></td>
+                                                    <td>Carlos Quispe</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador2.png""></td>
+                                                    <td>Carlos Quispe</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador3.png""></td>
+                                                    <td>Carlos Quispe</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador4.png""></td>
+                                                    <td>Carlos Quispe</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador5.png""></td>
+                                                    <td>Carlos Quispe</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>MES ABRIL</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador1.png""></td>
+                                                    <td>Carlos Quispe</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador2.png""></td>
+                                                    <td>Carlos Quispe</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador3.png""></td>
+                                                    <td>Carlos Quispe</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador4.png""></td>
+                                                    <td>Carlos Quispe</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="<?php echo RUTA_IMG?>ranking/ganador5.png""></td>
+                                                    <td>Carlos Quispe</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
