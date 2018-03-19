@@ -11,7 +11,7 @@
         <meta name="language"               content="es">
         <meta name="theme-color"            content="#000000">
     	<title>HP Super Vendendor</title>
-    	<link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/favicon.png">
+    	<link rel="shortcut icon" href="<?php echo RUTA_IMG?>logos/favicon.png">
     	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.css?v=<?php echo time();?>">

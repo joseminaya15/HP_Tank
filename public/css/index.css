@@ -189,7 +189,7 @@ video{
     white-space: nowrap;
 }
 .button-pdf{
-    background-color: #F05332;
+    background-color: #F05332 !important;
     text-transform: initial;
     color: #FFFFFF;
     width: 100%;

@@ -11,14 +11,14 @@
         <meta name="language"               content="es">
         <meta name="theme-color"            content="#000000">
         <title>HP Super Vendendor</title>
-        <link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/favicon.png">
+        <link rel="shortcut icon" href="<?php echo RUTA_IMG?>logos/favicon.png">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap/bootstrap.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>datetimepicker/css/bootstrap-material-datetimepicker.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>font-awesome.min.css?v=<?php echo time();?>">
-        <link rel="stylesheet"    href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+        <!-- <link rel="stylesheet"    href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> -->
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>roboto.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
@@ -95,6 +95,9 @@
                                     </table>
                                 </div>
                             </div>
+                            <div class="mdl-card__actions">
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Compartir<i class="fa fa-facebook"></i></button>
+                            </div>
                         </div>
                         <div class="mdl-card mdl-premio">
                             <div class="mdl-card__title">
@@ -123,8 +126,7 @@
                                                 <td class="text-left"><?php echo $ranking ?></td>
                                             </tr>
                                             <tr>
-                                                <td colspan="2" class="text-center">¡Rétate y haz que el próximo
-mes tenga tu huella!</td>
+                                                <td colspan="2" class="text-center">¡Rétate y haz que el próximo mes tenga tu huella!</td>
                                             </tr>
                                         </tbody>
                                     </table>
