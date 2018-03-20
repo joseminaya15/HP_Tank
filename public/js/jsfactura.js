@@ -40,6 +40,7 @@ function crearAnotacion(){
   if(factura == undefined){
     return;
   }
+  $('#cargarAnotacion').prop("disabled", true);
  $.ajax({
     data : {fecha     : fecha,
             nro_fact  : nro_fact,
