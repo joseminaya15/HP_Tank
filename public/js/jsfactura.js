@@ -73,6 +73,9 @@ function crearAnotacion(){
 function subirFactura(){
   $( "#archivo" ).trigger( "click" );
 }
+$( "#archivo" ).change(function() {
+  $('#btnSubirFact').text('Cargado');
+});
 var factura = null;
 function agregarDatos(){
   var datos = new FormData();
