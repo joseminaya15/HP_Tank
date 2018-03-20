@@ -335,30 +335,6 @@
                 });
                 doc2.save('rankingTop5Abril.pdf');
             });
-            /*function downloadCanvas(canvasId, filename) {
-                var domElement = document.getElementById(canvasId);
-                html2canvas(domElement, {
-                    onrendered: function(domElementCanvas) {
-                        var context = domElementCanvas.getContext('2d');
-                        var link = document.createElement('a');
-                        link.href = domElementCanvas.toDataURL("image/png");
-                        link.download = filename;
-                        if (document.createEvent) {
-                            var event = document.createEvent('MouseEvents');
-                            event.initMouseEvent("click", true, true, window, 0,
-                                0, 0, 0, 0,
-                                false, false, false, false,
-                                0, null);
-                            link.dispatchEvent(event);
-                        } else {
-                            link.click();
-                        }
-                    }
-                });
-            }
-            $('#boton-descarga').click(function() {
-                downloadCanvas('ranking','ranking.png');
-            });*/
             (function(d, s, id) {
               var js, fjs = d.getElementsByTagName(s)[0];
               if (d.getElementById(id)) return;
