@@ -176,7 +176,6 @@ function readCount(){
   }else if (print == 'HP Tank 5820'){
     $('#spiff').val('$7');
   }
-
   var read1 = $('#cantidad').val();
   var spiffread = $('#spiff').val().substr(1,2);
   if(spiffread != 0){
