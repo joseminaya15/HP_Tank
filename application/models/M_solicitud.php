@@ -25,7 +25,7 @@ class M_solicitud extends  CI_Model{
     }
 
     function getTotal($id_user) {
-        $sql = "SELECT SUM(a.monto) AS total
+        $sql = "SELECT SUM(SUBSTRING(a.spiff,2,2)) AS total
                   FROM anotacion a,
                        users u
                  WHERE a.Id_user = u.Id

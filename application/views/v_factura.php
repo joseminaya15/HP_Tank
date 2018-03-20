@@ -81,7 +81,7 @@
                                             <th>Nro Factura</th>
                                             <th>Modelo</th>
                                             <th>Cantidad</th>
-                                            <th>Total spiff ganado</th>
+                                            <th>Spiff ganado</th>
                                           </tr>
                                           <?php echo $tabla ?>
                                         </table>
@@ -155,7 +155,7 @@
                             </div>
                         </div>
                         <div class="mdl-card__actions">
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="crearAnotacion();agregarDatos();" id="cargarAnotacion">Cargar factura<i class="mdi mdi-play_arrow"></i></button>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="agregarDatos();crearAnotacion();" id="cargarAnotacion">Cargar factura<i class="mdi mdi-play_arrow"></i></button>
                         </div>
                     </div>
                 </div>

@@ -34,7 +34,7 @@ class Factura extends CI_Controller {
                             <td class="text-center">'.$key->nro_factura.'</td>
                             <td class="text-center">'.$key->modelo.'</td>
                             <td class="text-center">'.$key->cantidad.'</td>
-                            <td class="text-center">'.$key->monto.'</td>
+                            <td class="text-center">'.$key->spiff.'</td>
                         </tr>';
             }
             $data['tabla'] = $html;
@@ -88,7 +88,7 @@ class Factura extends CI_Controller {
             $this->session->set_userdata($session);
             $datos = $this->M_solicitud->getTotal($this->session->userdata('Id_user'));
             $data['total'] = $datos[0]->total == '' ? '0' : $datos[0]->total;
-            $this->sendGmailSap();
+            //$this->sendGmailSap();
             $data['error'] = EXIT_SUCCESS;
         } catch (Exception $e){
             $data['msj'] = $e->getMessage();

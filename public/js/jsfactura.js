@@ -15,6 +15,7 @@ function cerrarCesion(){
       }
   });
 }
+var factura = undefined;
 function crearAnotacion(){
   var fecha    = $('#fecha').val();
   var nro_fact = $('#nro_factura').val();
@@ -61,7 +62,7 @@ function crearAnotacion(){
           $('#monto').val("");
           $('#cantidad').val("");
           $('#gtotal').text(data.total);
-          setTimeout(function(){ location.href = 'Factura'; }, 2000);
+          //setTimeout(function(){ location.href = 'Factura'; }, 2000);
         }else{
           return;
         }
@@ -78,7 +79,6 @@ $( "#archivo" ).change(function() {
   $('#btnSubirFact').css('background-color','#5CB85C');
   $('#btnSubirFact').css('color','#FFFFFF');
 });
-var factura = null;
 function agregarDatos(){
   var datos = new FormData();
   factura = $('#archivo')[0].files[0];
@@ -102,7 +102,7 @@ function agregarDatos(){
         $('#nro_factura').val("");
         $('#monto').val("");
         $('#cantidad').val("");
-        setTimeout(function(){ location.href = 'Factura'; }, 2000);
+        //setTimeout(function(){ location.href = 'Factura'; }, 2000);
     });
 }
 
