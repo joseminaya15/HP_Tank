@@ -283,7 +283,6 @@
                 </div>
             </div>
             <div class="footer">
-                <button class="mdl-button mdl-button--raised" onclick="share()">saddsa</button>
                 <p>&copy; Copyright 2018 Hewlett-Packard Development Company, L.P.</p>
             </div>
         </section>
