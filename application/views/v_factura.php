@@ -81,7 +81,7 @@
                                             <th>Nro Factura</th>
                                             <th>Modelo</th>
                                             <th>Cantidad</th>
-                                            <th>Total</th>
+                                            <th>Total spiff ganado</th>
                                           </tr>
                                           <?php echo $tabla ?>
                                         </table>

@@ -160,7 +160,7 @@ function selectPrint(){
   if(print == 'HP Tank 5810'){
     spiff.val('$5');
   }else if (print == 'HP Tank 5820'){
-    spiff.val('$7');
+    spiff.val('$8');
   }
   var res = spiff.val().substr(1,2);
   if(res != 0){
@@ -174,7 +174,7 @@ function readCount(){
   if(print == 'HP Tank 5810'){
     $('#spiff').val('$5');
   }else if (print == 'HP Tank 5820'){
-    $('#spiff').val('$7');
+    $('#spiff').val('$8');
   }
   var read1 = $('#cantidad').val();
   var spiffread = $('#spiff').val().substr(1,2);
