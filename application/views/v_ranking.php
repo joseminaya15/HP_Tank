@@ -317,7 +317,7 @@
             };
             $('#pdf1').click(function () {
                 doc.fromHTML($('#content').html(), 15, 15, {
-                    'width': 170,
+                    'width': 250,
                         'elementHandlers': specialElementHandlers
                 });
                 doc.save('rankingTop5Marzo.pdf');
@@ -330,7 +330,7 @@
             };
             $('#pdf2').click(function () {
                 doc2.fromHTML($('#content2').html(), 15, 15, {
-                    'width': 170,
+                    'width': 250,
                         'elementHandlers': specialElementHandlers
                 });
                 doc2.save('rankingTop5Abril.pdf');

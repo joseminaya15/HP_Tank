@@ -191,7 +191,8 @@
             } else {
                 $('select').selectpicker();
             }
-            var doc = new jsPDF();
+            var doc = new jsPDF('l', 'mm', [297, 210]); //The first Param is for landscape or portrait
+            //var doc = new jsPDF();
             var specialElementHandlers = {
                 '#editor': function (element, renderer) {
                     return true;
