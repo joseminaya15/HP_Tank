@@ -60,7 +60,6 @@ function crearAnotacion(){
           $('#monto').val("");
           $('#cantidad').val("");
           $('#gtotal').text(data.total);
-          //msj('error', 'Su factura se registró correctamente')
           setTimeout(function(){ location.href = 'Factura'; }, 2000);
         }else{
           return;
