@@ -140,7 +140,7 @@
                             </div>
                             <div class="mdl-card__supporting-text p-t-0">
                                 <div class="col-xs-6">
-                                    <div class="table-responsive" id="content">
+                                    <div class="table-responsive">
                                         <table class="table m-0">
                                             <thead>
                                                 <tr>
@@ -169,15 +169,48 @@
                                                     <td class="text-left"><?php echo $cinco_nombre_m ?></td>
                                                 </tr>
                                                 <tr>
-                                                <div id="editor"></div>
-                                                    <td colspan="2" style="border: none;"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf" id="pdf1">Descargar PDF<i class="mdi mdi-play_arrow"></i></button></td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                        <div id="content" style="display: none;">
+                                             <table class="table">
+                                                <h1>Top 5 Mes de Marzo</h1>
+                                                <thead>
+                                                  <tr>
+                                                    <th>Puesto</th>
+                                                    <th>Nombre</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td>1</td>
+                                                    <td><?php echo $uno_nombre_m ?></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>2</td>
+                                                    <td><?php echo $dos_nombre_m ?></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>3</td>
+                                                    <td><?php echo $tres_nombre_m ?></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>4</td>
+                                                    <td><?php echo $cuatro_nombre_m ?></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td>5</td>
+                                                    <td><?php echo $cinco_nombre_m ?></td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                        </div>
+                                        <div id="editor"></div>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf" id="pdf1">Descargar PDF<i class="mdi mdi-play_arrow"></i></button>
                                     </div>
                                 </div>
                                 <div class="col-xs-6">
-                                    <div class="table-responsive" id="contenido2">
+                                    <div class="table-responsive">
                                         <table class="table m-0">
                                             <thead>
                                                 <tr>
@@ -205,12 +238,43 @@
                                                     <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador5.png""></td>
                                                     <td class="text-left"><?php echo $cinco_nombre_a ?></td>
                                                 </tr>
-                                                <tr>
-                                                    <div id="editor2"></div>
-                                                    <td colspan="2" style="border: none;"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf" id="pdf2">Descargar PDF<i class="mdi mdi-play_arrow"></i></button></td>
-                                                </tr>
                                             </tbody>
                                         </table>
+                                        <div id="content2" style="display: none;">
+                                             <table class="table">
+                                                <h1>Top 5 Mes de Abril</h1>
+                                                <thead>
+                                                  <tr>
+                                                    <th class="text-center">Puesto</th>
+                                                    <th class="text-center">Nombre</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td class="text-center">1</td>
+                                                    <td class="text-center"><?php echo $uno_nombre_a ?></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="text-center">2</td>
+                                                    <td class="text-center"><?php echo $dos_nombre_a ?></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="text-center">3</td>
+                                                    <td class="text-center"><?php echo $tres_nombre_a ?></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="text-center">4</td>
+                                                    <td class="text-center"><?php echo $cuatro_nombre_a ?></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="text-center">5</td>
+                                                    <td class="text-center"><?php echo $cinco_nombre_a ?></td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                        </div>
+                                        <div id="editor2"></div>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf" id="pdf2">Descargar PDF<i class="mdi mdi-play_arrow"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -255,7 +319,20 @@
                     'width': 170,
                         'elementHandlers': specialElementHandlers
                 });
-                doc.save('pdf1.pdf');
+                doc.save('rankingTop5Marzo.pdf');
+            });
+            var doc2 = new jsPDF();
+            var specialElementHandlers = {
+                '#editor2': function (element, renderer) {
+                    return true;
+                }
+            };
+            $('#pdf2').click(function () {
+                doc2.fromHTML($('#content2').html(), 15, 15, {
+                    'width': 170,
+                        'elementHandlers': specialElementHandlers
+                });
+                doc2.save('rankingTop5Marzo.pdf');
             });
             /*function downloadCanvas(canvasId, filename) {
                 var domElement = document.getElementById(canvasId);

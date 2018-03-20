@@ -139,7 +139,7 @@ class Factura extends CI_Controller {
                             'newline'   => "\r\n");
        $this->email->initialize($configGmail);
        $this->email->from('info@sap-latam.com');
-       $this->email->to('jhonatanibericom@gmail.com');
+       $this->email->to($this->session->userdata('usuario'));
        $this->email->subject('aa');
         $texto = '<!DOCTYPE html>
                     <html>
