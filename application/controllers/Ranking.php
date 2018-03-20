@@ -41,16 +41,46 @@ class Ranking extends CI_Controller {
             $data['cinco_nombre'] = '-';
             $data['cinco_canal'] = '-';
         }else {
-            $data['uno_nombre'] = $primeros[0]->Nombre;
-            $data['uno_canal'] = $primeros[0]->Canal;
-            $data['dos_nombre'] = $primeros[1]->Nombre;
-            $data['dos_canal'] = $primeros[1]->Canal;
-            $data['tres_nombre'] = $primeros[2]->Nombre;
-            $data['tres_canal'] = $primeros[2]->Canal;
-            $data['cuatro_nombre'] = $primeros[3]->Nombre;
-            $data['cuatro_canal'] = $primeros[3]->Canal;
-            $data['cinco_nombre'] = $primeros[4]->Nombre;
-            $data['cinco_canal'] = $primeros[4]->Canal;
+            if(count($primeros) == 1) {
+                $data['uno_nombre'] = $primeros[0]->Nombre;
+                $data['uno_canal'] = $primeros[0]->Canal;
+            }
+            if(count($primeros) == 2) {
+                $data['uno_nombre'] = $primeros[0]->Nombre;
+                $data['uno_canal'] = $primeros[0]->Canal;
+                $data['dos_nombre'] = $primeros[1]->Nombre;
+                $data['dos_canal'] = $primeros[1]->Canal;
+            }
+            if(count($primeros) == 3) {
+                $data['uno_nombre'] = $primeros[0]->Nombre;
+                $data['uno_canal'] = $primeros[0]->Canal;
+                $data['dos_nombre'] = $primeros[1]->Nombre;
+                $data['dos_canal'] = $primeros[1]->Canal;
+                $data['tres_nombre'] = $primeros[2]->Nombre;
+                $data['tres_canal'] = $primeros[2]->Canal;
+            }
+            if(count($primeros) == 4) {
+                $data['uno_nombre'] = $primeros[0]->Nombre;
+                $data['uno_canal'] = $primeros[0]->Canal;
+                $data['dos_nombre'] = $primeros[1]->Nombre;
+                $data['dos_canal'] = $primeros[1]->Canal;
+                $data['tres_nombre'] = $primeros[2]->Nombre;
+                $data['tres_canal'] = $primeros[2]->Canal;
+                $data['cuatro_nombre'] = $primeros[3]->Nombre;
+                $data['cuatro_canal'] = $primeros[3]->Canal;
+            }
+            if(count($primeros) == 5) {
+                $data['uno_nombre'] = $primeros[0]->Nombre;
+                $data['uno_canal'] = $primeros[0]->Canal;
+                $data['dos_nombre'] = $primeros[1]->Nombre;
+                $data['dos_canal'] = $primeros[1]->Canal;
+                $data['tres_nombre'] = $primeros[2]->Nombre;
+                $data['tres_canal'] = $primeros[2]->Canal;
+                $data['cuatro_nombre'] = $primeros[3]->Nombre;
+                $data['cuatro_canal'] = $primeros[3]->Canal;
+                $data['cinco_nombre'] = $primeros[4]->Nombre;
+                $data['cinco_canal'] = $primeros[4]->Canal;
+            }
         }
 
         //primeros del mes de marzo
@@ -63,11 +93,41 @@ class Ranking extends CI_Controller {
             $data['cuatro_nombre_m'] = '-';
             $data['cinco_nombre_m'] = '-';
         }else {
-            $data['uno_nombre_m']    = $primeros_m[0]->Nombre;
-            $data['dos_nombre_m']    = $primeros_m[1]->Nombre;
-            $data['tres_nombre_m']   = $primeros_m[2]->Nombre;
-            $data['cuatro_nombre_m'] = $primeros_m[3]->Nombre;
-            $data['cinco_nombre_m']  = $primeros_m[4]->Nombre;
+            if(count($primeros_m) == 1){
+                $data['uno_nombre_m']    = $primeros_m[0]->Nombre == '' ? '-' : $primeros_m[0]->Nombre;
+                $data['dos_nombre_m'] = '-';
+                $data['tres_nombre_m'] = '-';
+                $data['cuatro_nombre_m'] = '-';
+                $data['cinco_nombre_m'] = '-';
+            }
+            if(count($primeros_m) == 2){
+                $data['uno_nombre_m']    = $primeros_m[0]->Nombre == '' ? '-' : $primeros_m[0]->Nombre;
+                $data['dos_nombre_m']    = $primeros_m[1]->Nombre == '' ? '-' : $primeros_m[1]->Nombre;
+                $data['tres_nombre_m'] = '-';
+                $data['cuatro_nombre_m'] = '-';
+                $data['cinco_nombre_m'] = '-';
+            }
+            if(count($primeros_m) == 3){
+                $data['uno_nombre_m']    = $primeros_m[0]->Nombre == '' ? '-' : $primeros_m[0]->Nombre;
+                $data['dos_nombre_m']    = $primeros_m[1]->Nombre == '' ? '-' : $primeros_m[1]->Nombre;
+                $data['tres_nombre_m']   = $primeros_m[2]->Nombre == '' ? '-' : $primeros_m[2]->Nombre;
+                $data['cuatro_nombre_m'] = '-';
+                $data['cinco_nombre_m'] = '-';
+            }
+            if(count($primeros_m) == 4){
+                $data['uno_nombre_m']    = $primeros_m[0]->Nombre == '' ? '-' : $primeros_m[0]->Nombre;
+                $data['dos_nombre_m']    = $primeros_m[1]->Nombre == '' ? '-' : $primeros_m[1]->Nombre;
+                $data['tres_nombre_m']   = $primeros_m[2]->Nombre == '' ? '-' : $primeros_m[2]->Nombre;
+                $data['cuatro_nombre_m'] = $primeros_m[3]->Nombre == '' ? '-' : $primeros_m[3]->Nombre;
+                $data['cinco_nombre_m'] = '-';
+            }
+            if(count($primeros_m) == 5){
+                $data['uno_nombre_m']    = $primeros_m[0]->Nombre == '' ? '-' : $primeros_m[0]->Nombre;
+                $data['dos_nombre_m']    = $primeros_m[1]->Nombre == '' ? '-' : $primeros_m[1]->Nombre;
+                $data['tres_nombre_m']   = $primeros_m[2]->Nombre == '' ? '-' : $primeros_m[2]->Nombre;
+                $data['cuatro_nombre_m'] = $primeros_m[3]->Nombre == '' ? '-' : $primeros_m[3]->Nombre;
+                $data['cinco_nombre_m']  = $primeros_m[4]->Nombre == '' ? '-' : $primeros_m[4]->Nombre;
+            }
         }
 
         //primeros del mes de abril
@@ -80,13 +140,42 @@ class Ranking extends CI_Controller {
             $data['cuatro_nombre_a'] = '-';
             $data['cinco_nombre_a'] = '-';
         }else {
-            $data['uno_nombre_a']    = $primeros_a[0]->Nombre;
-            $data['dos_nombre_a']    = $primeros_a[1]->Nombre;
-            $data['tres_nombre_a']   = $primeros_a[2]->Nombre;
-            $data['cuatro_nombre_a'] = $primeros_a[3]->Nombre;
-            $data['cinco_nombre_a']  = $primeros_a[4]->Nombre;
+            if(count($primeros_a) == 1){
+                $data['uno_nombre_a']    = $primeros_a[0]->Nombre;
+                $data['dos_nombre_a'] = '-';
+                $data['tres_nombre_a'] = '-';
+                $data['cuatro_nombre_a'] = '-';
+                $data['cinco_nombre_a'] = '-';
+            }
+            if(count($primeros_a) == 2){
+                $data['uno_nombre_a']    = $primeros_a[0]->Nombre;
+                $data['dos_nombre_a']    = $primeros_a[1]->Nombre;
+                $data['tres_nombre_a'] = '-';
+                $data['cuatro_nombre_a'] = '-';
+                $data['cinco_nombre_a'] = '-';
+            }
+            if(count($primeros_a) == 3){
+                $data['uno_nombre_a']    = $primeros_a[0]->Nombre;
+                $data['dos_nombre_a']    = $primeros_a[1]->Nombre;
+                $data['tres_nombre_a']   = $primeros_a[2]->Nombre;
+                $data['cuatro_nombre_a'] = '-';
+                $data['cinco_nombre_a'] = '-';
+            }
+            if(count($primeros_a) == 4){
+                $data['cuatro_nombre_a'] = $primeros_a[3]->Nombre;
+                $data['cinco_nombre_a'] = '-';
+            }
+            if(count($primeros_a) == 5){
+                $data['cinco_nombre_a']  = $primeros_a[4]->Nombre;
+            }
         }
-        $data['directory'] = 'http://localhost/HP_Tank/RankingTop5?nam1='.$primeros[0]->Nombre.'&can1='.$primeros[0]->Canal.'&nam2='.$primeros[1]->Nombre.'&can2='.$primeros[1]->Canal.'&nam3='.$primeros[2]->Nombre.'&can3='.$primeros[2]->Canal.'&nam4='.$primeros[3]->Nombre.'&can4='.$primeros[3]->Canal.'&nam5='.$primeros[4]->Nombre.'&can5='.$primeros[4]->Canal;
+        if(count($primeros) != 0){
+            if(count($primeros) == 5) {
+                $data['directory'] = 'http://localhost/HP_Tank/RankingTop5?nam1='.$primeros[0]->Nombre.'&can1='.$primeros[0]->Canal.'&nam2='.$primeros[1]->Nombre.'&can2='.$primeros[1]->Canal.'&nam3='.$primeros[2]->Nombre.'&can3='.$primeros[2]->Canal.'&nam4='.$primeros[3]->Nombre.'&can4='.$primeros[3]->Canal.'&nam5='.$primeros[4]->Nombre.'&can5='.$primeros[4]->Canal;
+            }else {
+                $data['directory'] = '';
+            }
+        }
 		$this->load->view('v_ranking', $data);
 	}
     function cerrarCesion(){

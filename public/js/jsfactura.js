@@ -102,7 +102,7 @@ function agregarDatos(){
         $('#nro_factura').val("");
         $('#monto').val("");
         $('#cantidad').val("");
-        //setTimeout(function(){ location.href = 'Factura'; }, 2000);
+        setTimeout(function(){ location.href = 'Factura'; }, 2000);
     });
 }
 

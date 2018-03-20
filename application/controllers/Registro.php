@@ -39,7 +39,7 @@ class Registro extends CI_Controller {
                                 'pass'       => $password,
                                 'id_capitan' => $datoInsert['Id']);
             $this->session->set_userdata($session);
-            $this->sendGmailSap($usuario);
+            //$this->sendGmailSap($usuario);
 			$data['error'] = EXIT_SUCCESS;
         }catch(Exception $e) {
            $data['msj'] = $e->getMessage();

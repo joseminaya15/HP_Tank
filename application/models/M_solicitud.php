@@ -54,7 +54,7 @@ class M_solicitud extends  CI_Model{
                        users u
                  WHERE a.Id_user = u.Id
                  GROUP BY a.Id_user
-                ORDER BY SUM(a.monto) DESC
+                ORDER BY SUM(SUBSTRING(a.spiff,2,2)) DESC
                 LIMIT 5";
         $result = $this->db->query($sql);
         return $result->result();
@@ -68,14 +68,14 @@ class M_solicitud extends  CI_Model{
                  WHERE a.Id_user = u.Id
                    AND SUBSTRING(a.fecha, 6, 2) = ?
                  GROUP BY a.Id_user
-                ORDER BY SUM(a.monto) DESC
+                ORDER BY SUM(SUBSTRING(a.spiff,2,2)) DESC
                 LIMIT 5";
         $result = $this->db->query($sql, $mes);
         return $result->result();
     }
 
     function getTotalMes($id_user, $mes) {
-        $sql = "SELECT SUM(a.monto) AS total
+        $sql = "SELECT SUM(SUBSTRING(a.spiff,2,2)) AS total
                   FROM anotacion a,
                        users u
                  WHERE a.Id_user = u.Id

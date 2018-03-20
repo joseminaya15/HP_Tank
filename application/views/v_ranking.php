@@ -150,23 +150,23 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador1.png""></td>
-                                                    <td class="text-left"><?php echo $uno_nombre_m ?></td>
+                                                    <td class="text-left"><?php echo $uno_nombre_m == null ? '-' : $uno_nombre_m; ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador2.png""></td>
-                                                    <td class="text-left"><?php echo $dos_nombre_m ?></td>
+                                                    <td class="text-left"><?php echo $dos_nombre_m == null ? '-' : $dos_nombre_m; ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador3.png""></td>
-                                                    <td class="text-left"><?php echo $tres_nombre_m ?></td>
+                                                    <td class="text-left"><?php echo $tres_nombre_m == null ? '-' : $tres_nombre_m; ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador4.png""></td>
-                                                    <td class="text-left"><?php echo $cuatro_nombre_m ?></td>
+                                                    <td class="text-left"><?php echo $cuatro_nombre_m == null ? '-' : $cuatro_nombre_m; ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador5.png""></td>
-                                                    <td class="text-left"><?php echo $cinco_nombre_m ?></td>
+                                                    <td class="text-left"><?php echo $cinco_nombre_m == null ? '-' : $cinco_nombre_m; ?></td>
                                                 </tr>
                                                 <tr>
                                                 </tr>
