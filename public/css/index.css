@@ -318,7 +318,7 @@ video{
 	max-width: 280px;
 }
 .mdl-factura .mdl-card__actions{
-    padding: 0 25px;
+    padding: 25px;
 }
 .mdl-factura{
 	background-color: rgba(255, 255, 255, 0.8);

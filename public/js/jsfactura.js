@@ -75,6 +75,8 @@ function subirFactura(){
 }
 $( "#archivo" ).change(function() {
   $('#btnSubirFact').text('Cargado');
+  $('#btnSubirFact').css('background-color','#5CB85C');
+  $('#btnSubirFact').css('color','#FFFFFF');
 });
 var factura = null;
 function agregarDatos(){
