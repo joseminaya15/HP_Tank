@@ -167,7 +167,7 @@
 
         <form id="frmArchivo" method="post" style="display: none;">
             <input id="archivo" type="file" name="archivo" />
-            <input type="hidden" name="MAX_FILE_SIZE" value="20000"/>
+            <input type="hidden" name="MAX_FILE_SIZE" value="2000000"/>
             <input class="boton" type="submit" name="enviar" value="Importar" style="display: none" />
         </form>
 

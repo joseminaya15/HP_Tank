@@ -37,6 +37,9 @@ function crearAnotacion(){
   if(cantidad == null || cantidad == ''){
     msj('error', 'Ingrese la cantidad');
   }
+  if(factura == undefined){
+    return;
+  }
  $.ajax({
     data : {fecha     : fecha,
             nro_fact  : nro_fact,
@@ -57,7 +60,7 @@ function crearAnotacion(){
           $('#monto').val("");
           $('#cantidad').val("");
           $('#gtotal').text(data.total);
-          msj('error', 'Su factura se registró correctamente')
+          //msj('error', 'Su factura se registró correctamente')
           setTimeout(function(){ location.href = 'Factura'; }, 2000);
         }else{
           return;
@@ -70,8 +73,14 @@ function crearAnotacion(){
 function subirFactura(){
   $( "#archivo" ).trigger( "click" );
 }
+var factura = null;
 function agregarDatos(){
   var datos = new FormData();
+  factura = $('#archivo')[0].files[0];
+  if(factura == undefined){
+    msj('error', 'Seleccione una factura');
+    return;
+  }
     datos.append('archivo',$('#archivo')[0].files[0]);
      $.ajax({
         type:"post",
