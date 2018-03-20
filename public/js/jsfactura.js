@@ -96,6 +96,13 @@ function agregarDatos(){
         processData:false,
       }).done(function(respuesta){
         msj('error', respuesta.mensaje);
+        $('#fecha').val("");
+        $('#modelo').val("0");
+        $('.selectpicker').selectpicker('refresh');
+        $('#nro_factura').val("");
+        $('#monto').val("");
+        $('#cantidad').val("");
+        setTimeout(function(){ location.href = 'Factura'; }, 2000);
     });
 }
 
