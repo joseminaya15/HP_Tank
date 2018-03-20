@@ -36,7 +36,7 @@
             <div class="mdl-card-container">
                 <div class="center-login registro">
                     <div class="mdl-card mdl-card-login mdl-registro">
-                        <div class="mdl-card__supporting-text">
+                        <div class="mdl-card__supporting-text p-b-50 p-t-20 p-r-20 p-l-20">
                             <div class="col-xs-12">
                                 <h2>Nuevo registro</h2>
                             </div>
