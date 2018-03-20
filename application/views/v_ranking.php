@@ -55,14 +55,14 @@
                             <div class="mdl-card__title">
                                 <h2>Ranking TOP 5</h2>
                             </div>
-                            <div class="mdl-card__supporting-text">
+                            <div class="mdl-card__supporting-text p-t-0">
                                 <div class="table-responsive">
                                     <table class="table m-0">
                                         <thead>
                                             <tr>
                                                 <th></th>
-                                                <th>VENDEDOR</th>
-                                                <th>CANAL</th>
+                                                <th class="bold">VENDEDOR</th>
+                                                <th class="bold">CANAL</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -104,23 +104,23 @@
                             <div class="mdl-card__title">
                                 <h2>Mis premios ganados</h2>
                             </div>
-                            <div class="mdl-card__supporting-text">
+                            <div class="mdl-card__supporting-text p-t-0">
                                 <div class="table-responsive">
                                     <table class="table m-0">
                                         <thead>
                                             <tr>
-                                                <th>MES</th>
-                                                <th>SPIFFS GANADOS</th>
+                                                <th class="bold">MES</th>
+                                                <th class="bold">SPIFFS GANADOS</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td class="text-left">Marzo</td>
-                                                <td class="text-left">$<?php echo $total_marzo ?></td>
+                                                <td class="text-left bold">Marzo</td>
+                                                <td class="text-left bold">$<?php echo $total_marzo ?></td>
                                             </tr>
                                             <tr>
-                                                <td class="text-left">Abril</td>
-                                                <td class="text-left">$<?php echo $total_abril ?></td>
+                                                <td class="text-left bold">Abril</td>
+                                                <td class="text-left bold">$<?php echo $total_abril ?></td>
                                             </tr>
                                             <tr>
                                                 <td class="text-left texto p-t-30 p-b-20">En Marzo quedaste en el puesto</td>
@@ -138,13 +138,13 @@
                             <div class="mdl-card__title">
                                 <h2>Ganadores TOP 5 del mes</h2>
                             </div>
-                            <div class="mdl-card__supporting-text">
+                            <div class="mdl-card__supporting-text p-t-0">
                                 <div class="col-xs-6">
                                     <div class="table-responsive" id="content">
                                         <table class="table m-0">
                                             <thead>
                                                 <tr>
-                                                    <th colspan="2">MES MARZO</th>
+                                                    <th colspan="2" class="bold">MES MARZO</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -181,7 +181,7 @@
                                         <table class="table m-0">
                                             <thead>
                                                 <tr>
-                                                    <th colspan="2">MES ABRIL</th>
+                                                    <th colspan="2" class="bold">MES ABRIL</th>
                                                 </tr>
                                             </thead>
                                             <tbody>

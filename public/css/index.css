@@ -5,6 +5,10 @@ body{
 	padding: 0;
 	font-family: 'RobotoRegular';
 }
+.bold{
+    font-family: 'RobotoBold';
+    font-size: 16px !important;
+}
 .mdl-card-container{
 	max-width: 1200px;
 	width: 100%;
@@ -385,7 +389,7 @@ video{
     transition: transform .2s linear;
     width: 100%;
     vertical-align: top;
-    height: 420px;
+    height: 400px;
 }
 .mdl-ranking .mdl-ganador,
 .mdl-ranking .mdl-top{
