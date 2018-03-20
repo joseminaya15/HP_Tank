@@ -57,7 +57,7 @@
                             </div>
                             <div class="mdl-card__supporting-text">
                                 <div class="table-responsive">
-                                    <table class="table">
+                                    <table class="table m-0">
                                         <thead>
                                             <tr>
                                                 <th></th>
@@ -106,7 +106,7 @@
                             </div>
                             <div class="mdl-card__supporting-text">
                                 <div class="table-responsive">
-                                    <table class="table">
+                                    <table class="table m-0">
                                         <thead>
                                             <tr>
                                                 <th>MES</th>
@@ -123,11 +123,11 @@
                                                 <td class="text-left">$<?php echo $total_abril ?></td>
                                             </tr>
                                             <tr>
-                                                <td class="text-left texto">En Marzo quedaste en el puesto</td>
-                                                <td class="text-left puesto"><?php echo $ranking ?></td>
+                                                <td class="text-left texto p-t-30 p-b-20">En Marzo quedaste en el puesto</td>
+                                                <td class="text-left puesto p-t-30 p-b-20"><?php echo $ranking ?></td>
                                             </tr>
                                             <tr>
-                                                <td colspan="2" class="text-center">¡Rétate y haz que el próximo mes tenga tu huella!</td>
+                                                <td colspan="2" class="text-center retate">¡Rétate y haz que el próximo mes tenga tu huella!</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -141,7 +141,7 @@
                             <div class="mdl-card__supporting-text">
                                 <div class="col-xs-6">
                                     <div class="table-responsive" id="content">
-                                        <table class="table">
+                                        <table class="table m-0">
                                             <thead>
                                                 <tr>
                                                     <th colspan="2">MES MARZO</th>
@@ -178,7 +178,7 @@
                                 </div>
                                 <div class="col-xs-6">
                                     <div class="table-responsive" id="contenido2">
-                                        <table class="table">
+                                        <table class="table m-0">
                                             <thead>
                                                 <tr>
                                                     <th colspan="2">MES ABRIL</th>

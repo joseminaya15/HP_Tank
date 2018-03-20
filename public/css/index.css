@@ -198,6 +198,7 @@ video{
     border-radius: 10px;
     height: 30px;
     line-height: 30px;
+    margin-top: 10px;
 }
 .button-pdf i{
     color: #FFFFFF;
@@ -211,6 +212,7 @@ video{
 	right: 0;
 	text-align: center;
 	padding: 15px;
+    z-index: 1;
 }
 .footer p{
 	color: #FFFFFF;
@@ -383,6 +385,7 @@ video{
     transition: transform .2s linear;
     width: 100%;
     vertical-align: top;
+    height: 420px;
 }
 .mdl-ranking .mdl-ganador,
 .mdl-ranking .mdl-top{
@@ -469,18 +472,25 @@ video{
 	font-size: 20px;
 	margin-top: 15px;
 }
-.texto{
+.mdl-ranking .table>tbody>tr>td.texto{
     color: #0C5AA9;
     font-size: 22px;
     line-height: 24px;
     width: 150px;
+    font-family: 'RobotoMedium';
 }
-.puesto{
+.mdl-ranking .table>tbody>tr>td.puesto{
     color: #0C5AA9;
     font-size: 60px;
     line-height: 65px;
     text-align: center;
     font-weight: 600;
+}
+.mdl-ranking .table>tbody>tr>td.retate{
+    font-size: 20px;
+    line-height: 22px;
+    font-family: 'RobotoLight';
+    padding-top: 15px;
 }
 /*MODAL*/
 .modal-backdrop.in {
