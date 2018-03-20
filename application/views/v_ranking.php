@@ -333,7 +333,7 @@
                     'width': 170,
                         'elementHandlers': specialElementHandlers
                 });
-                doc2.save('rankingTop5Marzo.pdf');
+                doc2.save('rankingTop5Abril.pdf');
             });
             /*function downloadCanvas(canvasId, filename) {
                 var domElement = document.getElementById(canvasId);
