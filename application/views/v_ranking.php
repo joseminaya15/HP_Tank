@@ -209,7 +209,7 @@
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf" id="pdf1">Descargar PDF<i class="mdi mdi-play_arrow"></i></button>
                                     </div>
                                 </div>
-                                <div class="col-xs-6" id="totalPoints">
+                                <div class="col-xs-6">
                                     <div class="table-responsive">
                                         <table class="table m-0">
                                             <thead>
