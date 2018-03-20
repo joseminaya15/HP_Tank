@@ -86,7 +86,7 @@ class Ranking extends CI_Controller {
             $data['cuatro_nombre_a'] = $primeros_a[3]->Nombre;
             $data['cinco_nombre_a']  = $primeros_a[4]->Nombre;
         }
-
+        $data['directory'] = 'http://localhost/HP_Tank/RankingTop5?nam1='.$primeros[0]->Nombre.'&can1='.$primeros[0]->Canal.'&nam2='.$primeros[1]->Nombre.'&can2='.$primeros[1]->Canal.'&nam3='.$primeros[2]->Nombre.'&can3='.$primeros[2]->Canal.'&nam4='.$primeros[3]->Nombre.'&can4='.$primeros[3]->Canal.'&nam5='.$primeros[4]->Nombre.'&can5='.$primeros[4]->Canal;
 		$this->load->view('v_ranking', $data);
 	}
     function cerrarCesion(){

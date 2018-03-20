@@ -97,7 +97,7 @@
                             </div>
                             <div class="mdl-card__actions p-r-20">
                                 <div id="fb-root"></div>
-                                <div class="fb-share-button" data-href="http://localhost/HP_Tank/RankingTop5" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="http://localhost/HP_Tank/RankingTop5" class="fb-xfbml-parse-ignore">Compartir</a></div>
+                                <div class="fb-share-button" data-href="<?php echo $directory ?>" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="<?php echo $directory ?>" class="fb-xfbml-parse-ignore">Compartir</a></div>
                             </div>
                         </div>
                         <div class="mdl-card mdl-premio">
