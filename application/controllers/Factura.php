@@ -143,7 +143,7 @@ class Factura extends CI_Controller {
        $this->email->initialize($configGmail);
        $this->email->from('info@sap-latam.com');
        $this->email->to($this->session->userdata('usuario'));
-       $this->email->subject('Factura HP Tank');
+       $this->email->subject('Acabas de dejar una huella');
         $texto = '<!DOCTYPE html>
                     <html>
                     <body>
