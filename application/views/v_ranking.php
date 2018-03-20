@@ -95,7 +95,7 @@
                                     </table>
                                 </div>
                             </div>
-                            <div class="mdl-card__actions">
+                            <div class="mdl-card__actions p-r-20">
                                 <div id="fb-root"></div>
                                 <div class="fb-share-button" data-href="http://localhost/HP_Tank/RankingTop5" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="http://localhost/HP_Tank/RankingTop5" class="fb-xfbml-parse-ignore">Compartir</a></div>
                             </div>
@@ -170,7 +170,7 @@
                                                 </tr>
                                                 <tr>
                                                 <div id="editor"></div>
-                                                    <td colspan="2"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf" id="pdf1">Descargar PDF<i class="mdi mdi-play_arrow"></i></button></td>
+                                                    <td colspan="2" style="border: none;"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf" id="pdf1">Descargar PDF<i class="mdi mdi-play_arrow"></i></button></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -207,7 +207,7 @@
                                                 </tr>
                                                 <tr>
                                                     <div id="editor2"></div>
-                                                    <td colspan="2"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf" id="pdf2">Descargar PDF<i class="mdi mdi-play_arrow"></i></button></td>
+                                                    <td colspan="2" style="border: none;"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf" id="pdf2">Descargar PDF<i class="mdi mdi-play_arrow"></i></button></td>
                                                 </tr>
                                             </tbody>
                                         </table>

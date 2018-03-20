@@ -7,7 +7,8 @@ body{
 }
 .bold{
     font-family: 'RobotoBold';
-    font-size: 16px !important;
+    font-size: 14px !important;
+    line-height: 16px !important;
 }
 .mdl-card-container{
 	max-width: 1200px;
@@ -568,7 +569,7 @@ input::placeholder {
     line-height: 16px;
 }
 .mdl-ranking .table>tbody>tr>td img{
-    max-width: 40px;
+    max-width: 42px;
 }
 .mdl-top .table>tbody>tr>td{
     border-top: 1px solid #F5842F;
