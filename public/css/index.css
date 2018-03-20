@@ -392,12 +392,16 @@ video{
     vertical-align: top;
     height: 400px;
 }
+/*.mdl-ranking .mdl-card .mdl-card__actions,
+.mdl-ranking .mdl-card .mdl-card__supporting-text{
+    background-color: rgba(255, 255, 255, 0.8);
+}*/
 .mdl-ranking .mdl-ganador,
 .mdl-ranking .mdl-top{
-	max-width: 33%
+	max-width: 33.3%
 }
 .mdl-ranking .mdl-premio{
-	max-width: 25%
+	max-width: 25.3%
 }
 .mdl-ranking .mdl-card h2{
     margin: 0;
