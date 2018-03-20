@@ -63,7 +63,7 @@ class Registro extends CI_Controller {
        $this->email->initialize($configGmail);
        $this->email->from('info@sap-latam.com');
        $this->email->to($this->session->userdata('usuario'));
-       $this->email->subject('aa');
+       $this->email->subject('¡Sé el próximo Súper Vendedor HP Tank!');
         $texto = '<!DOCTYPE html>
                     <html>
                     <body>
