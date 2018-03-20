@@ -81,13 +81,13 @@ class Registro extends CI_Controller {
                                 <td>
                                     <table width="400" cellspacing="0" cellpadding="0" border="0" align="center" style="padding: 30px 0">
                                         <tr>
-                                            <td style="text-align: center;"><font style="font-family: arial;color: #00A0DC;font-size: 25px;font-weight: 600;">¡Gracias por registrarte!</font></td>
+                                            <td style="text-align: center;padding-bottom: 0;"><font style="font-family: arial;color: #00A0DC;font-size: 25px;font-weight: 600;">¡Gracias por registrarte!</font></td>
                                         </tr>
                                         <tr>
-                                            <td style="text-align: center;"><font style="font-family: arial;color: #000000;font-size: 22px;">Haz que tus ventas dejen huella</font></td>
+                                            <td style="text-align: center;padding: 0;margin: 0;"><font style="font-family: arial;color: #000000;font-size: 22px;">Haz que tus ventas dejen huella</font></td>
                                         </tr>
                                         <tr>
-                                            <td style="text-align: center;padding-top: 20px;"><font style="font-family: arial;color: #757575;font-size: 14px;">Inicia sesi&oacute;n con tu usuario y contrase&ntilde;a</font></td>
+                                            <td style="text-align: center;padding-top: 20px;padding-bottom: 0;"><font style="font-family: arial;color: #757575;font-size: 14px;">Inicia sesi&oacute;n con tu usuario y contrase&ntilde;a</font></td>
                                         </tr>
                                         <tr>
                                             <td style="padding: 20px 0;">
@@ -108,7 +108,7 @@ class Registro extends CI_Controller {
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td style="text-align: center;padding: 20px 0"><a style="font-family: arial;color: #00A0DC;font-size: 14px; text-decoration: underline;font-weight: 600;">Regresar al portal</a></td>
+                                            <td style="text-align: center;padding: 20px 0"><a href="http://incentivoshptank.marketinghp.net/login" target="_blank" style="font-family: arial;color: #00A0DC;font-size: 14px; text-decoration: underline;font-weight: 600;">Regresar al portal</a></td>
                                         </tr>
                                         <tr>
                                             <td style="text-align: center;"><font style="font-family: arial;color: #D3D3D3;font-size: 12px;">&copy;Copyright 2018 HP Development Company, L.P.</font></td>
