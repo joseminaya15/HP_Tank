@@ -469,6 +469,19 @@ video{
 	font-size: 20px;
 	margin-top: 15px;
 }
+.texto{
+    color: #0C5AA9;
+    font-size: 22px;
+    line-height: 24px;
+    width: 150px;
+}
+.puesto{
+    color: #0C5AA9;
+    font-size: 60px;
+    line-height: 65px;
+    text-align: center;
+    font-weight: 600;
+}
 /*MODAL*/
 .modal-backdrop.in {
     opacity: .8;

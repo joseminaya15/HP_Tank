@@ -123,8 +123,8 @@
                                                 <td class="text-left">$<?php echo $total_abril ?></td>
                                             </tr>
                                             <tr>
-                                                <td class="text-left">En Marzo quedaste en el puesto</td>
-                                                <td class="text-left"><?php echo $ranking ?></td>
+                                                <td class="text-left texto">En Marzo quedaste en el puesto</td>
+                                                <td class="text-left puesto"><?php echo $ranking ?></td>
                                             </tr>
                                             <tr>
                                                 <td colspan="2" class="text-center">¡Rétate y haz que el próximo mes tenga tu huella!</td>

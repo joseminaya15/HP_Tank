@@ -149,7 +149,7 @@ class Factura extends CI_Controller {
                                 <td>
                                     <table width="500" cellspacing="0" cellpadding="0" border="0" align="center">
                                         <tr>
-                                            <td><a href="#"><img src="http://test.brainblue.com/Super_Vendedor_HP_Tank/public/img/logos/fondol_factura.png" width="500" height="272" alt="alternative text" border="0" style="display: block;"></a></td>
+                                            <td><a href="#"><img src="http://incentivoshptank.marketinghp.net/public/img/logos/fondo_factura.png" width="500" height="272" alt="alternative text" border="0" style="display: block;"></a></td>
                                         </tr>
                                     </table>
                                 </td>
