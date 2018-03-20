@@ -141,7 +141,7 @@
                                             </td>
                                             <td class="text-center">
                                                 <div class="mdl-input factura">
-                                                    <input id="monto" type="text" class="form-control text-center" disabled>
+                                                    <input id="monto" type="text" class="form-control text-center">
                                                 </div>
                                             </td>
                                             <td>

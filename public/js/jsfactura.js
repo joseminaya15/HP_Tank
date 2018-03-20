@@ -150,23 +150,39 @@ function initButtonCalendarDaysMaxToday(idButton, currentDate, fecha) {
   var valueNewInput = $("#"+newInput).val();   
   id.text(valueNewInput);
 }
-var numberCantidad = null;
 var numberSpiff = null;
 var cantidad = null;
+var read_glob = null;
 function selectPrint(){
   var spiff = $('#spiff');
+  var read = $('#cantidad').val();
   var print = $('#modelo').val();
-  if(print == 'HP Tank 5810')
+  if(print == 'HP Tank 5810'){
     spiff.val('$5');
-  else if (print == 'HP Tank 5820')
+  }else if (print == 'HP Tank 5820'){
     spiff.val('$7');
+  }
   var res = spiff.val().substr(1,2);
-  numberSpiff = res;
-  $('#monto').val(numberCantidad*numberSpiff);
+  if(res != 0){
+    if(read != ''){
+      $('#spiff').val("$"+read*res);
+    }
+  }
 }
 function readCount(){
-  selectPrint();
-  var read       = $('#cantidad').val();
-  var Monto      = $('#monto').val(read*numberSpiff);
-  numberCantidad = read; 
+  var print = $('#modelo').val();
+  if(print == 'HP Tank 5810'){
+    $('#spiff').val('$5');
+  }else if (print == 'HP Tank 5820'){
+    $('#spiff').val('$7');
+  }
+
+  var read1 = $('#cantidad').val();
+  var spiffread = $('#spiff').val().substr(1,2);
+  if(spiffread != 0){
+    if(read1 != ''){
+      var nuevoSpiff = read1*spiffread;
+      $('#spiff').val("$"+nuevoSpiff);
+    }
+  }
 }
