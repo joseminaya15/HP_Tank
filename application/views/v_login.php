@@ -53,7 +53,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mdl-card mdl-card-login login">
+                    <div class="mdl-card mdl-card-login login" style="display: none">
                         <div class="mdl-card__supporting-text">
                             <div class="imagen-premio"></div>
                         </div>

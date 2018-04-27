@@ -74,17 +74,21 @@
                                 <h2 id="gtotal"><?php echo $total ?></h2>
                             </div>
                             <div id="content" style="display: none;">
-                                     <table>
-                                          <tr>
-                                            <th>Nombre</th>
-                                            <th>Fecha</th>
-                                            <th>Nro Factura</th>
-                                            <th>Modelo</th>
-                                            <th>Cantidad</th>
-                                            <th>Spiff ganado</th>
-                                          </tr>
-                                          <?php echo $tabla ?>
-                                        </table>
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th>Nombre</th>
+                                        <th>Fecha</th>
+                                        <th>Nro Factura</th>
+                                        <th>Modelo</th>
+                                        <th>Cantidad</th>
+                                        <th>Spiff ganado</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <?php echo $tabla ?>
+                                    </tbody>
+                                  </table>
                             </div>
                             <div id="editor"></div>
                             <a id="cmd">Descargar factura cargada<i class="mdi mdi-play_arrow"></i></a>
@@ -204,7 +208,7 @@
                     'width': 170,
                         'elementHandlers': specialElementHandlers
                 });
-                doc.save('sample-file.pdf');
+                doc.save('factura.pdf');
             });
             initButtonCalendarDaysMaxToday('fecha');
             initMaskInputs('fecha');

@@ -62,7 +62,7 @@ function crearAnotacion(){
           $('#monto').val("");
           $('#cantidad').val("");
           $('#gtotal').text(data.total);
-          //setTimeout(function(){ location.href = 'Factura'; }, 2000);
+          setTimeout(function(){ location.href = 'Factura'; }, 2000);
         }else{
           return;
         }

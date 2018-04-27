@@ -133,20 +133,6 @@ function seleccionarPais(){
     $('.canal').append('<div class="form-group">'+
                                   '<select class="form-control" id="canal" name="canal">'+
                                             '<option value="">Canal</option>'+
-                                            '<option value="C&M Sistemas Sa De Cv">C&M Sistemas Sa De Cv</option>'+
-                                            '<option value="Equipos Electronicos Valdes Sa De Cv">Equipos Electronicos Valdes Sa De Cv</option>'+
-                                            '<option value="Data & Graphics Sa De Cv">Data & Graphics Sa De Cv</option>'+
-                                            '<option value="Raf SA de CV">Raf SA de CV</option>'+
-                                            '<option value="Dataprint De El Salvador Sa De CV">Dataprint De El Salvador Sa De CV</option>'+
-                                            '<option value="Dpg Sa De Cv">Dpg Sa De Cv</option>'+
-                                            '<option value="STB Computer Sa De Cv">STB Computer Sa De Cv</option>'+
-                                  '</select>'+
-                                '</div>');
-  }else if(pais == 'Honduras'){
-  	$('.canal').html("");
-    $('.canal').append('<div class="form-group">'+
-                                  '<select class="form-control" id="canal" name="canal">'+
-                                            '<option value="">Canal</option>'+
                                             '<option value="Canella Sa">Canella Sa</option>'+
                                             '<option value="Compusersa Sa">Compusersa Sa</option>'+
                                             '<option value="Dataflex Sa">Dataflex Sa</option>'+
@@ -155,12 +141,23 @@ function seleccionarPais(){
                                             '<option value="Sintegradas SA">Sintegradas SA</option>'+
                                   '</select>'+
                                 '</div>');
+  }else if(pais == 'Honduras'){
+  	$('.canal').html("");
+    $('.canal').append('<div class="form-group">'+
+                                  '<select class="form-control" id="canal" name="canal">'+
+                                            '<option value="">Canal</option>'+
+                                            '<option value="Random Industrial S de Rl">Random Industrial S de Rl</option>'+
+                                            '<option value="Utiles de Honduras S De Rl">Utiles de Honduras S De Rl</option>'+
+                                            '<option value="Can Computers S de Rl de Cv">Can Computers S de Rl de Cv</option>'+
+                                            '<option value="Accesorios para Computadoras y Oficina Acosa">Accesorios para Computadoras y Oficina Acosa</option>'+
+                                            '<option value="Cash Business S De Rl">Cash Business S De Rl</option>'+
+                                  '</select>'+
+                                '</div>');
   }else if(pais == 'Nicaragua'){
   	$('.canal').html("");
     $('.canal').append('<div class="form-group">'+
                                   '<select class="form-control" id="canal" name="canal">'+
                                             '<option value="">Canal</option>'+
-                                            '<option value="Cash Business S De Rl">Cash Business S De Rl</option>'+
                                             '<option value="Tecnologia Computarizada SA">Tecnologia Computarizada SA</option>'+
                                             '<option value="Vargas Y Compania Ltda">Vargas Y Compania Ltda</option>'+
                                             '<option value="Libreria y Distribuidora Jardin Sa">Libreria y Distribuidora Jardin Sa</option>'+
