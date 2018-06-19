@@ -184,9 +184,16 @@ class Ranking extends CI_Controller {
             if(count($primeros_a) == 4){
                 $data['cuatro_nombre_a'] = $primeros_a[3]->Nombre;
                 $data['cinco_nombre_a'] = '-';
+                $data['uno_nombre_a'] = '-';
+                $data['dos_nombre_a'] = '-';
+                $data['tres_nombre_a'] = '-';
             }
             if(count($primeros_a) == 5){
                 $data['cinco_nombre_a']  = $primeros_a[4]->Nombre;
+                $data['uno_nombre_a'] = '-';
+                $data['dos_nombre_a'] = '-';
+                $data['tres_nombre_a'] = '-';
+                $data['cuatro_nombre_a'] = '-';
             }
         }
         if(count($primeros) != 0){
