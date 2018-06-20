@@ -20,16 +20,44 @@ class Ranking extends CI_Controller {
         }
         $data['nombre'] = $this->session->userdata('nombre');
         $data['canal']  = $this->session->userdata('canal');
-        $datos = $this->M_solicitud->getTotalMes($this->session->userdata('Id_user'), '03');
-        $data['total_marzo'] = $datos[0]->total == '' ? '0' : $datos[0]->total;
         $ranking = $this->M_solicitud->rankingTotal($this->session->userdata('Id_user'));
         foreach ($ranking as $key) {
             if($key->Id == $this->session->userdata('Id_user')){
                 $data['ranking'] = $key->rank == '' ? '-' : $key->rank;
             }
         }
-        $datos_abril = $this->M_solicitud->getTotalMes($this->session->userdata('Id_user'), '04');
-        $data['total_abril'] = $datos_abril[0]->total == '' ? '0' : $datos_abril[0]->total;
+
+        $i    = 3;
+        $htmlPremio = '';
+        $mes        = '';
+        $puntos     = '';
+        for($i; $i < 8; $i ++) {
+            switch ($i) {
+                case 3:
+                    $mes = 'Marzo';
+                    break;
+                case 4:
+                    $mes = 'Abril';
+                    break;
+                case 5:
+                    $mes = 'Mayo';
+                    break;
+                case 6:
+                    $mes = 'Junio';
+                    break;
+                case 7:
+                    $mes = 'Julio';
+                    break;
+            }
+            $datosGeneral = $this->M_solicitud->getTotalMes($this->session->userdata('Id_user'), '0'.$i);
+            $puntos       = ($datosGeneral[0]->total != '') ? $datosGeneral[0]->total : '-'; 
+            $htmlPremio .= '<tr>
+                                <td class="text-left bold">'.$mes.'</td>
+                                <td class="text-left bold">'.$puntos.'</td>
+                            </tr>';
+        }
+        $data ['premios'] = $htmlPremio;
+
         $primeros = $this->M_solicitud->get5Primeros();
         if(count($primeros) == 0){
             $data['uno_nombre'] = '-';
