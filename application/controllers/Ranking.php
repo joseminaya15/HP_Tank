@@ -86,10 +86,10 @@ class Ranking extends CI_Controller {
                     break;
             }
             $datosGeneral = $this->M_solicitud->getTotalMes($this->session->userdata('Id_user'), '0'.$i);
-            $puntos       = ($datosGeneral[0]->total != '') ? $datosGeneral[0]->total : '-'; 
+            $puntos       = ($datosGeneral[0]->total != '') ? $datosGeneral[0]->total : '0'; 
             $htmlPremio .= '<tr>
                                 <td class="text-left bold">'.$mes.'</td>
-                                <td class="text-left bold">'.$puntos.'</td>
+                                <td class="text-left bold">$'.$puntos.'</td>
                             </tr>';
         }
         $data['premios']     = $htmlPremio;
@@ -119,10 +119,8 @@ class Ranking extends CI_Controller {
         }
         $data['rankingTOP'] = $htmlRanking;
 
-//____________________________________________________________________
         //primeros del mes de marzo
         $primeros_m = $this->M_solicitud->get5PrimerosMes('03');
-
         if(count($primeros_m) == 0){
             $data['uno_nombre_m'] = '-';
             $data['dos_nombre_m'] = '-';
@@ -169,7 +167,6 @@ class Ranking extends CI_Controller {
 
         //primeros del mes de abril
         $primeros_a = $this->M_solicitud->get5PrimerosMes('04');
-
         if(count($primeros_a) == 0){
             $data['uno_nombre_a'] = '-';
             $data['dos_nombre_a'] = '-';
@@ -187,32 +184,124 @@ class Ranking extends CI_Controller {
             if(count($primeros_a) == 2){
                 $data['uno_nombre_a']    = $primeros_a[0]->Nombre;
                 $data['dos_nombre_a']    = $primeros_a[1]->Nombre;
-                $data['tres_nombre_a'] = '-';
+                $data['tres_nombre_a']   = '-';
                 $data['cuatro_nombre_a'] = '-';
-                $data['cinco_nombre_a'] = '-';
+                $data['cinco_nombre_a']  = '-';
             }
             if(count($primeros_a) == 3){
                 $data['uno_nombre_a']    = $primeros_a[0]->Nombre;
                 $data['dos_nombre_a']    = $primeros_a[1]->Nombre;
                 $data['tres_nombre_a']   = $primeros_a[2]->Nombre;
                 $data['cuatro_nombre_a'] = '-';
-                $data['cinco_nombre_a'] = '-';
+                $data['cinco_nombre_a']  = '-';
             }
             if(count($primeros_a) == 4){
-                $data['cuatro_nombre_a'] = $primeros_a[3]->Nombre;
-                $data['cinco_nombre_a'] = '-';
-                $data['uno_nombre_a'] = '-';
-                $data['dos_nombre_a'] = '-';
-                $data['tres_nombre_a'] = '-';
+                $data['cuatro_nombre_a'] = $primeros_a[0]->Nombre;
+                $data['cinco_nombre_a']  = $primeros_a[1]->Nombre;
+                $data['uno_nombre_a']    = $primeros_a[2]->Nombre;
+                $data['dos_nombre_a']    = $primeros_a[3]->Nombre;
+                $data['tres_nombre_a']   = '-';
             }
             if(count($primeros_a) == 5){
-                $data['cinco_nombre_a']  = $primeros_a[4]->Nombre;
-                $data['uno_nombre_a'] = '-';
-                $data['dos_nombre_a'] = '-';
-                $data['tres_nombre_a'] = '-';
-                $data['cuatro_nombre_a'] = '-';
+                $data['cinco_nombre_a']  = $primeros_a[0]->Nombre;
+                $data['uno_nombre_a']    = $primeros_a[1]->Nombre;
+                $data['dos_nombre_a']    = $primeros_a[2]->Nombre;
+                $data['tres_nombre_a']   = $primeros_a[3]->Nombre;
+                $data['cuatro_nombre_a'] = $primeros_a[4]->Nombre;
             }
         }
+
+        //primeros del mes de mayo
+        $primeros_ma = $this->M_solicitud->get5PrimerosMes('05');
+        if(count($primeros_ma) == 0){
+            $data['uno_nombre_ma']    = '-';
+            $data['dos_nombre_ma']    = '-';
+            $data['tres_nombre_ma']   = '-';
+            $data['cuatro_nombre_ma'] = '-';
+            $data['cinco_nombre_ma']  = '-';
+        }else {
+            if(count($primeros_ma) == 1){
+                $data['uno_nombre_ma']    = $primeros_ma[0]->Nombre;
+                $data['dos_nombre_ma']    = '-';
+                $data['tres_nombre_ma']   = '-';
+                $data['cuatro_nombre_ma'] = '-';
+                $data['cinco_nombre_ma']  = '-';
+            }
+            if(count($primeros_ma) == 2){
+                $data['uno_nombre_ma']    = $primeros_ma[0]->Nombre;
+                $data['dos_nombre_ma']    = $primeros_ma[1]->Nombre;
+                $data['tres_nombre_ma']   = '-';
+                $data['cuatro_nombre_ma'] = '-';
+                $data['cinco_nombre_ma']  = '-';
+            }
+            if(count($primeros_ma) == 3){
+                $data['uno_nombre_ma']    = $primeros_ma[0]->Nombre;
+                $data['dos_nombre_ma']    = $primeros_ma[1]->Nombre;
+                $data['tres_nombre_ma']   = $primeros_ma[2]->Nombre;
+                $data['cuatro_nombre_ma'] = '-';
+                $data['cinco_nombre_ma'] = '-';
+            }
+            if(count($primeros_ma) == 4){
+                $data['uno_nombre_ma']    = $primeros_ma[0]->Nombre;
+                $data['dos_nombre_ma']    = $primeros_ma[1]->Nombre;
+                $data['tres_nombre_ma']   = $primeros_ma[2]->Nombre;
+                $data['cuatro_nombre_ma'] = $primeros_ma[3]->Nombre;
+                $data['cinco_nombre_ma']  = '-';
+            }
+            if(count($primeros_ma) == 5){
+                $data['uno_nombre_ma']    = $primeros_ma[0]->Nombre;
+                $data['dos_nombre_ma']    = $primeros_ma[1]->Nombre;
+                $data['tres_nombre_ma']   = $primeros_ma[2]->Nombre;
+                $data['cuatro_nombre_ma'] = $primeros_ma[3]->Nombre;
+                $data['cinco_nombre_ma']  = $primeros_ma[4]->Nombre;
+            }
+        }
+        //primeros del mes de junio
+        $primeros_j = $this->M_solicitud->get5PrimerosMes('06');
+        if(count($primeros_j) == 0){
+            $data['uno_nombre_j'] = '-';
+            $data['dos_nombre_j'] = '-';
+            $data['tres_nombre_j'] = '-';
+            $data['cuatro_nombre_j'] = '-';
+            $data['cinco_nombre_j'] = '-';
+        }else {
+            if(count($primeros_j) == 1){
+                $data['uno_nombre_j']    = $primeros_j[0]->Nombre;
+                $data['dos_nombre_j']    = '-';
+                $data['tres_nombre_j']   = '-';
+                $data['cuatro_nombre_j'] = '-';
+                $data['cinco_nombre_j']  = '-';
+            }
+            if(count($primeros_j) == 2){
+                $data['uno_nombre_j']    = $primeros_j[0]->Nombre;
+                $data['dos_nombre_j']    = $primeros_j[1]->Nombre;
+                $data['tres_nombre_j']   = '-';
+                $data['cuatro_nombre_j'] = '-';
+                $data['cinco_nombre_j']  = '-';
+            }
+            if(count($primeros_j) == 3){
+                $data['uno_nombre_j']    = $primeros_j[0]->Nombre;
+                $data['dos_nombre_j']    = $primeros_j[1]->Nombre;
+                $data['tres_nombre_j']   = $primeros_j[2]->Nombre;
+                $data['cuatro_nombre_j'] = '-';
+                $data['cinco_nombre_j']  = '-';
+            }
+            if(count($primeros_j) == 4){
+                $data['uno_nombre_j']    = $primeros_j[0]->Nombre;
+                $data['dos_nombre_j']    = $primeros_j[1]->Nombre;
+                $data['tres_nombre_j']   = $primeros_j[2]->Nombre;
+                $data['cuatro_nombre_j'] = $primeros_j[3]->Nombre;
+                $data['cinco_nombre_j']  = '-';
+            }
+            if(count($primeros_j) == 5){
+                $data['uno_nombre_j']    = $primeros_j[0]->Nombre;
+                $data['dos_nombre_j']    = $primeros_j[1]->Nombre;
+                $data['tres_nombre_j']   = $primeros_j[2]->Nombre;
+                $data['cuatro_nombre_j'] = $primeros_j[3]->Nombre;
+                $data['cinco_nombre_j']  = $primeros_j[4]->Nombre;
+            }
+        }
+
         if(count($primeros) != 0){
             if(count($primeros) == 5) {
                 $data['directory'] = 'http://incentivoshptank.marketinghp.net/RankingTop5?nam1='.$primeros[0]->Nombre.'&can1='.$primeros[0]->Canal.'&nam2='.$primeros[1]->Nombre.'&can2='.$primeros[1]->Canal.'&nam3='.$primeros[2]->Nombre.'&can3='.$primeros[2]->Canal.'&nam4='.$primeros[3]->Nombre.'&can4='.$primeros[3]->Canal.'&nam5='.$primeros[4]->Nombre.'&can5='.$primeros[4]->Canal;
