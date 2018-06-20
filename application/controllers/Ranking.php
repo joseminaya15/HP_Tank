@@ -13,8 +13,6 @@ class Ranking extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-        /*session_is_registered($this->session->userdata('usuario'));
-        exit;*/
         if($this->session->userdata('usuario') == null){
             header("location: Login");
         }
@@ -26,8 +24,7 @@ class Ranking extends CI_Controller {
                 $data['ranking'] = $key->rank == '' ? '-' : $key->rank;
             }
         }
-
-        $i    = 3;
+        $i          = 3;
         $htmlPremio = '';
         $mes        = '';
         $puntos     = '';
@@ -58,80 +55,29 @@ class Ranking extends CI_Controller {
         }
         $data ['premios'] = $htmlPremio;
 
+        $htmlRanking = '';
         $primeros = $this->M_solicitud->get5Primeros();
-        if(count($primeros) == 0){
-            $data['uno_nombre'] = '-';
-            $data['uno_canal'] = '-';
-            $data['dos_nombre'] = '-';
-            $data['dos_canal'] = '-';
-            $data['tres_nombre'] = '-';
-            $data['tres_canal'] = '-';
-            $data['cuatro_nombre'] = '-';
-            $data['cuatro_canal'] = '-';
-            $data['cinco_nombre'] = '-';
-            $data['cinco_canal'] = '-';
-        }else {
-            if(count($primeros) == 1) {
-                $data['uno_nombre'] = $primeros[0]->Nombre;
-                $data['uno_canal'] = $primeros[0]->Canal;
-                $data['dos_nombre'] = '-';
-                $data['dos_canal'] = '-';
-                $data['tres_nombre'] = '-';
-                $data['tres_canal'] = '-';
-                $data['cuatro_nombre'] = '-';
-                $data['cuatro_canal'] = '-';
-                $data['cinco_nombre'] = '-';
-                $data['cinco_canal'] = '-';
+        $j = 1;
+        if(count($primeros) == 0) {
+            for ($j; $j < 6; $j++){
+                $htmlRanking .= '<tr>
+                                     <td><img src="'.RUTA_IMG.'ranking/ranking'.$j.'.png""></td>
+                                     <td class="text-left"> - </td>
+                                     <td class="text-left"> - </td>
+                                 </tr>';    
             }
-            if(count($primeros) == 2) {
-                $data['uno_nombre'] = $primeros[0]->Nombre;
-                $data['uno_canal'] = $primeros[0]->Canal;
-                $data['dos_nombre'] = $primeros[1]->Nombre;
-                $data['dos_canal'] = $primeros[1]->Canal;
-                $data['tres_nombre'] = '-';
-                $data['tres_canal'] = '-';
-                $data['cuatro_nombre'] = '-';
-                $data['cuatro_canal'] = '-';
-                $data['cinco_nombre'] = '-';
-                $data['cinco_canal'] = '-';
-            }
-            if(count($primeros) == 3) {
-                $data['uno_nombre'] = $primeros[0]->Nombre;
-                $data['uno_canal'] = $primeros[0]->Canal;
-                $data['dos_nombre'] = $primeros[1]->Nombre;
-                $data['dos_canal'] = $primeros[1]->Canal;
-                $data['tres_nombre'] = $primeros[2]->Nombre;
-                $data['tres_canal'] = $primeros[2]->Canal;
-                $data['cuatro_nombre'] = '-';
-                $data['cuatro_canal'] = '-';
-                $data['cinco_nombre'] = '-';
-                $data['cinco_canal'] = '-';
-            }
-            if(count($primeros) == 4) {
-                $data['uno_nombre'] = $primeros[0]->Nombre;
-                $data['uno_canal'] = $primeros[0]->Canal;
-                $data['dos_nombre'] = $primeros[1]->Nombre;
-                $data['dos_canal'] = $primeros[1]->Canal;
-                $data['tres_nombre'] = $primeros[2]->Nombre;
-                $data['tres_canal'] = $primeros[2]->Canal;
-                $data['cuatro_nombre'] = $primeros[3]->Nombre;
-                $data['cuatro_canal'] = $primeros[3]->Canal;
-                $data['cinco_nombre'] = '-';
-                $data['cinco_canal'] = '-';
-            }
-            if(count($primeros) == 5) {
-                $data['uno_nombre'] = $primeros[0]->Nombre;
-                $data['uno_canal'] = $primeros[0]->Canal;
-                $data['dos_nombre'] = $primeros[1]->Nombre;
-                $data['dos_canal'] = $primeros[1]->Canal;
-                $data['tres_nombre'] = $primeros[2]->Nombre;
-                $data['tres_canal'] = $primeros[2]->Canal;
-                $data['cuatro_nombre'] = $primeros[3]->Nombre;
-                $data['cuatro_canal'] = $primeros[3]->Canal;
-                $data['cinco_nombre'] = $primeros[4]->Nombre;
-                $data['cinco_canal'] = $primeros[4]->Canal;
+        } else {
+            for($j; $j < 6; $j++) {
+                $primeros[$j-1]->Nombre = ($primeros[$j-1]->Nombre != '' ) ? $primeros[$j-1]->Nombre : '-';
+                $primeros[$j-1]->Canal = ($primeros[$j-1]->Canal != '' ) ? $primeros[$j-1]->Canal : '-';
+                $htmlRanking .= '<tr>
+                                     <td><img src="'.RUTA_IMG.'ranking/ranking'.$j.'.png""></td>
+                                     <td class="text-left">'.$primeros[$j-1]->Nombre.'</td>
+                                     <td class="text-left">'.$primeros[$j-1]->Canal.'</td>
+                                 </tr>';
             }
         }
+        $data['rankingTOP'] = $htmlRanking;
 
         //primeros del mes de marzo
         $primeros_m = $this->M_solicitud->get5PrimerosMes('03');

@@ -66,31 +66,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td><img src="<?php echo RUTA_IMG?>ranking/ranking1.png""></td>
-                                                <td class="text-left"><?php echo $uno_nombre ?></td>
-                                                <td class="text-left"><?php echo $uno_canal ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td><img src="<?php echo RUTA_IMG?>ranking/ranking2.png""></td>
-                                                <td class="text-left"><?php echo $dos_nombre ?></td>
-                                                <td class="text-left"><?php echo $dos_canal ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td><img src="<?php echo RUTA_IMG?>ranking/ranking3.png""></td>
-                                                <td class="text-left"><?php echo $tres_nombre ?></td>
-                                                <td class="text-left"><?php echo $tres_canal ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td><img src="<?php echo RUTA_IMG?>ranking/ranking4.png""></td>
-                                                <td class="text-left"><?php echo $cuatro_nombre ?></td>
-                                                <td class="text-left"><?php echo $cuatro_canal ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td><img src="<?php echo RUTA_IMG?>ranking/ranking5.png""></td>
-                                                <td class="text-left"><?php echo $cinco_nombre ?></td>
-                                                <td class="text-left"><?php echo $cinco_canal ?></td>
-                                            </tr>
+                                            <?php echo $rankingTOP ?>
                                         </tbody>
                                     </table>
                                 </div>
