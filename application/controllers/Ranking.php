@@ -13,6 +13,8 @@ class Ranking extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
+        /*session_is_registered($this->session->userdata('usuario'));
+        exit;*/
         if($this->session->userdata('usuario') == null){
             header("location: Login");
         }
