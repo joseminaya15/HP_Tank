@@ -13,98 +13,113 @@ class Ranking extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-        session_is_registered($this->session->userdata('usuario'));
-        exit;
         if($this->session->userdata('usuario') == null){
             header("location: Login");
         }
         $data['nombre'] = $this->session->userdata('nombre');
         $data['canal']  = $this->session->userdata('canal');
-        $datos = $this->M_solicitud->getTotalMes($this->session->userdata('Id_user'), '03');
-        $data['total_marzo'] = $datos[0]->total == '' ? '0' : $datos[0]->total;
         $ranking = $this->M_solicitud->rankingTotal($this->session->userdata('Id_user'));
         foreach ($ranking as $key) {
             if($key->Id == $this->session->userdata('Id_user')){
                 $data['ranking'] = $key->rank == '' ? '-' : $key->rank;
             }
         }
-        $datos_abril = $this->M_solicitud->getTotalMes($this->session->userdata('Id_user'), '04');
-        $data['total_abril'] = $datos_abril[0]->total == '' ? '0' : $datos_abril[0]->total;
+        $i          = 3;
+        $mes        = '';
+        $htmlPremio = '';
+        $mesServidor= date("n");
+        $puntos     = '';
+        switch ($mesServidor) {
+            case 1:
+                $mesServidor = 'Enero';
+                break;
+            case 2:
+                $mesServidor = 'Febrero';
+                break;
+            case 3:
+                $mesServidor = 'Marzo';
+                break;
+            case 4:
+                $mesServidor = 'Abril';
+                break;
+            case 5:
+                $mesServidor = 'Mayo';
+                break;
+            case 6:
+                $mesServidor = 'Junio';
+                break;
+            case 7:
+                $mesServidor = 'Julio';
+                break;
+            case 8:
+                $mesServidor = 'Agosto';
+                break;
+            case 9:
+                $mesServidor = 'Setiembre';
+                break;
+            case 10:
+                $mesServidor = 'Octubre';
+                break;
+            case 11:
+                $mesServidor = 'Noviembre';
+                break;
+            case 12:
+                $mesServidor = 'Diciembre';
+                break;
+        }
+        for($i; $i < 8; $i ++) {
+            switch ($i) {
+                case 3:
+                    $mes = 'Marzo';
+                    break;
+                case 4:
+                    $mes = 'Abril';
+                    break;
+                case 5:
+                    $mes = 'Mayo';
+                    break;
+                case 6:
+                    $mes = 'Junio';
+                    break;
+                case 7:
+                    $mes = 'Julio';
+                    break;
+            }
+            $datosGeneral = $this->M_solicitud->getTotalMes($this->session->userdata('Id_user'), '0'.$i);
+            $puntos       = ($datosGeneral[0]->total != '') ? $datosGeneral[0]->total : '-'; 
+            $htmlPremio .= '<tr>
+                                <td class="text-left bold">'.$mes.'</td>
+                                <td class="text-left bold">'.$puntos.'</td>
+                            </tr>';
+        }
+        $data['premios']     = $htmlPremio;
+        $data['mesServidor'] = $mesServidor;
+
+        $htmlRanking = '';
         $primeros = $this->M_solicitud->get5Primeros();
-        if(count($primeros) == 0){
-            $data['uno_nombre'] = '-';
-            $data['uno_canal'] = '-';
-            $data['dos_nombre'] = '-';
-            $data['dos_canal'] = '-';
-            $data['tres_nombre'] = '-';
-            $data['tres_canal'] = '-';
-            $data['cuatro_nombre'] = '-';
-            $data['cuatro_canal'] = '-';
-            $data['cinco_nombre'] = '-';
-            $data['cinco_canal'] = '-';
-        }else {
-            if(count($primeros) == 1) {
-                $data['uno_nombre'] = $primeros[0]->Nombre;
-                $data['uno_canal'] = $primeros[0]->Canal;
-                $data['dos_nombre'] = '-';
-                $data['dos_canal'] = '-';
-                $data['tres_nombre'] = '-';
-                $data['tres_canal'] = '-';
-                $data['cuatro_nombre'] = '-';
-                $data['cuatro_canal'] = '-';
-                $data['cinco_nombre'] = '-';
-                $data['cinco_canal'] = '-';
+        $j = 1;
+        if(count($primeros) == 0) {
+            for ($j; $j < 6; $j++){
+                $htmlRanking .= '<tr>
+                                     <td><img src="'.RUTA_IMG.'ranking/ranking'.$j.'.png""></td>
+                                     <td class="text-left"> - </td>
+                                     <td class="text-left"> - </td>
+                                 </tr>';    
             }
-            if(count($primeros) == 2) {
-                $data['uno_nombre'] = $primeros[0]->Nombre;
-                $data['uno_canal'] = $primeros[0]->Canal;
-                $data['dos_nombre'] = $primeros[1]->Nombre;
-                $data['dos_canal'] = $primeros[1]->Canal;
-                $data['tres_nombre'] = '-';
-                $data['tres_canal'] = '-';
-                $data['cuatro_nombre'] = '-';
-                $data['cuatro_canal'] = '-';
-                $data['cinco_nombre'] = '-';
-                $data['cinco_canal'] = '-';
-            }
-            if(count($primeros) == 3) {
-                $data['uno_nombre'] = $primeros[0]->Nombre;
-                $data['uno_canal'] = $primeros[0]->Canal;
-                $data['dos_nombre'] = $primeros[1]->Nombre;
-                $data['dos_canal'] = $primeros[1]->Canal;
-                $data['tres_nombre'] = $primeros[2]->Nombre;
-                $data['tres_canal'] = $primeros[2]->Canal;
-                $data['cuatro_nombre'] = '-';
-                $data['cuatro_canal'] = '-';
-                $data['cinco_nombre'] = '-';
-                $data['cinco_canal'] = '-';
-            }
-            if(count($primeros) == 4) {
-                $data['uno_nombre'] = $primeros[0]->Nombre;
-                $data['uno_canal'] = $primeros[0]->Canal;
-                $data['dos_nombre'] = $primeros[1]->Nombre;
-                $data['dos_canal'] = $primeros[1]->Canal;
-                $data['tres_nombre'] = $primeros[2]->Nombre;
-                $data['tres_canal'] = $primeros[2]->Canal;
-                $data['cuatro_nombre'] = $primeros[3]->Nombre;
-                $data['cuatro_canal'] = $primeros[3]->Canal;
-                $data['cinco_nombre'] = '-';
-                $data['cinco_canal'] = '-';
-            }
-            if(count($primeros) == 5) {
-                $data['uno_nombre'] = $primeros[0]->Nombre;
-                $data['uno_canal'] = $primeros[0]->Canal;
-                $data['dos_nombre'] = $primeros[1]->Nombre;
-                $data['dos_canal'] = $primeros[1]->Canal;
-                $data['tres_nombre'] = $primeros[2]->Nombre;
-                $data['tres_canal'] = $primeros[2]->Canal;
-                $data['cuatro_nombre'] = $primeros[3]->Nombre;
-                $data['cuatro_canal'] = $primeros[3]->Canal;
-                $data['cinco_nombre'] = $primeros[4]->Nombre;
-                $data['cinco_canal'] = $primeros[4]->Canal;
+        } else {
+            for($j; $j < 6; $j++) {
+                $primeros[$j-1]->Nombre = ($primeros[$j-1]->Nombre != '' ) ? $primeros[$j-1]->Nombre : '-';
+                $primeros[$j-1]->Canal = ($primeros[$j-1]->Canal != '' ) ? $primeros[$j-1]->Canal : '-';
+                $htmlRanking .= '<tr>
+                                     <td><img src="'.RUTA_IMG.'ranking/ranking'.$j.'.png""></td>
+                                     <td class="text-left">'.$primeros[$j-1]->Nombre.'</td>
+                                     <td class="text-left">'.$primeros[$j-1]->Canal.'</td>
+                                 </tr>';
             }
         }
+        $data['rankingTOP'] = $htmlRanking;
 
+//____________________________________________________________________
         //primeros del mes de marzo
         $primeros_m = $this->M_solicitud->get5PrimerosMes('03');
 
@@ -205,7 +220,7 @@ class Ranking extends CI_Controller {
                 $data['directory'] = '';
             }
         }
-        $data['directory'] = '';
+        // $data['directory'] = '';
 		$this->load->view('v_ranking', $data);
 	}
     function cerrarCesion(){

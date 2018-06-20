@@ -89,7 +89,7 @@ class M_solicitud extends  CI_Model{
     function rankingTotal(){
       $sql = "SELECT    p.Nombre, p.Id,
                         @curRank := @curRank + 1 AS rank
-              FROM      users p, (SELECT @curRank := 0) r
+                FROM    users p, (SELECT @curRank := 0) r
               GROUP BY p.Id
               ORDER BY  p.total DESC";
       $result = $this->db->query($sql);
