@@ -92,8 +92,8 @@
                                         <tbody>
                                             <?php echo $premios ?>
                                             <tr>
-                                                <td class="text-left texto p-t-10 p-b-10">En Marzo quedaste en el puesto</td>
-                                                <td class="text-left puesto p-t-10 p-b-10"><?php echo $ranking ?></td>
+                                                <td class="text-left texto p-t-10 p-b-10">En <?php echo $mesServidor; ?> quedaste en el puesto</td>
+                                                <td class="text-left puesto p-t-10 p-b-10"><?php echo $ranking; ?></td>
                                             </tr>
                                             <tr>
                                                 <td colspan="2" class="text-center retate">¡Rétate y haz que el próximo mes tenga tu huella!</td>

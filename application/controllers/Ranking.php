@@ -25,9 +25,48 @@ class Ranking extends CI_Controller {
             }
         }
         $i          = 3;
-        $htmlPremio = '';
         $mes        = '';
+        $htmlPremio = '';
+        $mesServidor= date("n");
         $puntos     = '';
+        switch ($mesServidor) {
+            case 1:
+                $mesServidor = 'Enero';
+                break;
+            case 2:
+                $mesServidor = 'Febrero';
+                break;
+            case 3:
+                $mesServidor = 'Marzo';
+                break;
+            case 4:
+                $mesServidor = 'Abril';
+                break;
+            case 5:
+                $mesServidor = 'Mayo';
+                break;
+            case 6:
+                $mesServidor = 'Junio';
+                break;
+            case 7:
+                $mesServidor = 'Julio';
+                break;
+            case 8:
+                $mesServidor = 'Agosto';
+                break;
+            case 9:
+                $mesServidor = 'Setiembre';
+                break;
+            case 10:
+                $mesServidor = 'Octubre';
+                break;
+            case 11:
+                $mesServidor = 'Noviembre';
+                break;
+            case 12:
+                $mesServidor = 'Diciembre';
+                break;
+        }
         for($i; $i < 8; $i ++) {
             switch ($i) {
                 case 3:
@@ -53,7 +92,8 @@ class Ranking extends CI_Controller {
                                 <td class="text-left bold">'.$puntos.'</td>
                             </tr>';
         }
-        $data ['premios'] = $htmlPremio;
+        $data['premios']     = $htmlPremio;
+        $data['mesServidor'] = $mesServidor;
 
         $htmlRanking = '';
         $primeros = $this->M_solicitud->get5Primeros();
@@ -79,6 +119,7 @@ class Ranking extends CI_Controller {
         }
         $data['rankingTOP'] = $htmlRanking;
 
+//____________________________________________________________________
         //primeros del mes de marzo
         $primeros_m = $this->M_solicitud->get5PrimerosMes('03');
 
@@ -179,7 +220,7 @@ class Ranking extends CI_Controller {
                 $data['directory'] = '';
             }
         }
-        $data['directory'] = '';
+        // $data['directory'] = '';
 		$this->load->view('v_ranking', $data);
 	}
     function cerrarCesion(){
