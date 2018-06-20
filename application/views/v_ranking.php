@@ -108,7 +108,7 @@
                                 <h2>Ganadores TOP 5 del mes</h2>
                             </div>
                             <div class="mdl-card__supporting-text p-t-0">
-                                <div class="col-xs-6">
+                                <div class="col-xs-6" style="display:none">
                                     <div class="table-responsive">
                                         <table class="table m-0">
                                             <thead>
@@ -178,7 +178,7 @@
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf" id="pdf1">Descargar PDF<i class="mdi mdi-play_arrow"></i></button>
                                     </div>
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-xs-6" style="display:none">
                                     <div class="table-responsive">
                                         <table class="table m-0">
                                             <thead>
@@ -383,6 +383,74 @@
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf" id="pdf4">Descargar PDF<i class="mdi mdi-play_arrow"></i></button>
                                     </div>
                                 </div>
+                                <div class="col-xs-6" style="display:none">
+                                    <div class="table-responsive">
+                                        <table class="table m-0">
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="2" class="bold">MES JULIO</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador1.png""></td>
+                                                    <td class="text-left"><?php echo $uno_nombre_ju ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador2.png""></td>
+                                                    <td class="text-left"><?php echo $dos_nombre_ju ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador3.png""></td>
+                                                    <td class="text-left"><?php echo $tres_nombre_ju ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador4.png""></td>
+                                                    <td class="text-left"><?php echo $cuatro_nombre_ju ?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-left" style="width: 55px;"><img src="<?php echo RUTA_IMG?>ranking/ganador5.png""></td>
+                                                    <td class="text-left"><?php echo $cinco_nombre_ju ?></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div id="content5" style="display: none;">
+                                             <table class="table">
+                                                <h1>Top 5 Mes de Julio</h1>
+                                                <thead>
+                                                  <tr>
+                                                    <th class="text-center">Puesto</th>
+                                                    <th class="text-center">Nombre</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <td class="text-center">1</td>
+                                                    <td class="text-center"><?php echo $uno_nombre_ju ?></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="text-center">2</td>
+                                                    <td class="text-center"><?php echo $dos_nombre_ju ?></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="text-center">3</td>
+                                                    <td class="text-center"><?php echo $tres_nombre_ju ?></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="text-center">4</td>
+                                                    <td class="text-center"><?php echo $cuatro_nombre_ju ?></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="text-center">5</td>
+                                                    <td class="text-center"><?php echo $cinco_nombre_ju ?></td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                        </div>
+                                        <div id="editor5"></div>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf" id="pdf5">Descargar PDF<i class="mdi mdi-play_arrow"></i></button>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
@@ -466,6 +534,19 @@
                         'elementHandlers': specialElementHandlers
                 });
                 doc4.save('rankingTop5Junio.pdf');
+            });
+            var doc5 = new jsPDF();
+            var specialElementHandlers = {
+                '#editor5': function (element, renderer) {
+                    return true;
+                }
+            };
+            $('#pdf5').click(function () {
+                doc5.fromHTML($('#content5').html(), 15, 15, {
+                    'width': 250,
+                        'elementHandlers': specialElementHandlers
+                });
+                doc5.save('rankingTop5Julio.pdf');
             });
             (function(d, s, id) {
               var js, fjs = d.getElementsByTagName(s)[0];

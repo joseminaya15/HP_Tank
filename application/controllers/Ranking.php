@@ -301,6 +301,51 @@ class Ranking extends CI_Controller {
                 $data['cinco_nombre_j']  = $primeros_j[4]->Nombre;
             }
         }
+        //primeros del mes de julio
+        $primeros_ju = $this->M_solicitud->get5PrimerosMes('07');
+        if(count($primeros_ju) == 0){
+            $data['uno_nombre_ju'] = '-';
+            $data['dos_nombre_ju'] = '-';
+            $data['tres_nombre_ju'] = '-';
+            $data['cuatro_nombre_ju'] = '-';
+            $data['cinco_nombre_ju'] = '-';
+        }else {
+            if(count($primeros_ju) == 1){
+                $data['uno_nombre_ju']    = $primeros_ju[0]->Nombre;
+                $data['dos_nombre_ju']    = '-';
+                $data['tres_nombre_ju']   = '-';
+                $data['cuatro_nombre_ju'] = '-';
+                $data['cinco_nombre_ju']  = '-';
+            }
+            if(count($primeros_ju) == 2){
+                $data['uno_nombre_ju']    = $primeros_ju[0]->Nombre;
+                $data['dos_nombre_ju']    = $primeros_ju[1]->Nombre;
+                $data['tres_nombre_ju']   = '-';
+                $data['cuatro_nombre_ju'] = '-';
+                $data['cinco_nombre_ju']  = '-';
+            }
+            if(count($primeros_ju) == 3){
+                $data['uno_nombre_ju']    = $primeros_ju[0]->Nombre;
+                $data['dos_nombre_ju']    = $primeros_ju[1]->Nombre;
+                $data['tres_nombre_ju']   = $primeros_ju[2]->Nombre;
+                $data['cuatro_nombre_ju'] = '-';
+                $data['cinco_nombre_ju']  = '-';
+            }
+            if(count($primeros_ju) == 4){
+                $data['uno_nombre_ju']    = $primeros_ju[0]->Nombre;
+                $data['dos_nombre_ju']    = $primeros_ju[1]->Nombre;
+                $data['tres_nombre_ju']   = $primeros_ju[2]->Nombre;
+                $data['cuatro_nombre_ju'] = $primeros_ju[3]->Nombre;
+                $data['cinco_nombre_ju']  = '-';
+            }
+            if(count($primeros_ju) == 5){
+                $data['uno_nombre_ju']    = $primeros_ju[0]->Nombre;
+                $data['dos_nombre_ju']    = $primeros_ju[1]->Nombre;
+                $data['tres_nombre_ju']   = $primeros_ju[2]->Nombre;
+                $data['cuatro_nombre_ju'] = $primeros_ju[3]->Nombre;
+                $data['cinco_nombre_ju']  = $primeros_ju[4]->Nombre;
+            }
+        }
 
         if(count($primeros) != 0){
             if(count($primeros) == 5) {
