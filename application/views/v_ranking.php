@@ -247,7 +247,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-xs-6">
+                                <div class="col-xs-4">
                                     <div class="table-responsive">
                                         <table class="table m-0">
                                             <thead>
@@ -315,7 +315,7 @@
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf" id="pdf3">Descargar PDF<i class="mdi mdi-play_arrow"></i></button>
                                     </div>
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-xs-4">
                                     <div class="table-responsive">
                                         <table class="table m-0">
                                             <thead>
@@ -383,7 +383,7 @@
                                         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-pdf" id="pdf4">Descargar PDF<i class="mdi mdi-play_arrow"></i></button>
                                     </div>
                                 </div>
-                                <div class="col-xs-6" style="display:none">
+                                <div class="col-xs-4">
                                     <div class="table-responsive">
                                         <table class="table m-0">
                                             <thead>

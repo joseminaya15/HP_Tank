@@ -29,7 +29,7 @@ class Ranking extends CI_Controller {
             $htmlPremio = '';
             $mesServidor= date("n");
             $puntos     = '';
-            switch ($mesServidor) {
+            switch ($mesServidor-1) {
                 case 1:
                     $mesServidor = 'Enero';
                     break;
@@ -64,6 +64,9 @@ class Ranking extends CI_Controller {
                     $mesServidor = 'Noviembre';
                     break;
                 case 12:
+                    $mesServidor = 'Diciembre';
+                    break;
+                default: 
                     $mesServidor = 'Diciembre';
                     break;
             }
