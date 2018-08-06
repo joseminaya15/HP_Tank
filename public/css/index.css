@@ -203,7 +203,6 @@ video{
     border-radius: 10px;
     height: 30px;
     line-height: 30px;
-    margin-top: 10px;
 }
 .button-pdf i{
     color: #FFFFFF;
@@ -390,12 +389,8 @@ video{
     transition: transform .2s linear;
     width: 100%;
     vertical-align: top;
-    height: 400px;
+    height: 480px;
 }
-/*.mdl-ranking .mdl-card .mdl-card__actions,
-.mdl-ranking .mdl-card .mdl-card__supporting-text{
-    background-color: rgba(255, 255, 255, 0.8);
-}*/
 .mdl-ranking .mdl-ganador,
 .mdl-ranking .mdl-top{
 	max-width: 33.3%
@@ -418,6 +413,33 @@ video{
 }
 .mdl-ranking .mdl-ganador .mdl-card__title{
 	background-color: #A63A93;
+}
+.mdl-ranking .js-top{
+    text-align: left;
+}
+.mdl-ranking .js-top a{
+    color:  #000000;
+    text-decoration: none;
+    font-family: 'RobotoBold';
+}
+.mdl-ganador .mdl-card__actions{
+    padding: 5px 16px 10px 16px;
+}
+#TopRanking{
+    height: 415px;
+    overflow-y: scroll;
+}
+#TopRanking::-webkit-scrollbar {
+    width: 6px;
+    height: 5px;
+}
+#TopRanking::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 20px;
+}
+#TopRanking::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 20px;
 }
 /*MDL-INPUT*/
 .mdl-fecha{
@@ -483,15 +505,15 @@ video{
 }
 .mdl-ranking .table>tbody>tr>td.texto{
     color: #0C5AA9;
-    font-size: 22px;
-    line-height: 24px;
-    width: 150px;
+    font-size: 18px;
+    line-height: 18px;
+    width: 180px;
     font-family: 'RobotoMedium';
 }
 .mdl-ranking .table>tbody>tr>td.puesto{
     color: #0C5AA9;
-    font-size: 60px;
-    line-height: 65px;
+    font-size: 50px;
+    line-height: 40px;
     text-align: center;
     font-weight: 600;
 }
@@ -567,13 +589,14 @@ input::placeholder {
 .table>tbody>tr>td{
     border-top: 1px solid #00A1DD;
     color: #000000;
+    vertical-align: middle;
 }
 .mdl-ranking .table>tbody>tr>td{
-    font-size: 13px;
+    font-size: 14px;
     line-height: 16px;
 }
 .mdl-ranking .table>tbody>tr>td img{
-    max-width: 42px;
+    max-width: 35px;
 }
 .mdl-top .table>tbody>tr>td{
     border-top: 1px solid #F5842F;

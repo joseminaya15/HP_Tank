@@ -92,7 +92,7 @@ class Ranking extends CI_Controller {
                 $puntos       = ($datosGeneral[0]->total != '') ? $datosGeneral[0]->total : '0'; 
                 $htmlPremio .= '<tr>
                                     <td class="text-left bold">'.$mes.'</td>
-                                    <td class="text-left bold">$'.$puntos.'</td>
+                                    <td class="text-right bold">$'.$puntos.'</td>
                                 </tr>';
             }
             $data['premios']     = $htmlPremio;
@@ -106,7 +106,7 @@ class Ranking extends CI_Controller {
                     $htmlRanking .= '<tr>
                                          <td><img src="'.RUTA_IMG.'ranking/ranking'.$j.'.png""></td>
                                          <td class="text-left"> - </td>
-                                         <td class="text-left"> - </td>
+                                         <td class="text-right"> - </td>
                                      </tr>';    
                 }
             } else {
@@ -116,7 +116,7 @@ class Ranking extends CI_Controller {
                     $htmlRanking .= '<tr>
                                          <td><img src="'.RUTA_IMG.'ranking/ranking'.$j.'.png""></td>
                                          <td class="text-left">'.$primeros[$j-1]->Nombre.'</td>
-                                         <td class="text-left">'.$primeros[$j-1]->Canal.'</td>
+                                         <td class="text-right">'.$primeros[$j-1]->Canal.'</td>
                                      </tr>';
                 }
             }

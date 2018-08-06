@@ -73,26 +73,25 @@
                                 <img src="<?php echo RUTA_IMG?>logos/money.png"">
                                 <h2 id="gtotal"><?php echo $total ?></h2>
                             </div>
-                            <div id="content" style="display: none;">
-                                <table class="table">
+                            <div id="content" style="display: none;width: 100%;">
+                                <table class="table" width="100">
                                     <thead>
-                                      <tr>
-                                        <th>Nombre</th>
-                                        <th>Fecha</th>
-                                        <th>Nro Factura</th>
-                                        <th>Modelo</th>
-                                        <th>Cantidad</th>
-                                        <th>Spiff ganado</th>
-                                      </tr>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Fecha</th>
+                                            <th>Nro Factura</th>
+                                            <th>Modelo</th>
+                                            <th>Cantidad</th>
+                                            <th>Spiff ganado</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
-                                      <?php echo $tabla ?>
+                                        <?php echo $tabla ?>
                                     </tbody>
                                   </table>
                             </div>
                             <div id="editor"></div>
                             <a id="cmd">Descargar factura cargada<i class="mdi mdi-play_arrow"></i></a>
-                            <!--<button id="cmd">Descargar factura cargada</button>-->
                         </div>
                     </div>
                     <div class="mdl-card mdl-factura">
@@ -185,7 +184,7 @@
         <script src="<?php echo RUTA_PLUGINS?>datetimepicker/js/bootstrap-material-datetimepicker.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>jquery-mask/jquery.mask.min.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
         <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
         <script src="<?php echo RUTA_JS?>jsfactura.js?v=<?php echo time();?>"></script>
@@ -195,18 +194,17 @@
             } else {
                 $('select').selectpicker();
             }
-            var doc = new jsPDF('l', 'mm', [297, 210]); //The first Param is for landscape or portrait
-            //var doc = new jsPDF();
-            var specialElementHandlers = {
-                '#editor': function (element, renderer) {
-                    return true;
-                }
-            };
-
+            var doc = new jsPDF('landscape');
+            // var specialElementHandlers = {
+            //     '#editor': function (element, renderer) {
+            //         return true;
+            //     }
+            // };
             $('#cmd').click(function () {
                 doc.fromHTML($('#content').html(), 15, 15, {
-                    'width': 170,
-                        'elementHandlers': specialElementHandlers
+                    'width': 100,
+                    'height':  100
+                    // 'elementHandlers': specialElementHandlers
                 });
                 doc.save('factura.pdf');
             });
