@@ -76,7 +76,7 @@
                     </div>
                     <div id="Ranking" class="mdl-card mdl-card-menu scale" onclick="goToMenu(this.id)">
                         <div class="mdl-card__title">
-                            <img src="<?php echo RUTA_IMG?>logos/ganadores.png">
+                            <img width="100%" src="<?php echo RUTA_IMG?>logos/ganadores.gif">
                         </div>
                         <div class="mdl-card__supporting-text">
                             <p>Ganadores Top 5 del mes</p>
