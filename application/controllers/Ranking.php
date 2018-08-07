@@ -13,15 +13,24 @@ class Ranking extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
+        $cont = 1;
         if($this->session->userdata('usuario') == null){
             header("location: Login");
         } else {
             $data['nombre'] = $this->session->userdata('nombre');
             $data['canal']  = $this->session->userdata('canal');
-            $ranking = $this->M_solicitud->rankingTotal($this->session->userdata('Id_user'));
-            foreach ($ranking as $key) {
-                if($key->Id == $this->session->userdata('Id_user')){
-                    $data['ranking'] = $key->rank == '' ? '-' : $key->rank;
+            $ranking = $this->M_solicitud->rankingTotal();
+            $data['ranking'] = '-'; 
+            if(count($ranking) == 0){
+                $data['ranking'] = '-';
+            }else {
+                foreach ($ranking as $key) {
+                    if($key->Id == $this->session->userdata('Id_user')){
+                        $data['ranking'] = $cont;
+                    }/*else {
+                       $data['ranking'] = '-'; 
+                    }*/
+                    $cont++;
                 }
             }
             $i          = 3;

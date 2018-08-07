@@ -87,11 +87,14 @@ class M_solicitud extends  CI_Model{
     }
 
     function rankingTotal(){
-      $sql = "SELECT    p.Nombre, p.Id,
-                        @curRank := @curRank + 1 AS rank
-                FROM    users p, (SELECT @curRank := 0) r
+      $sql = "SELECT p.Nombre, p.Id,
+                       SUM(SUBSTRING(a.spiff,2,2)) AS suma
+                 FROM users p,
+                    anotacion a
+                 WHERE a.Id_user = p.Id
+                   AND SUBSTRING(a.fecha,6,2) = '07'
               GROUP BY p.Id
-              ORDER BY  p.total DESC";
+              ORDER BY  SUM(SUBSTRING(a.spiff,2,2)) DESC";
       $result = $this->db->query($sql);
        return $result->result();
     }
