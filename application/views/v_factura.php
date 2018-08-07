@@ -91,7 +91,7 @@
                                   </table>
                             </div>
                             <div id="editor"></div>
-                            <a id="cmd">Descargar factura cargada<i class="mdi mdi-play_arrow"></i></a>
+                            <a href="Pdf" target="_blank">Descargar factura cargada<i class="mdi mdi-play_arrow"></i></a>
                         </div>
                     </div>
                     <div class="mdl-card mdl-factura">
