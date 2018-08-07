@@ -9,78 +9,51 @@ class Pdf extends CI_Controller {
 	function __construct() {
         parent::__construct();
         $this->load->helper("url");
+        $this->load->model('M_solicitud');
     }
 
 	public function index(){
+		$tabla = $this->M_solicitud->getDatosTabla($this->session->userdata('Id_user'));
+        if(count($tabla) == 0){
+            $html  = '<tr>
+                        <td class="text-center"></td>
+                      </tr>';
+            $data['tabla'] = $html;
+        }else {
+            foreach ($tabla as $key){
+                $html .= '<tr>
+                            <td class="text-center">'.$key->Nombre.'</td>
+                            <td class="text-center">'.$key->fecha.'</td>
+                            <td class="text-center">'.$key->nro_factura.'</td>
+                            <td class="text-center">'.$key->modelo.'</td>
+                            <td class="text-center">'.$key->cantidad.'</td>
+                            <td class="text-center">'.$key->spiff.'</td>
+                        </tr>';
+            }
+        }
 		$html='<html>
 					<head>
 						<link rel="shortcut icon" href="http://hpedigitalmarketingacademy.com/Certificados/public/img/logo/favicon.ico">
 						<link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
-						<style>
-							body,html{
-								margin: 0;
-								padding: 0;
-								font-family: "MetricRegular";
-							}
-							.fondo-imagen{
-								position: absolute;
-								top: 0;
-								left: 0;
-								right: 0;
-								bottom: 0;
-								width: 100%;
-								height: 100%;
-							}
-							.js-logo{
-								padding-top: 150px;
-							}
-							.js-information{
-								text-align: center;
-								padding-top: 20px;
-							}
-							.js-information h2{
-								font-size: 40px;
-								font-family: "Roboto",sans-serif;
-								font-weight: 100;
-							}
-							.js-information p{
-								font-size: 20px;
-								font-family: "Roboto",sans-serif;
-								font-weight: light;
-								color: #231F20;
-							}
-							.js-information h3{
-								font-size: 42px;
-								font-family: "Roboto",sans-serif;
-								font-weight: bold;
-							}
-							.js-information span{
-								font-size: 14px;
-								font-family: "Roboto",sans-serif;
-								font-weight: light;
-								display: block;
-								color: #231F20;
-							}
-						</style>
 					</head>
 					<body>
-						<div class="fondo-imagen">
-							<img style="width: 100%;" src="http://hpedigitalmarketingacademy.com/Certificados/public/img/fondo/fondo.png"/>
-						</div>
-						<div class="js-logo"><img width="180" src="http://hpedigitalmarketingacademy.com/Certificados/public/img/logo/logo-footer.png"/></div>
-						<div class="js-information">
-							<h2 style="font-family: "MetricRegular";">Certificado de Participación</h2>
-							<p>Por el presente certificamos que</p>
-							<h3></h3>
-							<div width="360" style="margin:auto;">
-								<p>ha completado satisfactoriamente el<br> <strong>HPE Digital Marketing Academy</strong> compuesto por 10 workshops dictados bajo la modalidad de webinar y ahora cuenta con los conocimientos esenciales para desarrollar campañas de Marketing Digital.</p>
-							</div><br><br>
-							<img width="250" style="border-bottom: 1px solid #757575;" src="http://hpedigitalmarketingacademy.com/Certificados/public/img/fondo/firma.jpg"/><br><br>
-							<span>Gabriella Guazzo</span><br>
-							<span>EG Geography Marketing Manager Latin America</span><br>
-							<span>Hewlett Packard Enterprise</span><br><br>
-							<span>Junio, 2018</span><br>
-						</div>
+						<div id="content" style="display: none;width: 100%;">
+                            <table class="table" width="100">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Fecha</th>
+                                        <th>Nro Factura</th>
+                                        <th>Modelo</th>
+                                        <th>Cantidad</th>
+                                        <th>Spiff ganado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    '.$html.'
+                                </tbody>
+                            </table>
+                        </div>
 					</body>
 				  </html>';
 		$mpdf  = new \Mpdf\Mpdf();
