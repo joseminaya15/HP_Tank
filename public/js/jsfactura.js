@@ -11,7 +11,9 @@ function cerrarCesion(){
           return;
         }
       }catch(err){
+        toastr.remove();
         msj('error',err.message);
+        return;
       }
   });
 }
@@ -24,19 +26,29 @@ function crearAnotacion(){
   var monto    = $('#monto').val();
   var cantidad = $('#cantidad').val();
   if(fecha == null || fecha == ''){
+    toastr.remove();
     msj('error', 'Ingrese la fecha');
+    return;
   }
   if(modelo == null || modelo == ''){
+    toastr.remove();
     msj('error', 'Ingrese el modelo');
+    return;
   }
   if(spiff == null || spiff == ''){
+    toastr.remove();
     msj('error', 'Ingrese el spiff');
+    return;
   }
   if(monto == null || monto == ''){
+    toastr.remove();
     msj('error', 'Ingrese el monto');
+    return;
   }
   if(cantidad == null || cantidad == ''){
+    toastr.remove();
     msj('error', 'Ingrese la cantidad');
+    return;
   }
   if(factura == undefined){
     return;
@@ -67,7 +79,9 @@ function crearAnotacion(){
           return;
         }
       } catch (err){
+        toastr.remove();
         msj('error',err.message);
+        return;
       }
   });
 }
@@ -83,6 +97,7 @@ function agregarDatos(){
   var datos = new FormData();
   factura = $('#archivo')[0].files[0];
   if(factura == undefined){
+    toastr.remove();
     msj('error', 'Se requiere cargar el sustento de la factura (pdf)');
     return;
   }
@@ -95,6 +110,7 @@ function agregarDatos(){
         data:datos,
         processData:false,
       }).done(function(respuesta){
+        toastr.remove();
         msj('error', respuesta.mensaje);
         $('#fecha').val("");
         $('#modelo').val("0");
