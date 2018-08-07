@@ -1,21 +1,17 @@
 .toast-title {
 	font-weight: bold;
 }
-
 .toast-message {
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
-
 .toast-message a, .toast-message label {
 	color: #ffffff;
 }
-
 .toast-message a:hover {
 	color: #cccccc;
 	text-decoration: none;
 }
-
 .toast-close-button {
 	position: relative;
 	right: -0.3em;
@@ -39,11 +35,6 @@
 	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
 	filter: alpha(opacity = 40);
 }
-
-/*Additional properties for button version
- iOS requires the button element instead of an anchor tag.
- If you want the anchor version, it requires `href="#"`.*/
-
 button.toast-close-button {
 	padding: 0;
 	cursor: pointer;
@@ -51,25 +42,21 @@ button.toast-close-button {
 	border: 0;
 	-webkit-appearance: none;
 }
-
 .toast-top-center {
 	top: 0;
 	right: 0;
 	width: 100%;
 }
-
 .toast-bottom-center {
 	bottom: 0;
 	right: 0;
 	width: 100%;
 }
-
 .toast-top-full-width {
 	top: 0;
 	right: 0;
 	width: 100%;
 }
-
 .toast-bottom-full-width {
 	bottom: 0;
 	right: 0;
@@ -95,19 +82,62 @@ button.toast-close-button {
 	bottom: 12px;
 	left: 12px;
 }
-
 #toast-container {
 	position: fixed;
 	z-index: 999999;
-	/*overrides*/
+	transform: translateY(20px);
+	opacity: 0;
+	-webkit-transition: all .218s ease-in-out;
+	-moz-transition: all .218s ease-in-out;
+	-ms-transition: all .218s ease-in-out;
+	-o-transition: all .218s ease-in-out;
+	transition: all .218s ease-in-out;
 }
-
+#toast-container .toast{
+	background-color: #FFFFFF !important;
+	color: #000000;
+	min-width: 300px;
+    border-radius: 3px;
+	padding: 15px 20px;
+	overflow: inherit;
+	font-size: 18px;
+	margin: 0;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+#toast-container.aparecer-toast{
+	transform: translateY(0);
+	opacity: 1;
+}
+#toast-container.desaparecer-toast{
+	opacity:0;
+}
+.toast-bottom-left{
+	bottom: 0;
+	left: 0;
+	padding: 30px;
+}
+.toast-bottom-right{
+	bottom: 0;
+	right: 0;
+	padding: 30px;
+}
+.toast-bottom-left .close-toastr:HOVER{
+	background-color: transparent;
+}
+.toast-bottom-left .close-toastr{
+	line-height: 1;
+}
+.toast-bottom-left .close-toastr i{
+	color: #FFF;
+	line-height: 24px;
+	font-size: 18px;
+	vertical-align: middle;
+}
 #toast-container * {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
 #toast-container>div {
 	position: relative;
 	overflow: hidden;
@@ -122,31 +152,23 @@ button.toast-close-button {
 	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
 	filter: alpha(opacity = 80);
 }
-
-#toast-container.toast-top-center>div, #toast-container.toast-bottom-center>div
-	{
+#toast-container.toast-top-center>div, #toast-container.toast-bottom-center>div{
 	width: 40%;
 	margin: auto;
 }
-
-#toast-container.toast-top-full-width>div, #toast-container.toast-bottom-full-width>div
-	{
+#toast-container.toast-top-full-width>div, #toast-container.toast-bottom-full-width>div{
 	width: 96%;
 	margin: auto;
 }
-
 .toast,
 .toast-info,
 .toast-success,
 .toast-warning{
 	background-color: #323232;
 }
-
 .toast-error {
 	background-color: #f44336;
 }
-
-
 .toast-progress {
 	position: absolute;
 	left: 0;
@@ -157,7 +179,6 @@ button.toast-close-button {
 	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
 	filter: alpha(opacity = 40);
 }
-
 /*Responsive Design*/
 @media all and (max-width: 240px) {
 	#toast-container .toast-close-button {
@@ -165,15 +186,12 @@ button.toast-close-button {
 		top: -0.2em;
 	}
 }
-
 @media all and (min-width: 241px) and (max-width: 480px) {
 	#toast-container .toast-close-button {
 		right: -0.2em;
 		top: -0.2em;
 	}
 }
-
-
 @media ( max-width: 720px ){
 	#toast-container.toast-top-center>div, #toast-container.toast-bottom-center>div
 		{

@@ -31,7 +31,7 @@ function msj(tipo, msj, cabecera){
 	if (tipo == 'error'){
 		toastr.error(msj, cabecera, {
 			closeButton: true,
-			positionClass: "toast-bottom-center",
+			positionClass: "toast-bottom-right",
 			showDuration: 250,
 		    hideDuration: 250,
 			timeOut: 5000,
@@ -43,7 +43,7 @@ function msj(tipo, msj, cabecera){
 	} else if (tipo == 'warning'){
 		toastr.warning(msj, cabecera, {
 			closeButton: true,
-			positionClass: "toast-bottom-center",
+			positionClass: "toast-bottom-right",
 			showDuration: 250,
 		    hideDuration: 250,
 			timeOut: 5000,
