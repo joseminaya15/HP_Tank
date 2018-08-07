@@ -83,7 +83,7 @@ function agregarDatos(){
   var datos = new FormData();
   factura = $('#archivo')[0].files[0];
   if(factura == undefined){
-    msj('error', 'Seleccione una factura');
+    msj('error', 'Se requiere cargar el sustento de la factura (pdf)');
     return;
   }
     datos.append('archivo',$('#archivo')[0].files[0]);
