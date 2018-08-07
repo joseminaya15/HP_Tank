@@ -35,25 +35,36 @@ class Pdf extends CI_Controller {
 					<head>
 						<link rel="shortcut icon" href="http://hpedigitalmarketingacademy.com/Certificados/public/img/logo/favicon.ico">
 						<link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
+                        <style>
+                            .table{
+                                width: 100%; 
+                            }
+                            .table tr td,
+                            .table tr th{
+                                border: 1px solid #000000;
+                                padding: 5px;
+                            }
+                        </style>
 					</head>
 					<body>
-						<div id="content" style="display: none;width: 100%;">
-                            <table class="table" width="100">
-                                <thead>
-                                    <tr>
-                                        <th>Nombre</th>
-                                        <th>Fecha</th>
-                                        <th>Nro Factura</th>
-                                        <th>Modelo</th>
-                                        <th>Cantidad</th>
-                                        <th>Spiff ganado</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    '.$html.'
-                                </tbody>
-                            </table>
+                        <div style="text-align: center;">
+                            <h2>Total de Facturas</h2>
                         </div>
+                        <table class="table" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Fecha</th>
+                                    <th>Nro Factura</th>
+                                    <th>Modelo</th>
+                                    <th>Cantidad</th>
+                                    <th>Spiff ganado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                '.$html.'
+                            </tbody>
+                        </table>
 					</body>
 				  </html>';
 		$mpdf  = new \Mpdf\Mpdf();
