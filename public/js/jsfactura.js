@@ -182,9 +182,9 @@ function selectPrint(){
   var spiff = $('#spiff');
   var read = $('#cantidad').val();
   var print = $('#modelo').val();
-  if(print == 'HP Tank 5810'){
+  if(print == 'HP DeskJet GT 5810' || print == 'HP Tank 315' ){
     spiff.val('$5');
-  }else if (print == 'HP Tank 5820'){
+  }else if (print == 'HP DeskJet GT 5820' || print == 'HP Tank 415'){
     spiff.val('$8');
   }
   var res = spiff.val().substr(1,2);
@@ -196,9 +196,9 @@ function selectPrint(){
 }
 function readCount(){
   var print = $('#modelo').val();
-  if(print == 'HP Tank 5810'){
+  if(print == 'HP DeskJet GT 5810' || print == 'HP Tank 315' ){
     $('#spiff').val('$5');
-  }else if (print == 'HP Tank 5820'){
+  }else if (print == 'HP DeskJet GT 5820' || print == 'HP Tank 415'){
     $('#spiff').val('$8');
   }
   var read1 = $('#cantidad').val();

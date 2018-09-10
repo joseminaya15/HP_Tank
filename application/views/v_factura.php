@@ -127,8 +127,10 @@
                                             <td class="text-center">
                                                 <div class="mdl-input factura">
                                                     <select class="selectpicker" id="modelo" name="modelo" onchange="selectPrint()">
-                                                        <option value="HP Tank 5810">HP Tank 5810</option>
-                                                        <option value="HP Tank 5820">HP Tank 5820</option>
+                                                        <option value="HP DeskJet GT 5810">HP DeskJet GT 5810</option>
+                                                        <option value="HP Tank 315">HP Tank 315</option>
+                                                        <option value="HP DeskJet GT 5820">HP DeskJet GT 5820</option>
+                                                        <option value="HP Tank 415">HP Tank 415</option>
                                                     </select>
                                                 </div>
                                             </td>
