@@ -103,8 +103,9 @@ class Factura extends CI_Controller {
         $config['allowed_types']        = 'jpg|png|jpeg|pdf';
         $config['max_size']             = 10000;
         $this->load->library('upload', $config);
-        if(count($_FILES['archivo']['name']) == 0){
-            $respuesta['error'] =$error;
+        $respuesta['cantidad']=$_FILES['archivo'];
+        if(count($_FILES['archivo']) == 0){
+
             $respuesta['mensaje']  = 'Seleccione su factura';
         }else {
             $this->load->library('upload', $config);
