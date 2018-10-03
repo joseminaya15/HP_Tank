@@ -146,7 +146,7 @@
                                             </td>
                                             <td class="text-center">
                                                 <div class="mdl-input factura">
-                                                    <input id="monto" type="text" class="form-control text-center">
+                                                    <input id="monto" type="text" class="form-control text-center numeros">
                                                 </div>
                                             </td>
                                             <td>
@@ -160,7 +160,7 @@
                             </div>
                         </div>
                         <div class="mdl-card__actions">
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="crearAnotacion();agregarDatos();" id="cargarAnotacion">Cargar factura<i class="mdi mdi-play_arrow"></i></button>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="crearAnotacion();" id="cargarAnotacion">Cargar factura<i class="mdi mdi-play_arrow"></i></button>
                         </div>
                     </div>
                 </div>
