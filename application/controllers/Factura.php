@@ -98,21 +98,19 @@ class Factura extends CI_Controller {
     }
 
     function cargarFact(){
-
-        $respuesta['mensajse'] = 'inicio';
         $nombre_fichero                 = carpetas();
         $config['upload_path']          = $nombre_fichero;
         $config['allowed_types']        = 'jpg|png|jpeg|pdf';
         $config['max_size']             = 10000;
         $this->load->library('upload', $config);
-        $respuesta['cantidad']=$_FILES['archivo'];
         if(count($_FILES['archivo']['name']) == 0){
+            $respuesta['error'] =$error;
             $respuesta['mensaje']  = 'Seleccione su factura';
         }else {
             $this->load->library('upload', $config);
             if ( ! $this->upload->do_upload('archivo')){
                 $error = $this->upload->display_errors();
-                $respuesta['error'] =$error;
+                $respuesta['error'] =EXIT_ERROR;
             }else{
                 $data = $this->upload->data();
                 $respuesta['error'] =EXIT_SUCCESS;

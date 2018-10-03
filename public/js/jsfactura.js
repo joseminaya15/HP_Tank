@@ -19,7 +19,6 @@ function cerrarCesion(){
 }
 var factura = undefined;
 function crearAnotacion(){
-	// console.log("entro a crear");
 	var fecha    = $('#fecha').val();
 	var nro_fact = $('#nro_factura').val();
 	var modelo   = $('#modelo').val();
@@ -55,11 +54,8 @@ function crearAnotacion(){
 		msj('error', 'Ingrese la cantidad');
 		return;
 	}
-	// if(factura == undefined){
-	// 	console.log("indefinida");
-	// 	return;
-	// }
-	// $('#cargarAnotacion').prop("disabled", true);
+	
+	$('#cargarAnotacion').prop("disabled", true);
 
 	
 	if(factura == undefined){
@@ -73,7 +69,6 @@ function crearAnotacion(){
 		return;
 	}
 	datos.append('archivo',factura);
-	// console.log('archivo',factura);
 	$.ajax({
 		type:"post",
 		dataType:"json",
@@ -83,10 +78,8 @@ function crearAnotacion(){
 		processData:false,
 		cache: false,
 		success: function(response){
-			// console.log("response",response);
 		}
 	}).done(function(respuesta){
-		// console.log("respuesta archivo", respuesta.nameFile);
 		if (respuesta.error==0) {
 			$.ajax({
 				data : {
@@ -101,12 +94,9 @@ function crearAnotacion(){
 				url  : 'Factura/crearAnotacion',
 				type : 'POST'
 			}).done(function(data){
-				// console.log("data",data);
 				try{
 					data = JSON.parse(data);
 					if(data.error == 0){
-						// subirFactura();
-
 					}else{
 						return;
 					}
@@ -130,37 +120,7 @@ function crearAnotacion(){
 			msj('error', 'Error su archivo no fue cargado Intentelo una vez más');
 			return;
 		}
-
 	});
-
-
-	// $.ajax({
-	// 	data : {
-	// 		fecha     : fecha,
-	// 		nro_fact  : nro_fact,
-	// 		modelo    : modelo,
-	// 		spiff     : spiff,
-	// 		monto     : monto,
-	// 		cantidad  : cantidad
-	// 	},
-	// 	url  : 'Factura/crearAnotacion',
-	// 	type : 'POST'
-	// }).done(function(data){
-	// 	console.log("data",data);
-	// 	try{
-	// 		data = JSON.parse(data);
-	// 		if(data.error == 0){
-	// 			subirFactura();
-
-	// 		}else{
-	// 			return;
-	// 		}
-	// 	} catch (err){
-	// 		toastr.remove();
-	// 		msj('error',err.message);
-	// 		return;
-	// 	}
-	// });
 }
 function triggerFecha(){
 	$( "#butonFecha" ).trigger( "click" );
@@ -195,7 +155,7 @@ function agregarDatos(){
 		data:datos,
 		processData:false,
 	}).done(function(respuesta){
-		console.log("respuesta archivo", respuesta);
+		// console.log("respuesta archivo", respuesta);
 		toastr.remove();
 		msj('error', respuesta.mensaje);
 		$('#fecha').val("");
@@ -206,7 +166,6 @@ function agregarDatos(){
 		$('#cantidad').val("");
 		setTimeout(function(){ location.href = 'Factura'; }, 2000);
 	});
-	console.log(2);
 }
 
 / MASK DE FECHA /
