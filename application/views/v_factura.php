@@ -114,9 +114,9 @@
                                             <td class="text-center">
                                                 <div class="mdl-input mdl-fecha factura">
                                                     <div class="mdl-icon">
-                                                        <button class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-date_range"></i></button>
+                                                        <button id="butonFecha" class="mdl-button mdl-js-button mdl-button--icon"><i class="mdi mdi-date_range"></i></button>
                                                     </div>
-                                                    <input class="form-control text-center" type="text" id="fecha" name="fecha" maxlength="10" placeholder="dd/mm/aaaa">
+                                                    <input class="form-control text-center" type="text" id="fecha" name="fecha" maxlength="10" placeholder="dd/mm/aaaa" onclick="triggerFecha();">
                                                 </div>
                                             </td>
                                             <td class="text-center">
@@ -160,7 +160,7 @@
                             </div>
                         </div>
                         <div class="mdl-card__actions">
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="agregarDatos();crearAnotacion();" id="cargarAnotacion">Cargar factura<i class="mdi mdi-play_arrow"></i></button>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-login ingresar" onclick="crearAnotacion();agregarDatos();" id="cargarAnotacion">Cargar factura<i class="mdi mdi-play_arrow"></i></button>
                         </div>
                     </div>
                 </div>

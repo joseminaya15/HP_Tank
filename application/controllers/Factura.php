@@ -69,7 +69,6 @@ class Factura extends CI_Controller {
             $spiff    = $this->input->post('spiff');
             $monto    = $this->input->post('monto');
             $date     = str_replace('/', '-', $fecha);
-
             $arrInsert = array('fecha'       => date('Y-m-d', strtotime($date)),
                                'nro_factura' => $nro_fact,
                                'modelo'      => $modelo,
@@ -107,13 +106,15 @@ class Factura extends CI_Controller {
             $archivotmp = $_FILES['archivo']['tmp_name'];
             $namearch = $_FILES['archivo']['name'];
             $nuevo = explode(".",$namearch);
+            $_FILES['archivo']['name'] = str_replace(' ', '_', $_FILES['archivo']['name']);
+            $contador = count($nuevo);
             if($tamanio > '2000000'){
                 $respuesta->mensaje = 'El tamaño de su pdf debe ser menor';
             }else {
-                if($nuevo[1] == 'pdf' || $nuevo[1] == 'jpeg' || $nuevo[1] == 'jpg' || $nuevo[1] == 'png'){
+                if($nuevo[$contador-1] == 'jpg' || $nuevo[$contador-1] == 'png'|| $nuevo[$contador-1] == 'JPG' || $nuevo[$contador-1] == 'PNG' || $nuevo[1] == 'pdf' || $nuevo[1] == 'jpeg' || $nuevo[1] == 'PDF' || $nuevo[1] == 'JPEG'){
                     $target = getcwd().DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'archivos'.DIRECTORY_SEPARATOR.'1'.basename($_FILES['archivo']['name']);
                     if(move_uploaded_file($archivotmp, $target) ){
-                       $arrUpdt = array('documento' => $namearch);
+                       $arrUpdt = array('documento' => $_FILES['archivo']['name']);
                        $this->M_solicitud->updateDatos($arrUpdt, $this->session->userdata('id_anotacion'), 'anotacion');
                        $respuesta->mensaje = 'Su factura se subió correctamente';
                     } else {

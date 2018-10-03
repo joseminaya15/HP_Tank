@@ -67,14 +67,15 @@ function crearAnotacion(){
     try{
         data = JSON.parse(data);
         if(data.error == 0){
-          $('#fecha').val("");
-          $('#modelo').val("0");
-          $('.selectpicker').selectpicker('refresh');
-          $('#nro_factura').val("");
-          $('#monto').val("");
-          $('#cantidad').val("");
-          $('#gtotal').text(data.total);
-          setTimeout(function(){ location.href = 'Factura'; }, 2000);
+          subirFactura();
+          // $('#fecha').val("");
+          // $('#modelo').val("0");
+          // $('.selectpicker').selectpicker('refresh');
+          // $('#nro_factura').val("");
+          // $('#monto').val("");
+          // $('#cantidad').val("");
+          // $('#gtotal').text(data.total);
+          // setTimeout(function(){ location.href = 'Factura'; }, 2000);
         }else{
           return;
         }
@@ -84,6 +85,10 @@ function crearAnotacion(){
         return;
       }
   });
+  console.log(1);
+}
+function triggerFecha(){
+    $( "#butonFecha" ).trigger( "click" );
 }
 function subirFactura(){
   $( "#archivo" ).trigger( "click" );
@@ -94,13 +99,18 @@ $( "#archivo" ).change(function() {
   $('#btnSubirFact').css('color','#FFFFFF');
 });
 function agregarDatos(){
-  var datos = new FormData();
-  factura = $('#archivo')[0].files[0];
-  if(factura == undefined){
-    toastr.remove();
-    msj('error', 'Se requiere cargar el sustento de la factura (pdf)');
-    return;
-  }
+  	var datos = new FormData();
+  	factura = $('#archivo')[0].files[0];
+	if(factura == undefined){
+		toastr.remove();
+		msj('error', 'Se requiere cargar el sustento de la factura (pdf)');
+		return;
+	}
+  	if(factura['size'] > 2048000){
+		toastr.remove();
+		msj('error', 'El logo debe ser menor a 2MB');
+		return;
+	}
     datos.append('archivo',$('#archivo')[0].files[0]);
      $.ajax({
         type:"post",
@@ -120,6 +130,7 @@ function agregarDatos(){
         $('#cantidad').val("");
         setTimeout(function(){ location.href = 'Factura'; }, 2000);
     });
+      console.log(2);
 }
 
 / MASK DE FECHA /

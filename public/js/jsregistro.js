@@ -101,7 +101,7 @@ function seleccionarPais(){
   var pais = $('#pais').val();
   if(pais == 'Costa Rica'){
     $('.canal').html("");
-  	$('.canal').append('<div class="form-group">'+
+    $('.canal').append('<div class="form-group">'+
                                   '<select class="form-control" id="canal" name="canal">'+
                                             '<option value="">Canal</option>'+
                                             '<option value="Alfatec De CR Sa">Alfatec De CR Sa</option>'+
@@ -115,7 +115,7 @@ function seleccionarPais(){
                                   '</select>'+
                                 '</div>');
   }else if(pais == 'El Salvador'){
-  	$('.canal').html("");
+    $('.canal').html("");
     $('.canal').append('<div class="form-group">'+
                                   '<select class="form-control" id="canal" name="canal">'+
                                             '<option value="">Canal</option>'+
@@ -129,7 +129,7 @@ function seleccionarPais(){
                                   '</select>'+
                                 '</div>');
   }else if(pais == 'Guatemala'){
-  	$('.canal').html("");
+    $('.canal').html("");
     $('.canal').append('<div class="form-group">'+
                                   '<select class="form-control" id="canal" name="canal">'+
                                             '<option value="">Canal</option>'+
@@ -142,7 +142,7 @@ function seleccionarPais(){
                                   '</select>'+
                                 '</div>');
   }else if(pais == 'Honduras'){
-  	$('.canal').html("");
+    $('.canal').html("");
     $('.canal').append('<div class="form-group">'+
                                   '<select class="form-control" id="canal" name="canal">'+
                                             '<option value="">Canal</option>'+
@@ -151,10 +151,12 @@ function seleccionarPais(){
                                             '<option value="Can Computers S de Rl de Cv">Can Computers S de Rl de Cv</option>'+
                                             '<option value="Accesorios para Computadoras y Oficina Acosa">Accesorios para Computadoras y Oficina Acosa</option>'+
                                             '<option value="Cash Business S De Rl">Cash Business S De Rl</option>'+
+                                            '<option value="RAF">RAF</option>'+
+                                            '<option value="Equipos y Sistemas">Equipos y Sistemas</option>'+
                                   '</select>'+
                                 '</div>');
   }else if(pais == 'Nicaragua'){
-  	$('.canal').html("");
+    $('.canal').html("");
     $('.canal').append('<div class="form-group">'+
                                   '<select class="form-control" id="canal" name="canal">'+
                                             '<option value="">Canal</option>'+
@@ -166,7 +168,7 @@ function seleccionarPais(){
                                   '</select>'+
                                 '</div>');
   }else if(pais == 'Panamá'){
-  	$('.canal').html("");
+    $('.canal').html("");
     $('.canal').append('<div class="form-group">'+
                                   '<select class="form-control" id="canal" name="canal">'+
                                             '<option value="">Canal</option>'+
